@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file D:\Facultate\Disertatie\Disertation_Project\FPGA\hw\hw.runs\design_1_xbar_3_synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied
