@@ -38,6 +38,7 @@
 #include "xil_cache.h"
 #include "timer_ps/timer_ps.h"
 #include "xparameters.h"
+#include "sleep.h"
 
 #include "xil_cache.h"
 
@@ -91,9 +92,27 @@ int main(void)
 {
 	DemoInitialize();
 
-	DemoRun();
+	DemoRun2();
 
 	return 0;
+}
+
+void DemoRun2()
+{
+	u32 nextFrame = 0;
+
+	nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
+	DisplayChangeFrame(&dispCtrl, nextFrame);
+
+
+	while (1) {
+			nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
+			VideoStop(&videoCapt);
+			DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
+			VideoStart(&videoCapt);
+			DisplayChangeFrame(&dispCtrl, nextFrame);
+			usleep(S_to_uS(0.05));
+	}
 }
 
 
@@ -173,7 +192,11 @@ void DemoInitialize()
 	 */
 	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
 
-	DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
+//	for (i = 0; i < DISPLAY_NUM_FRAMES; i++) {
+//		InitWhiteFrame(frameBuf[i], dispCtrl.vMode.width, dispCtrl.vMode.height);
+//	}
+
+	memset(frameBuf, 0xFF, sizeof(frameBuf));
 
 	return;
 }
@@ -193,7 +216,6 @@ void DemoRun()
 	while (userInput != 'q')
 	{
 		fRefresh = 0;
-		DemoPrintMenu();
 
 		/* Wait for data on UART */
 		while (!XUartPs_IsReceiveData(UART_BASEADDR) && !fRefresh)
@@ -237,11 +259,6 @@ void DemoRun()
 		case '7':
 			Xil_DCacheDisable();
 			nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
-//			nextFrame = videoCapt.curFrame + 1;
-//			if (nextFrame >= DISPLAY_NUM_FRAMES)
-//			{
-//				nextFrame = 1;
-//			}
 			VideoStop(&videoCapt);
 			DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
 			VideoStart(&videoCapt);
@@ -250,19 +267,10 @@ void DemoRun()
 			break;
 		case '8':
 			nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
-//			nextFrame = videoCapt.curFrame + 1;
-//			if (nextFrame >= DISPLAY_NUM_FRAMES)
-//			{
-//				nextFrame = 1;
-//			}
 			VideoStop(&videoCapt);
 			DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
 			VideoStart(&videoCapt);
 			DisplayChangeFrame(&dispCtrl, nextFrame);
-			break;
-		case 'q':
-			break;
-		case 'r':
 			break;
 		default :
 			xil_printf("\n\rInvalid Selection");
@@ -271,35 +279,6 @@ void DemoRun()
 	}
 
 	return;
-}
-
-void DemoPrintMenu()
-{
-	xil_printf("\x1B[H"); //Set cursor to top left of terminal
-	xil_printf("\x1B[2J"); //Clear terminal
-	xil_printf("**************************************************\n\r");
-	xil_printf("*                ZYBO Video Demo                 *\n\r");
-	xil_printf("**************************************************\n\r");
-	xil_printf("*Display Resolution: %28s*\n\r", dispCtrl.vMode.label);
-	printf("*Display Pixel Clock Freq. (MHz): %15.3f*\n\r", dispCtrl.pxlFreq);
-	xil_printf("*Display Frame Index: %27d*\n\r", dispCtrl.curFrame);
-	if (videoCapt.state == VIDEO_DISCONNECTED) xil_printf("*Video Capture Resolution: %22s*\n\r", "!HDMI UNPLUGGED!");
-	else xil_printf("*Video Capture Resolution: %17dx%-4d*\n\r", videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo);
-	xil_printf("*Video Frame Index: %29d*\n\r", videoCapt.curFrame);
-	xil_printf("**************************************************\n\r");
-	xil_printf("\n\r");
-	xil_printf("1 - Change Display Resolution\n\r");
-	xil_printf("2 - Change Display Framebuffer Index\n\r");
-	xil_printf("3 - Print Blended Test Pattern to Display Framebuffer\n\r");
-	xil_printf("4 - Print Color Bar Test Pattern to Display Framebuffer\n\r");
-	xil_printf("5 - Start/Stop Video stream into Video Framebuffer\n\r");
-	xil_printf("6 - Change Video Framebuffer Index\n\r");
-	xil_printf("7 - Grab Video Frame and invert colors\n\r");
-	xil_printf("8 - Grab Video Frame and scale to Display resolution\n\r");
-	xil_printf("q - Quit\n\r");
-	xil_printf("\n\r");
-	xil_printf("\n\r");
-	xil_printf("Enter a selection:");
 }
 
 int DemoGetInactiveFrame(DisplayCtrl *DispCtrlPtr, VideoCapture *VideoCaptPtr)
@@ -321,6 +300,8 @@ int DemoGetInactiveFrame(DisplayCtrl *DispCtrlPtr, VideoCapture *VideoCaptPtr)
 		}
 	}
 	xil_printf("Unreachable error state reached. All buffers are in use.\r\n");
+
+	return -1;
 }
 
 void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
@@ -418,7 +399,7 @@ void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u3
 	return;
 }
 
-void DemoPrintTest(u8 *frame, u32 width, u32 height)
+void InitWhiteFrame(u8 *frame, u32 width, u32 height)
 {
 	memset(frame, 0xFF, width * height * sizeof(t_RGB));
 	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
