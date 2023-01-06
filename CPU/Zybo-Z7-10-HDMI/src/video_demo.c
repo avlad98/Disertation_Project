@@ -173,7 +173,7 @@ void DemoInitialize()
 	 */
 	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
 
-	DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
+	DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
 
 	return;
 }
@@ -212,9 +212,6 @@ void DemoRun()
 
 		switch (userInput)
 		{
-		case '1':
-			DemoChangeRes();
-			break;
 		case '2':
 			nextFrame = dispCtrl.curFrame + 1;
 			if (nextFrame >= DISPLAY_NUM_FRAMES)
@@ -222,12 +219,6 @@ void DemoRun()
 				nextFrame = 1;
 			}
 			DisplayChangeFrame(&dispCtrl, nextFrame);
-			break;
-		case '3':
-			DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
-			break;
-		case '4':
-			DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_1);
 			break;
 		case '5':
 			if (videoCapt.state == VIDEO_STREAMING)
@@ -309,104 +300,6 @@ void DemoPrintMenu()
 	xil_printf("\n\r");
 	xil_printf("\n\r");
 	xil_printf("Enter a selection:");
-}
-
-void DemoChangeRes()
-{
-	int fResSet = 0;
-	int status;
-	char userInput = 0;
-
-	/* Flush UART FIFO */
-	while (XUartPs_IsReceiveData(UART_BASEADDR))
-	{
-		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-	}
-
-	while (!fResSet)
-	{
-		DemoCRMenu();
-
-		/* Wait for data on UART */
-		while (!XUartPs_IsReceiveData(UART_BASEADDR))
-		{}
-
-		/* Store the first character in the UART recieve FIFO and echo it */
-		userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-		xil_printf("%c", userInput);
-		status = XST_SUCCESS;
-		switch (userInput)
-		{
-		case '1':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_640x480);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case '2':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_800x600);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case '3':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_1280x720);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case '4':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_1280x1024);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case '5':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_1600x900);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case '6':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_1920x1080);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case 'q':
-			fResSet = 1;
-			break;
-		default :
-			xil_printf("\n\rInvalid Selection");
-			TimerDelay(500000);
-		}
-		if (status == XST_DMA_ERROR)
-		{
-			xil_printf("\n\rWARNING: AXI VDMA Error detected and cleared\n\r");
-		}
-	}
-}
-
-void DemoCRMenu()
-{
-	xil_printf("\x1B[H"); //Set cursor to top left of terminal
-	xil_printf("\x1B[2J"); //Clear terminal
-	xil_printf("**************************************************\n\r");
-	xil_printf("*                ZYBO Video Demo                 *\n\r");
-	xil_printf("**************************************************\n\r");
-	xil_printf("*Current Resolution: %28s*\n\r", dispCtrl.vMode.label);
-	printf("*Pixel Clock Freq. (MHz): %23.3f*\n\r", dispCtrl.pxlFreq);
-	xil_printf("**************************************************\n\r");
-	xil_printf("\n\r");
-	xil_printf("1 - %s\n\r", VMODE_640x480.label);
-	xil_printf("2 - %s\n\r", VMODE_800x600.label);
-	xil_printf("3 - %s\n\r", VMODE_1280x720.label);
-	xil_printf("4 - %s\n\r", VMODE_1280x1024.label);
-	xil_printf("5 - %s\n\r", VMODE_1600x900.label);
-	xil_printf("6 - %s\n\r", VMODE_1920x1080.label);
-	xil_printf("q - Quit (don't change resolution)\n\r");
-	xil_printf("\n\r");
-	xil_printf("Select a new resolution:");
 }
 
 int DemoGetInactiveFrame(DisplayCtrl *DispCtrlPtr, VideoCapture *VideoCaptPtr)
@@ -525,160 +418,10 @@ void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u3
 	return;
 }
 
-void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
+void DemoPrintTest(u8 *frame, u32 width, u32 height)
 {
-	u32 xcoi, ycoi;
-	u32 iPixelAddr;
-	u8 wRed, wBlue, wGreen;
-	u32 wCurrentInt;
-	double fRed, fBlue, fGreen, fColor;
-	u32 xLeft, xMid, xRight, xInt;
-	u32 yMid, yInt;
-	double xInc, yInc;
-
-
-	switch (pattern)
-	{
-	case DEMO_PATTERN_0:
-
-		xInt = width / 4; //Four intervals, each with width/4 pixels
-		xLeft = xInt * 3;
-		xMid = xInt * 2 * 3;
-		xRight = xInt * 3 * 3;
-		xInc = 256.0 / ((double) xInt); //256 color intensities are cycled through per interval (overflow must be caught when color=256.0)
-
-		yInt = height / 2; //Two intervals, each with width/2 lines
-		yMid = yInt;
-		yInc = 256.0 / ((double) yInt); //256 color intensities are cycled through per interval (overflow must be caught when color=256.0)
-
-		fBlue = 0.0;
-		fRed = 256.0;
-		for(xcoi = 0; xcoi < (width*3); xcoi+=3)
-		{
-			/*
-			 * Convert color intensities to integers < 256, and trim values >=256
-			 */
-			wRed = (fRed >= 256.0) ? 255 : ((u8) fRed);
-			wBlue = (fBlue >= 256.0) ? 255 : ((u8) fBlue);
-			iPixelAddr = xcoi;
-			fGreen = 0.0;
-			for(ycoi = 0; ycoi < height; ycoi++)
-			{
-
-				wGreen = (fGreen >= 256.0) ? 255 : ((u8) fGreen);
-				frame[iPixelAddr] = wRed;
-				frame[iPixelAddr + 1] = wBlue;
-				frame[iPixelAddr + 2] = wGreen;
-				if (ycoi < yMid)
-				{
-					fGreen += yInc;
-				}
-				else
-				{
-					fGreen -= yInc;
-				}
-
-				/*
-				 * This pattern is printed one vertical line at a time, so the address must be incremented
-				 * by the stride instead of just 1.
-				 */
-				iPixelAddr += stride;
-			}
-
-			if (xcoi < xLeft)
-			{
-				fBlue = 0.0;
-				fRed -= xInc;
-			}
-			else if (xcoi < xMid)
-			{
-				fBlue += xInc;
-				fRed += xInc;
-			}
-			else if (xcoi < xRight)
-			{
-				fBlue -= xInc;
-				fRed -= xInc;
-			}
-			else
-			{
-				fBlue += xInc;
-				fRed = 0;
-			}
-		}
-		/*
-		 * Flush the framebuffer memory range to ensure changes are written to the
-		 * actual memory, and therefore accessible by the VDMA.
-		 */
-		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-		break;
-	case DEMO_PATTERN_1:
-
-		xInt = width / 7; //Seven intervals, each with width/7 pixels
-		xInc = 256.0 / ((double) xInt); //256 color intensities per interval. Notice that overflow is handled for this pattern.
-
-		fColor = 0.0;
-		wCurrentInt = 1;
-		for(xcoi = 0; xcoi < (width*3); xcoi+=3)
-		{
-
-			/*
-			 * Just draw white in the last partial interval (when width is not divisible by 7)
-			 */
-			if (wCurrentInt > 7)
-			{
-				wRed = 255;
-				wBlue = 255;
-				wGreen = 255;
-			}
-			else
-			{
-				if (wCurrentInt & 0b001)
-					wRed = (u8) fColor;
-				else
-					wRed = 0;
-
-				if (wCurrentInt & 0b010)
-					wBlue = (u8) fColor;
-				else
-					wBlue = 0;
-
-				if (wCurrentInt & 0b100)
-					wGreen = (u8) fColor;
-				else
-					wGreen = 0;
-			}
-
-			iPixelAddr = xcoi;
-
-			for(ycoi = 0; ycoi < height; ycoi++)
-			{
-				frame[iPixelAddr] = wRed;
-				frame[iPixelAddr + 1] = wBlue;
-				frame[iPixelAddr + 2] = wGreen;
-				/*
-				 * This pattern is printed one vertical line at a time, so the address must be incremented
-				 * by the stride instead of just 1.
-				 */
-				iPixelAddr += stride;
-			}
-
-			fColor += xInc;
-			if (fColor >= 256.0)
-			{
-				fColor = 0.0;
-				wCurrentInt++;
-			}
-		}
-		/*
-		 * Flush the framebuffer memory range to ensure changes are written to the
-		 * actual memory, and therefore accessible by the VDMA.
-		 */
-		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-		break;
-	default :
-		xil_printf("Error: invalid pattern passed to DemoPrintTest");
-	}
+	memset(frame, 0xFF, width * height * sizeof(t_RGB));
+	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 }
 
 void DemoISR(void *callBackRef, void *pVideo)
