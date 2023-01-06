@@ -7,3 +7,11 @@ FPGA/vivado.jou
 FPGA/vivado_11140.backup.jou
 FPGA/vivado_11140.backup.log
 FPGA/hw.cache/wt/project.wpc
+CPU/.metadata/
+*.log*
+CPU/Zybo-Z7-10-HDMI/Debug/*
+CPU/design_1_wrapper/zynq_fsbl/fsbl.elf
+CPU/design_1_wrapper/platform.spr
+CPU/design_1_wrapper/platform.tcl
+CPU/design_1_wrapper/zynq_fsbl/zynq_fsbl_bsp/
+CPU/Zybo-Z7-10-HDMI/.gitignore
