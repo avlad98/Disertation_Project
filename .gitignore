@@ -1,0 +1,9 @@
+CPU/.analytics
+CPU/.metadata/.log
+CPU/.metadata/version.ini
+CPU/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs
+FPGA/vivado.log
+FPGA/vivado.jou
+FPGA/vivado_11140.backup.jou
+FPGA/vivado_11140.backup.log
+FPGA/hw.cache/wt/project.wpc
