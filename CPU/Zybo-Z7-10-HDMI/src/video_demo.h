@@ -8,6 +8,7 @@
 #include "xil_types.h"
 #include "video_capture/video_capture.h"
 #include "display_ctrl/display_ctrl.h"
+#include "effects/effects.h"
 
 /* ------------------------------------------------------------ */
 /*					Miscellaneous Declarations					*/
@@ -22,11 +23,7 @@
 #define DEMO_START_ON_DET 1
 #define S_to_uS(x)	(ULONG)((x) * 1000000)
 
-typedef struct {
-	u8 r;
-	u8 g;
-	u8 b;
-} t_RGB;
+
 
 /* ------------------------------------------------------------ */
 /*					Procedure Declarations						*/

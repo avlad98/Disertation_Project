@@ -185,7 +185,7 @@ int VideoStart(VideoCapture *videoPtr)
 
 
 
-	xdbg_printf(XDBG_DEBUG_GENERAL, "Starting VDMA for Video capture\n\r");
+//	xdbg_printf(XDBG_DEBUG_GENERAL, "Starting VDMA for Video capture\n\r");
 	Status = XAxiVdma_DmaConfig(videoPtr->vdma, XAXIVDMA_WRITE, &(videoPtr->vdmaConfig));
 	if (Status != XST_SUCCESS)
 	{

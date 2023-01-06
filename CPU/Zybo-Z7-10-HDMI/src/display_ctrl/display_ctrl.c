@@ -453,7 +453,7 @@ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex)
 	 */
 	if (dispPtr->state == DISPLAY_RUNNING)
 	{
-		xdbg_printf(XDBG_DEBUG_GENERAL, "Change frame: current index = %d next index = %d\r\n", dispPtr->curFrame, frameIndex);
+//		xdbg_printf(XDBG_DEBUG_GENERAL, "Change frame: current index = %d next index = %d\r\n", dispPtr->curFrame, frameIndex);
 		Status = XAxiVdma_StartParking(dispPtr->vdma, dispPtr->curFrame, XAXIVDMA_READ);
 		if (Status != XST_SUCCESS)
 		{

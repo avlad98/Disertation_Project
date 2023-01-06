@@ -69,6 +69,7 @@ VideoCapture videoCapt;//no need for volatile because the videoCapt's state is e
                        //losing the frame with the inverted colors of the frame gotten from the disconnected input
 INTC intc;
 char fRefresh; //flag used to trigger a refresh of the Menu on video detect
+u32 nextFrame = 0;
 
 /*
  * Framebuffers for video data
@@ -97,21 +98,90 @@ int main(void)
 	return 0;
 }
 
+eImgEffect DecodeUserChoice(char userInput)
+{
+	eImgEffect imgEffect = ORIGINAL;
+
+	xil_printf("Applying ");
+
+
+	switch (userInput) {
+	case '0':
+		imgEffect = ORIGINAL;
+		xil_printf("ORIGINAL");
+		break;
+	case '1':
+		imgEffect = INVERTED_COLORS;
+		xil_printf("INVERTED_COLORS");
+		break;
+	case '2':
+		imgEffect = GRAYSCALE;
+		xil_printf("GRAYSCALE");
+		break;
+	case '3':
+		break;
+	}
+
+	xil_printf(" effect\r\n");
+
+	return imgEffect;
+}
+
+void ProcessImage(eImgEffect imgEffect)
+{
+	u8 *srcFrame = pFrames[videoCapt.curFrame];
+	u8 *destFrame = pFrames[nextFrame];
+	u32 width = videoCapt.timing.HActiveVideo;
+	u32 height = videoCapt.timing.VActiveVideo;
+	u32 stride = DEMO_STRIDE;
+
+	Xil_DCacheInvalidateRange((unsigned int) srcFrame, DEMO_MAX_FRAME);
+
+	switch (imgEffect) {
+		case ORIGINAL:
+			noEffect(srcFrame, destFrame, width, height, stride);
+			break;
+		case INVERTED_COLORS:
+			effectInvertedColors(srcFrame, destFrame, width, height, stride);
+			break;
+		case GRAYSCALE:
+			effectGrayscale(srcFrame, destFrame, width, height, stride);
+			break;
+		default:
+			break;
+	}
+
+	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
+}
+
 void DemoRun2()
 {
-	u32 nextFrame = 0;
+	eImgEffect imgEffect = ORIGINAL;
+	char userInput = 0;
 
 	nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
 	DisplayChangeFrame(&dispCtrl, nextFrame);
 
+	/* Flush UART FIFO */
+	while (XUartPs_IsReceiveData(UART_BASEADDR))
+	{
+		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+	}
 
 	while (1) {
-			nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
-			VideoStop(&videoCapt);
-			DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-			usleep(S_to_uS(0.05));
+		if (XUartPs_IsReceiveData(UART_BASEADDR)) {
+			userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+			xil_printf("RECEIVED char %c || uint %u\r\n", userInput, (u8) userInput);
+			imgEffect = DecodeUserChoice(userInput);
+		}
+
+		nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
+		VideoStop(&videoCapt);
+		ProcessImage(imgEffect);
+		VideoStart(&videoCapt);
+		DisplayChangeFrame(&dispCtrl, nextFrame);
+		usleep(S_to_uS(0.05));
 	}
 }
 
@@ -306,16 +376,16 @@ int DemoGetInactiveFrame(DisplayCtrl *DispCtrlPtr, VideoCapture *VideoCaptPtr)
 
 void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
 {
-	u32 xcoi, ycoi;
+	u32 line, col;
 	u32 lineStart = 0;
 	Xil_DCacheInvalidateRange((unsigned int) srcFrame, DEMO_MAX_FRAME);
-	for(ycoi = 0; ycoi < height; ycoi++)
+	for(col = 0; col < height; col++)
 	{
-		for(xcoi = 0; xcoi < (width * 3); xcoi+=3)
+		for(line = 0; line < (width * sizeof(tRBGPixel)); line+=(sizeof(tRBGPixel)))
 		{
-			destFrame[xcoi + lineStart] = ~srcFrame[xcoi + lineStart];         //Red
-			destFrame[xcoi + lineStart + 1] = ~srcFrame[xcoi + lineStart + 1]; //Blue
-			destFrame[xcoi + lineStart + 2] = ~srcFrame[xcoi + lineStart + 2]; //Green
+			destFrame[line + lineStart] = ~srcFrame[line + lineStart];         //Red
+			destFrame[line + lineStart + 1] = ~srcFrame[line + lineStart + 1]; //Blue
+			destFrame[line + lineStart + 2] = ~srcFrame[line + lineStart + 2]; //Green
 		}
 		lineStart += stride;
 	}
@@ -401,7 +471,7 @@ void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u3
 
 void InitWhiteFrame(u8 *frame, u32 width, u32 height)
 {
-	memset(frame, 0xFF, width * height * sizeof(t_RGB));
+	memset(frame, 0xFF, width * height * sizeof(tRBGPixel));
 	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 }
 
