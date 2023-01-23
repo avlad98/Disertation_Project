@@ -102,29 +102,14 @@ eImgEffect DecodeUserChoice(char userInput)
 {
 	eImgEffect imgEffect = ORIGINAL;
 
-	xil_printf("Applying ");
+	imgEffect = userInput - '0';
 
-
-	switch (userInput) {
-	case '0':
-		imgEffect = ORIGINAL;
-		xil_printf("ORIGINAL");
-		break;
-	case '1':
-		imgEffect = INVERTED_COLORS;
-		xil_printf("INVERTED_COLORS");
-		break;
-	case '2':
-		imgEffect = GRAYSCALE;
-		xil_printf("GRAYSCALE");
-		break;
-	case '3':
-		imgEffect = ROTATE180;
-		xil_printf("ROTATE180");
-		break;
+	if (imgEffect < 0 || imgEffect >= NUM_EFFECTS) {
+		xil_printf("Invalid effect %u\r\n", imgEffect);
+		return ORIGINAL;
 	}
 
-	xil_printf(" effect\r\n");
+	xil_printf("Applying %s effect\r\n", effects[imgEffect].name);
 
 	return imgEffect;
 }
@@ -139,22 +124,7 @@ void ProcessImage(eImgEffect imgEffect)
 
 	Xil_DCacheInvalidateRange((unsigned int) srcFrame, DEMO_MAX_FRAME);
 
-	switch (imgEffect) {
-		case ORIGINAL:
-			noEffect(srcFrame, destFrame, width, height, stride);
-			break;
-		case INVERTED_COLORS:
-			effectInvertedColors(srcFrame, destFrame, width, height, stride);
-			break;
-		case GRAYSCALE:
-			effectGrayscale(srcFrame, destFrame, width, height, stride);
-			break;
-		case ROTATE180:
-			effectRotate180(srcFrame, destFrame, width, height, stride);
-			break;
-		default:
-			break;
-	}
+	effects[imgEffect].fun_ptr(srcFrame, destFrame, width, height, stride);
 
 	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
 }
