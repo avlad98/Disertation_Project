@@ -119,6 +119,8 @@ eImgEffect DecodeUserChoice(char userInput)
 		xil_printf("GRAYSCALE");
 		break;
 	case '3':
+		imgEffect = ROTATE180;
+		xil_printf("ROTATE180");
 		break;
 	}
 
@@ -146,6 +148,9 @@ void ProcessImage(eImgEffect imgEffect)
 			break;
 		case GRAYSCALE:
 			effectGrayscale(srcFrame, destFrame, width, height, stride);
+			break;
+		case ROTATE180:
+			effectRotate180(srcFrame, destFrame, width, height, stride);
 			break;
 		default:
 			break;

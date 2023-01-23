@@ -50,3 +50,26 @@ void effectGrayscale(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 str
 		lineStart += stride;
 	}
 }
+
+void effectRotate180(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
+{
+    u32 line, col;
+    u32 lineStartSrc = (height - 1) * stride;
+    u32 lineStartDst = 0;
+    tRBGPixel *srcPixel;
+    tRBGPixel *dstPixel;
+
+    for(line = 0; line < height; line++)
+    {
+        for(col = 0; col < (width * sizeof(tRBGPixel)); col += sizeof(tRBGPixel))
+        {
+            srcPixel = (tRBGPixel*)&srcFrame[col + lineStartSrc];
+            dstPixel = (tRBGPixel*)&destFrame[col + lineStartDst];
+
+            memcpy(dstPixel, srcPixel, sizeof(tRBGPixel));
+        }
+        lineStartSrc -= stride;
+        lineStartDst += stride;
+    }
+}
+
