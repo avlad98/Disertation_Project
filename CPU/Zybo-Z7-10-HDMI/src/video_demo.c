@@ -91,9 +91,9 @@ const ivt_t ivt[] = {
 
 int main(void)
 {
-	DemoInitialize();
+	Init();
 
-	DemoRun2();
+	MainLoop();
 
 	return 0;
 }
@@ -129,7 +129,7 @@ void ProcessImage(eImgEffect imgEffect)
 	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
 }
 
-void DemoRun2()
+void MainLoop()
 {
 	eImgEffect imgEffect = ORIGINAL;
 	char userInput = 0;
@@ -161,7 +161,7 @@ void DemoRun2()
 }
 
 
-void DemoInitialize()
+void Init()
 {
 	int Status;
 	XAxiVdma_Config *vdmaConfig;
@@ -237,91 +237,7 @@ void DemoInitialize()
 	 */
 	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
 
-//	for (i = 0; i < DISPLAY_NUM_FRAMES; i++) {
-//		InitWhiteFrame(frameBuf[i], dispCtrl.vMode.width, dispCtrl.vMode.height);
-//	}
-
 	memset(frameBuf, 0xFF, sizeof(frameBuf));
-
-	return;
-}
-
-
-void DemoRun()
-{
-	int nextFrame = 0;
-	char userInput = 0;
-
-	/* Flush UART FIFO */
-	while (XUartPs_IsReceiveData(UART_BASEADDR))
-	{
-		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-	}
-
-	while (userInput != 'q')
-	{
-		fRefresh = 0;
-
-		/* Wait for data on UART */
-		while (!XUartPs_IsReceiveData(UART_BASEADDR) && !fRefresh)
-		{}
-
-		/* Store the first character in the UART receive FIFO and echo it */
-		if (XUartPs_IsReceiveData(UART_BASEADDR))
-		{
-			userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-			xil_printf("%c", userInput);
-		}
-		else  //Refresh triggered by video detect interrupt
-		{
-			userInput = 'r';
-		}
-
-		switch (userInput)
-		{
-		case '2':
-			nextFrame = dispCtrl.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 1;
-			}
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-			break;
-		case '5':
-			if (videoCapt.state == VIDEO_STREAMING)
-				VideoStop(&videoCapt);
-			else
-				VideoStart(&videoCapt);
-			break;
-		case '6':
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 1;
-			}
-			VideoChangeFrame(&videoCapt, nextFrame);
-			break;
-		case '7':
-			Xil_DCacheDisable();
-			nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
-			VideoStop(&videoCapt);
-			DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-			Xil_DCacheEnable();
-			break;
-		case '8':
-			nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
-			VideoStop(&videoCapt);
-			DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-			break;
-		default :
-			xil_printf("\n\rInvalid Selection");
-			TimerDelay(500000);
-		}
-	}
 
 	return;
 }
@@ -347,107 +263,6 @@ int DemoGetInactiveFrame(DisplayCtrl *DispCtrlPtr, VideoCapture *VideoCaptPtr)
 	xil_printf("Unreachable error state reached. All buffers are in use.\r\n");
 
 	return -1;
-}
-
-void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
-{
-	u32 line, col;
-	u32 lineStart = 0;
-	Xil_DCacheInvalidateRange((unsigned int) srcFrame, DEMO_MAX_FRAME);
-	for(col = 0; col < height; col++)
-	{
-		for(line = 0; line < (width * sizeof(tRBGPixel)); line+=(sizeof(tRBGPixel)))
-		{
-			destFrame[line + lineStart] = ~srcFrame[line + lineStart];         //Red
-			destFrame[line + lineStart + 1] = ~srcFrame[line + lineStart + 1]; //Blue
-			destFrame[line + lineStart + 2] = ~srcFrame[line + lineStart + 2]; //Green
-		}
-		lineStart += stride;
-	}
-	/*
-	 * Flush the framebuffer memory range to ensure changes are written to the
-	 * actual memory, and therefore accessible by the VDMA.
-	 */
-	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
-}
-
-
-/*
- * Bilinear interpolation algorithm. Assumes both frames have the same stride.
- */
-void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride)
-{
-	float xInc, yInc; // Width/height of a destination frame pixel in the source frame coordinate system
-	float xcoSrc, ycoSrc; // Location of the destination pixel being operated on in the source frame coordinate system
-	float x1y1, x2y1, x1y2, x2y2; //Used to store the color data of the four nearest source pixels to the destination pixel
-	int ix1y1, ix2y1, ix1y2, ix2y2; //indexes into the source frame for the four nearest source pixels to the destination pixel
-	float xDist, yDist; //distances between destination pixel and x1y1 source pixels in source frame coordinate system
-
-	int xcoDest, ycoDest; // Location of the destination pixel being operated on in the destination coordinate system
-	int iy1; //Used to store the index of the first source pixel in the line with y1
-	int iDest; //index of the pixel data in the destination frame being operated on
-
-	int i;
-
-	xInc = ((float) srcWidth - 1.0) / ((float) destWidth);
-	yInc = ((float) srcHeight - 1.0) / ((float) destHeight);
-
-	ycoSrc = 0.0;
-	for (ycoDest = 0; ycoDest < destHeight; ycoDest++)
-	{
-		iy1 = ((int) ycoSrc) * stride;
-		yDist = ycoSrc - ((float) ((int) ycoSrc));
-
-		/*
-		 * Save some cycles in the loop below by presetting the destination
-		 * index to the first pixel in the current line
-		 */
-		iDest = ycoDest * stride;
-
-		xcoSrc = 0.0;
-		for (xcoDest = 0; xcoDest < destWidth; xcoDest++)
-		{
-			ix1y1 = iy1 + ((int) xcoSrc) * 3;
-			ix2y1 = ix1y1 + 3;
-			ix1y2 = ix1y1 + stride;
-			ix2y2 = ix1y1 + stride + 3;
-
-			xDist = xcoSrc - ((float) ((int) xcoSrc));
-
-			/*
-			 * For loop handles all three colors
-			 */
-			for (i = 0; i < 3; i++)
-			{
-				x1y1 = (float) srcFrame[ix1y1 + i];
-				x2y1 = (float) srcFrame[ix2y1 + i];
-				x1y2 = (float) srcFrame[ix1y2 + i];
-				x2y2 = (float) srcFrame[ix2y2 + i];
-
-				/*
-				 * Bilinear interpolation function
-				 */
-				destFrame[iDest] = (u8) ((1.0-yDist)*((1.0-xDist)*x1y1+xDist*x2y1) + yDist*((1.0-xDist)*x1y2+xDist*x2y2));
-				iDest++;
-			}
-			xcoSrc += xInc;
-		}
-		ycoSrc += yInc;
-	}
-
-	/*
-	 * Flush the framebuffer memory range to ensure changes are written to the
-	 * actual memory, and therefore accessible by the VDMA.
-	 */
-	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
-
-	return;
-}
-
-void InitWhiteFrame(u8 *frame, u32 width, u32 height)
-{
-	memset(frame, 0xFF, width * height * sizeof(tRBGPixel));
-	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 }
 
 void DemoISR(void *callBackRef, void *pVideo)
