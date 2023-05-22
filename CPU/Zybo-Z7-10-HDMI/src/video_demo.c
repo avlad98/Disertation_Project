@@ -42,6 +42,7 @@
 #include "xtime_l.h" // Xilinx timer library
 
 #include "xil_cache.h"
+#include "AXI4_ImageProcessor.h"
 
 /*
  * XPAR redefines
@@ -144,6 +145,23 @@ void ProcessImage(eImgEffect imgEffect)
 
 void MainLoop()
 {
+
+//	INCLUDEFILES=$(wildcard *.h)
+//	LIBSOURCES=$(wildcard *.c)
+//	OUTS = $(wildcard *.o)
+
+	usleep(S_to_uS(15));
+	AXI4_IMAGEPROCESSOR_mWriteReg(
+			XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
+			AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
+			0x1);
+	usleep(S_to_uS(5));
+	AXI4_IMAGEPROCESSOR_mWriteReg(
+			XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
+			AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
+			0x0);
+
+
 //	eImgEffect imgEffect = ORIGINAL;
 //	char userInput = 0;
 //	XTime tStart, tEnd;

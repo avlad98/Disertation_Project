@@ -51,7 +51,11 @@
                                 								
                                 <option id="xilinx.gnu.compiler.option.debugging.level.499760527" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
                                 								
-                                <option id="xilinx.gnu.compiler.inferred.swplatform.includes.2135839865" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes"/>
+                                <option id="xilinx.gnu.compiler.inferred.swplatform.includes.2135839865" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="${resolvePlatformFile:project=Zybo-Z7-10-HDMI,fileType=bspInclude}"/>
+                                    								
+                                </option>
                                 								
                                 <option id="xilinx.gnu.compiler.misc.other.2074986118" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot; -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard" valueType="string"/>
                                 								

@@ -10,11 +10,12 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 374.277 ; gain = 52.480
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 374.234 ; gain = 64.047
 INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/ip_repo/AXI4_ImageProcessor_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ipdefs/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 463.199 ; gain = 64.035
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 460.844 ; gain = 61.504
 Command: read_checkpoint -auto_incremental -incremental D:/../WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/../WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,189 +28,188 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 66856
+INFO: [Synth 8-7075] Helper process launched with PID 67960
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1260.262 ; gain = 408.543
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1262.715 ; gain = 410.242
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dynclk_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axi_dynclk_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dynclk_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axi_dynclk_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_video_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axi_gpio_video_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_video_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axi_gpio_video_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_gp0_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1116]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_ZD2IXJ' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3219]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_ZD2IXJ' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3219]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_13ZP1O6' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3344]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_13ZP1O6' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3344]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_Y154GK' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3490]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_Y154GK' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3490]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_15LWNJP' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3622]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_15LWNJP' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3622]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_WF9HZL' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3754]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_WF9HZL' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3754]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_119IHAT' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3886]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_119IHAT' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3886]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_2' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_xbar_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_2' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_xbar_2_stub.v:5]
-WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (15) of module 'design_1_xbar_2' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2042]
-WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (15) of module 'design_1_xbar_2' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2046]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_gp0_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1116]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_hp0_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2081]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_17E8JHA' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2693]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_m00_regslice_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_m00_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_m00_regslice_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_m00_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_17E8JHA' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2693]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_S4BDUK' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4191]
-INFO: [Synth 8-6157] synthesizing module 'design_1_s00_regslice_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_s00_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_s00_regslice_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_s00_regslice_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_s00_regslice_0' is unconnected for instance 's00_regslice' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4318]
-WARNING: [Synth 8-7023] instance 's00_regslice' of module 'design_1_s00_regslice_0' has 34 connections declared, but only 33 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4318]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_S4BDUK' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4191]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_12AUBLP' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4354]
-INFO: [Synth 8-6157] synthesizing module 'design_1_s01_regslice_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_s01_regslice_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_s01_regslice_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_s01_regslice_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_s01_regslice_0' is unconnected for instance 's01_regslice' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4505]
-WARNING: [Synth 8-7023] instance 's01_regslice' of module 'design_1_s01_regslice_0' has 40 connections declared, but only 39 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4505]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_12AUBLP' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4354]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_3' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_xbar_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_3' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_xbar_3_stub.v:5]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2664]
-WARNING: [Synth 8-689] width (64) of port connection 's_axi_rdata' does not match port width (128) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2681]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2682]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2684]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2685]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_3' is unconnected for instance 'xbar' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2614]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_3' is unconnected for instance 'xbar' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2614]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_3' has 78 connections declared, but only 76 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2614]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_hp0_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2081]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axi_vdma_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axi_vdma_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mm2s_frame_ptr_out' of module 'design_1_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:682]
-WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'design_1_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:682]
-WARNING: [Synth 8-7023] instance 'axi_vdma_0' of module 'design_1_axi_vdma_0_0' has 67 connections declared, but only 65 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:682]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_in_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axis_subset_converter_in_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_in_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axis_subset_converter_in_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_out_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axis_subset_converter_out_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_out_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_axis_subset_converter_out_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'design_1_axis_subset_converter_out_0' is unconnected for instance 'axis_subset_converter_out' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:761]
-WARNING: [Synth 8-7023] instance 'axis_subset_converter_out' of module 'design_1_axis_subset_converter_out_0' has 14 connections declared, but only 13 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:761]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:775]
-INFO: [Synth 8-6157] synthesizing module 'design_1_brightness_adjustment_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_brightness_adjustment_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_brightness_adjustment_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_brightness_adjustment_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'color' of module 'design_1_brightness_adjustment_0_0' is unconnected for instance 'brightness_adjustment_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:775]
-WARNING: [Synth 8-7023] instance 'brightness_adjustment_0' of module 'design_1_brightness_adjustment_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:775]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:779]
-INFO: [Synth 8-6157] synthesizing module 'design_1_color_inversion_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_color_inversion_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_color_inversion_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_color_inversion_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'color' of module 'design_1_color_inversion_0_0' is unconnected for instance 'color_inversion_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:779]
-WARNING: [Synth 8-7023] instance 'color_inversion_0' of module 'design_1_color_inversion_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:779]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:783]
-INFO: [Synth 8-6157] synthesizing module 'design_1_contrast_adjustment_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_contrast_adjustment_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_contrast_adjustment_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_contrast_adjustment_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'color' of module 'design_1_contrast_adjustment_0_0' is unconnected for instance 'contrast_adjustment_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:783]
-WARNING: [Synth 8-7023] instance 'contrast_adjustment_0' of module 'design_1_contrast_adjustment_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:783]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dvi2rgb_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_dvi2rgb_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dvi2rgb_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_dvi2rgb_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'aPixelClkLckd' of module 'design_1_dvi2rgb_0_0' is unconnected for instance 'dvi2rgb_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:787]
-WARNING: [Synth 8-7023] instance 'dvi2rgb_0' of module 'design_1_dvi2rgb_0_0' has 20 connections declared, but only 19 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:787]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:807]
-INFO: [Synth 8-6157] synthesizing module 'design_1_edge_detection_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_edge_detection_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_edge_detection_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_edge_detection_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'color' of module 'design_1_edge_detection_0_0' is unconnected for instance 'edge_detection_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:807]
-WARNING: [Synth 8-7023] instance 'edge_detection_0' of module 'design_1_edge_detection_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:807]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:811]
-INFO: [Synth 8-6157] synthesizing module 'design_1_emboss_effect_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_emboss_effect_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_emboss_effect_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_emboss_effect_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'color' of module 'design_1_emboss_effect_0_0' is unconnected for instance 'emboss_effect_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:811]
-WARNING: [Synth 8-7023] instance 'emboss_effect_0' of module 'design_1_emboss_effect_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:811]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:815]
-INFO: [Synth 8-6157] synthesizing module 'design_1_grayscale_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_grayscale_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_grayscale_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_grayscale_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'color' of module 'design_1_grayscale_0_0' is unconnected for instance 'grayscale_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:815]
-WARNING: [Synth 8-7023] instance 'grayscale_0' of module 'design_1_grayscale_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:815]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:819]
-INFO: [Synth 8-6157] synthesizing module 'design_1_posterize_effect_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_posterize_effect_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_posterize_effect_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_posterize_effect_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'color' of module 'design_1_posterize_effect_0_0' is unconnected for instance 'posterize_effect_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:819]
-WARNING: [Synth 8-7023] instance 'posterize_effect_0' of module 'design_1_posterize_effect_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:819]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:823]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:823]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:823]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:823]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_fclk0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_fclk0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_fclk0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_fclk0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_fclk0_0' is unconnected for instance 'proc_sys_reset_fclk0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:831]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_fclk0_0' is unconnected for instance 'proc_sys_reset_fclk0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:831]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_fclk0_0' is unconnected for instance 'proc_sys_reset_fclk0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:831]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_fclk0' of module 'design_1_proc_sys_reset_fclk0_0' has 10 connections declared, but only 7 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:831]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_fclk1_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_fclk1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_fclk1_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_fclk1_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_fclk1_0' is unconnected for instance 'proc_sys_reset_fclk1' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:839]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_fclk1_0' is unconnected for instance 'proc_sys_reset_fclk1' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:839]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_fclk1_0' is unconnected for instance 'proc_sys_reset_fclk1' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:839]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_fclk1' of module 'design_1_proc_sys_reset_fclk1_0' has 10 connections declared, but only 7 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:839]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_processing_system7_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_processing_system7_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:847]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:847]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:847]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:847]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:847]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:847]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 119 connections declared, but only 113 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:847]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rgb2dvi_1_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_rgb2dvi_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rgb2dvi_1_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_rgb2dvi_1_0_stub.v:5]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:973]
-INFO: [Synth 8-6157] synthesizing module 'design_1_sepia_tone_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_sepia_tone_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_sepia_tone_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_sepia_tone_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'color' of module 'design_1_sepia_tone_0_0' is unconnected for instance 'sepia_tone_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:973]
-WARNING: [Synth 8-7023] instance 'sepia_tone_0' of module 'design_1_sepia_tone_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:973]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:977]
-INFO: [Synth 8-6157] synthesizing module 'design_1_solarize_effect_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_solarize_effect_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_solarize_effect_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_solarize_effect_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'color' of module 'design_1_solarize_effect_0_0' is unconnected for instance 'solarize_effect_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:977]
-WARNING: [Synth 8-7023] instance 'solarize_effect_0' of module 'design_1_solarize_effect_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:977]
+INFO: [Synth 8-6157] synthesizing module 'design_1_AXI4_ImageProcessor_0_1' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_AXI4_ImageProcessor_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_AXI4_ImageProcessor_0_1' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_AXI4_ImageProcessor_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dynclk_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axi_dynclk_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dynclk_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axi_dynclk_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_video_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axi_gpio_video_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_video_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axi_gpio_video_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_gp0_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1184]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_ZD2IXJ' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3433]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_ZD2IXJ' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3433]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_13ZP1O6' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3558]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_13ZP1O6' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3558]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_Y154GK' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3704]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_Y154GK' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3704]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_15LWNJP' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3836]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_15LWNJP' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3836]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_WF9HZL' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3968]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_WF9HZL' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:3968]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_175LJ1S' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4100]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_175LJ1S' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4100]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_119IHAT' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4246]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_119IHAT' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4246]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_2' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_xbar_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_2' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_xbar_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_gp0_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1184]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_hp0_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2295]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_17E8JHA' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2907]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_m00_regslice_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_m00_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_m00_regslice_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_m00_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_17E8JHA' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2907]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_S4BDUK' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4551]
+INFO: [Synth 8-6157] synthesizing module 'design_1_s00_regslice_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_s00_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_s00_regslice_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_s00_regslice_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_s00_regslice_0' is unconnected for instance 's00_regslice' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4678]
+WARNING: [Synth 8-7023] instance 's00_regslice' of module 'design_1_s00_regslice_0' has 34 connections declared, but only 33 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4678]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_S4BDUK' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4551]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_12AUBLP' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4714]
+INFO: [Synth 8-6157] synthesizing module 'design_1_s01_regslice_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_s01_regslice_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_s01_regslice_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_s01_regslice_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_s01_regslice_0' is unconnected for instance 's01_regslice' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4865]
+WARNING: [Synth 8-7023] instance 's01_regslice' of module 'design_1_s01_regslice_0' has 40 connections declared, but only 39 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4865]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_12AUBLP' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:4714]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_3' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_xbar_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_3' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_xbar_3_stub.v:5]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2878]
+WARNING: [Synth 8-689] width (64) of port connection 's_axi_rdata' does not match port width (128) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2895]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2896]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2898]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'design_1_xbar_3' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2899]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_3' is unconnected for instance 'xbar' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2828]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_3' is unconnected for instance 'xbar' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2828]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_3' has 78 connections declared, but only 76 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2828]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_hp0_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:2295]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axi_vdma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axi_vdma_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mm2s_frame_ptr_out' of module 'design_1_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:749]
+WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'design_1_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:749]
+WARNING: [Synth 8-7023] instance 'axi_vdma_0' of module 'design_1_axi_vdma_0_0' has 67 connections declared, but only 65 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:749]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_in_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axis_subset_converter_in_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_in_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axis_subset_converter_in_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_out_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axis_subset_converter_out_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_out_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_axis_subset_converter_out_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'design_1_axis_subset_converter_out_0' is unconnected for instance 'axis_subset_converter_out' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:828]
+WARNING: [Synth 8-7023] instance 'axis_subset_converter_out' of module 'design_1_axis_subset_converter_out_0' has 14 connections declared, but only 13 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:828]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:842]
+INFO: [Synth 8-6157] synthesizing module 'design_1_brightness_adjustment_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_brightness_adjustment_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_brightness_adjustment_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_brightness_adjustment_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'color' of module 'design_1_brightness_adjustment_0_0' is unconnected for instance 'brightness_adjustment_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:842]
+WARNING: [Synth 8-7023] instance 'brightness_adjustment_0' of module 'design_1_brightness_adjustment_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:842]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:846]
+INFO: [Synth 8-6157] synthesizing module 'design_1_color_inversion_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_color_inversion_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_color_inversion_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_color_inversion_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'color' of module 'design_1_color_inversion_0_0' is unconnected for instance 'color_inversion_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:846]
+WARNING: [Synth 8-7023] instance 'color_inversion_0' of module 'design_1_color_inversion_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:846]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:850]
+INFO: [Synth 8-6157] synthesizing module 'design_1_contrast_adjustment_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_contrast_adjustment_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_contrast_adjustment_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_contrast_adjustment_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'color' of module 'design_1_contrast_adjustment_0_0' is unconnected for instance 'contrast_adjustment_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:850]
+WARNING: [Synth 8-7023] instance 'contrast_adjustment_0' of module 'design_1_contrast_adjustment_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:850]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dvi2rgb_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_dvi2rgb_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dvi2rgb_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_dvi2rgb_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'aPixelClkLckd' of module 'design_1_dvi2rgb_0_0' is unconnected for instance 'dvi2rgb_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:854]
+WARNING: [Synth 8-7023] instance 'dvi2rgb_0' of module 'design_1_dvi2rgb_0_0' has 20 connections declared, but only 19 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:854]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:874]
+INFO: [Synth 8-6157] synthesizing module 'design_1_edge_detection_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_edge_detection_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_edge_detection_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_edge_detection_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'color' of module 'design_1_edge_detection_0_0' is unconnected for instance 'edge_detection_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:874]
+WARNING: [Synth 8-7023] instance 'edge_detection_0' of module 'design_1_edge_detection_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:874]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:878]
+INFO: [Synth 8-6157] synthesizing module 'design_1_emboss_effect_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_emboss_effect_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_emboss_effect_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_emboss_effect_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'color' of module 'design_1_emboss_effect_0_0' is unconnected for instance 'emboss_effect_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:878]
+WARNING: [Synth 8-7023] instance 'emboss_effect_0' of module 'design_1_emboss_effect_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:878]
+INFO: [Synth 8-6157] synthesizing module 'design_1_grayscale_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_grayscale_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_grayscale_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_grayscale_0_0_stub.v:5]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:887]
+INFO: [Synth 8-6157] synthesizing module 'design_1_posterize_effect_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_posterize_effect_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_posterize_effect_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_posterize_effect_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'color' of module 'design_1_posterize_effect_0_0' is unconnected for instance 'posterize_effect_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:887]
+WARNING: [Synth 8-7023] instance 'posterize_effect_0' of module 'design_1_posterize_effect_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:887]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:891]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:891]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:891]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:891]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_fclk0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_fclk0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_fclk0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_fclk0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_fclk0_0' is unconnected for instance 'proc_sys_reset_fclk0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:899]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_fclk0_0' is unconnected for instance 'proc_sys_reset_fclk0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:899]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_fclk0_0' is unconnected for instance 'proc_sys_reset_fclk0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:899]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_fclk0' of module 'design_1_proc_sys_reset_fclk0_0' has 10 connections declared, but only 7 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:899]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_fclk1_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_fclk1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_fclk1_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_proc_sys_reset_fclk1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_fclk1_0' is unconnected for instance 'proc_sys_reset_fclk1' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:907]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_fclk1_0' is unconnected for instance 'proc_sys_reset_fclk1' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:907]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_fclk1_0' is unconnected for instance 'proc_sys_reset_fclk1' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:907]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_fclk1' of module 'design_1_proc_sys_reset_fclk1_0' has 10 connections declared, but only 7 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:907]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_processing_system7_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:915]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:915]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:915]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:915]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:915]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:915]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 119 connections declared, but only 113 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:915]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rgb2dvi_1_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_rgb2dvi_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rgb2dvi_1_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_rgb2dvi_1_0_stub.v:5]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+INFO: [Synth 8-6157] synthesizing module 'design_1_sepia_tone_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_sepia_tone_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_sepia_tone_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_sepia_tone_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'color' of module 'design_1_sepia_tone_0_0' is unconnected for instance 'sepia_tone_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+WARNING: [Synth 8-7023] instance 'sepia_tone_0' of module 'design_1_sepia_tone_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1041]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1045]
+INFO: [Synth 8-6157] synthesizing module 'design_1_solarize_effect_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_solarize_effect_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_solarize_effect_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_solarize_effect_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'color' of module 'design_1_solarize_effect_0_0' is unconnected for instance 'solarize_effect_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1045]
+WARNING: [Synth 8-7023] instance 'solarize_effect_0' of module 'design_1_solarize_effect_0_0' has 4 connections declared, but only 3 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1045]
 INFO: [Synth 8-6157] synthesizing module 'design_1_subset_converter_reset_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_subset_converter_reset_0/synth/design_1_subset_converter_reset_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_subset_converter_reset_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_subset_converter_reset_0/synth/design_1_subset_converter_reset_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'design_1_thresholding_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_thresholding_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_thresholding_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_thresholding_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_axi4s_vid_out_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_axi4s_vid_out_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'vid_vblank' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-WARNING: [Synth 8-7071] port 'vid_hblank' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-WARNING: [Synth 8-7071] port 'vid_field_id' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-WARNING: [Synth 8-7071] port 'locked' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-WARNING: [Synth 8-7071] port 'overflow' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-WARNING: [Synth 8-7071] port 'underflow' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-WARNING: [Synth 8-7071] port 'status' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-WARNING: [Synth 8-7071] port 'sof_state_out' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'design_1_v_axi4s_vid_out_0_0' has 32 connections declared, but only 23 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:988]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_in_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_v_tc_in_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_in_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_v_tc_in_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_out_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_v_tc_out_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_out_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_v_tc_out_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'fsync_out' of module 'design_1_v_tc_out_0' is unconnected for instance 'v_tc_out' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1042]
-WARNING: [Synth 8-7023] instance 'v_tc_out' of module 'design_1_v_tc_out_0' has 33 connections declared, but only 32 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1042]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_vid_in_axi4s_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_v_vid_in_axi4s_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_vid_in_axi4s_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-54320-DESKTOP-UR3KT7E/realtime/design_1_v_vid_in_axi4s_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'fid' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1075]
-WARNING: [Synth 8-7071] port 'vtd_vblank' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1075]
-WARNING: [Synth 8-7071] port 'vtd_hblank' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1075]
-WARNING: [Synth 8-7071] port 'vtd_field_id' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1075]
-WARNING: [Synth 8-7071] port 'overflow' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1075]
-WARNING: [Synth 8-7071] port 'underflow' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1075]
-WARNING: [Synth 8-7023] instance 'v_vid_in_axi4s_0' of module 'design_1_v_vid_in_axi4s_0_0' has 28 connections declared, but only 22 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1075]
+INFO: [Synth 8-6157] synthesizing module 'design_1_thresholding_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_thresholding_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_thresholding_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_thresholding_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_axi4s_vid_out_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_axi4s_vid_out_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'vid_vblank' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+WARNING: [Synth 8-7071] port 'vid_hblank' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+WARNING: [Synth 8-7071] port 'vid_field_id' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+WARNING: [Synth 8-7071] port 'locked' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+WARNING: [Synth 8-7071] port 'overflow' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+WARNING: [Synth 8-7071] port 'underflow' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+WARNING: [Synth 8-7071] port 'status' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+WARNING: [Synth 8-7071] port 'sof_state_out' of module 'design_1_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'design_1_v_axi4s_vid_out_0_0' has 32 connections declared, but only 23 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1056]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_in_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_v_tc_in_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_in_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_v_tc_in_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_out_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_v_tc_out_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_out_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_v_tc_out_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'fsync_out' of module 'design_1_v_tc_out_0' is unconnected for instance 'v_tc_out' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1110]
+WARNING: [Synth 8-7023] instance 'v_tc_out' of module 'design_1_v_tc_out_0' has 33 connections declared, but only 32 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1110]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_vid_in_axi4s_0_0' [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_v_vid_in_axi4s_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_vid_in_axi4s_0_0' (0#1) [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/.Xil/Vivado-7260-DESKTOP-UR3KT7E/realtime/design_1_v_vid_in_axi4s_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'fid' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1143]
+WARNING: [Synth 8-7071] port 'vtd_vblank' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1143]
+WARNING: [Synth 8-7071] port 'vtd_hblank' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1143]
+WARNING: [Synth 8-7071] port 'vtd_field_id' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1143]
+WARNING: [Synth 8-7071] port 'overflow' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1143]
+WARNING: [Synth 8-7071] port 'underflow' of module 'design_1_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1143]
+WARNING: [Synth 8-7023] instance 'v_vid_in_axi4s_0' of module 'design_1_v_vid_in_axi4s_0_0' has 28 connections declared, but only 22 given [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/synth/design_1.v:1143]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
@@ -332,18 +332,18 @@ WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1367.301 ; gain = 515.582
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1369.145 ; gain = 516.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1367.301 ; gain = 515.582
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1369.145 ; gain = 516.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1367.301 ; gain = 515.582
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1369.145 ; gain = 516.672
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1367.301 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1369.145 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -414,6 +414,8 @@ Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPG
 Finished Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_posterize_effect_0_0/design_1_posterize_effect_0_0/design_1_posterize_effect_0_0_in_context.xdc] for cell 'design_1_i/posterize_effect_0'
 Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_solarize_effect_0_0/design_1_solarize_effect_0_0/design_1_solarize_effect_0_0_in_context.xdc] for cell 'design_1_i/solarize_effect_0'
 Finished Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_solarize_effect_0_0/design_1_solarize_effect_0_0/design_1_solarize_effect_0_0_in_context.xdc] for cell 'design_1_i/solarize_effect_0'
+Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_AXI4_ImageProcessor_0_1/design_1_AXI4_ImageProcessor_0_1/design_1_AXI4_ImageProcessor_0_1_in_context.xdc] for cell 'design_1_i/AXI4_ImageProcessor_0'
+Finished Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_AXI4_ImageProcessor_0_1/design_1_AXI4_ImageProcessor_0_1/design_1_AXI4_ImageProcessor_0_1_in_context.xdc] for cell 'design_1_i/AXI4_ImageProcessor_0'
 Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc]
 WARNING: [Vivado 12-2489] -waveform contains time 6.730500 which will be rounded to 6.731 to ensure it is an integer multiple of 1 picosecond [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc:73]
 Finished Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc]
@@ -423,12 +425,12 @@ Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPG
 Finished Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1395.234 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1399.227 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1395.234 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1399.227 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/proc_sys_reset_0' at clock pin 'slowest_sync_clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/v_tc_in' at clock pin 'clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/v_vid_in_axi4s_0' at clock pin 'vid_io_in_clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
@@ -436,14 +438,14 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -780,11 +782,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/sepia_tone_0. (constra
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/contrast_adjustment_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/posterize_effect_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/solarize_effect_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/AXI4_ImageProcessor_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -807,25 +810,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -843,37 +846,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -890,92 +893,94 @@ Report BlackBoxes:
 |5     |design_1_m00_regslice_0              |         1|
 |6     |design_1_s00_regslice_0              |         1|
 |7     |design_1_s01_regslice_0              |         1|
-|8     |design_1_axi_dynclk_0_0              |         1|
-|9     |design_1_axi_gpio_video_0            |         1|
-|10    |design_1_axi_vdma_0_0                |         1|
-|11    |design_1_axis_subset_converter_in_0  |         1|
-|12    |design_1_axis_subset_converter_out_0 |         1|
-|13    |design_1_brightness_adjustment_0_0   |         1|
-|14    |design_1_color_inversion_0_0         |         1|
-|15    |design_1_contrast_adjustment_0_0     |         1|
-|16    |design_1_dvi2rgb_0_0                 |         1|
-|17    |design_1_edge_detection_0_0          |         1|
-|18    |design_1_emboss_effect_0_0           |         1|
-|19    |design_1_grayscale_0_0               |         1|
-|20    |design_1_posterize_effect_0_0        |         1|
-|21    |design_1_proc_sys_reset_0_0          |         1|
-|22    |design_1_proc_sys_reset_fclk0_0      |         1|
-|23    |design_1_proc_sys_reset_fclk1_0      |         1|
-|24    |design_1_processing_system7_0_0      |         1|
-|25    |design_1_rgb2dvi_1_0                 |         1|
-|26    |design_1_sepia_tone_0_0              |         1|
-|27    |design_1_solarize_effect_0_0         |         1|
-|28    |design_1_thresholding_0_0            |         1|
-|29    |design_1_v_axi4s_vid_out_0_0         |         1|
-|30    |design_1_v_tc_in_0                   |         1|
-|31    |design_1_v_tc_out_0                  |         1|
-|32    |design_1_v_vid_in_axi4s_0_0          |         1|
+|8     |design_1_AXI4_ImageProcessor_0_1     |         1|
+|9     |design_1_axi_dynclk_0_0              |         1|
+|10    |design_1_axi_gpio_video_0            |         1|
+|11    |design_1_axi_vdma_0_0                |         1|
+|12    |design_1_axis_subset_converter_in_0  |         1|
+|13    |design_1_axis_subset_converter_out_0 |         1|
+|14    |design_1_brightness_adjustment_0_0   |         1|
+|15    |design_1_color_inversion_0_0         |         1|
+|16    |design_1_contrast_adjustment_0_0     |         1|
+|17    |design_1_dvi2rgb_0_0                 |         1|
+|18    |design_1_edge_detection_0_0          |         1|
+|19    |design_1_emboss_effect_0_0           |         1|
+|20    |design_1_grayscale_0_0               |         1|
+|21    |design_1_posterize_effect_0_0        |         1|
+|22    |design_1_proc_sys_reset_0_0          |         1|
+|23    |design_1_proc_sys_reset_fclk0_0      |         1|
+|24    |design_1_proc_sys_reset_fclk1_0      |         1|
+|25    |design_1_processing_system7_0_0      |         1|
+|26    |design_1_rgb2dvi_1_0                 |         1|
+|27    |design_1_sepia_tone_0_0              |         1|
+|28    |design_1_solarize_effect_0_0         |         1|
+|29    |design_1_thresholding_0_0            |         1|
+|30    |design_1_v_axi4s_vid_out_0_0         |         1|
+|31    |design_1_v_tc_in_0                   |         1|
+|32    |design_1_v_tc_out_0                  |         1|
+|33    |design_1_v_vid_in_axi4s_0_0          |         1|
 +------+-------------------------------------+----------+
 
 Report Cell Usage: 
 +------+-----------------------------------+------+
 |      |Cell                               |Count |
 +------+-----------------------------------+------+
-|1     |design_1_auto_pc                   |     2|
-|3     |design_1_axi_dynclk_0              |     1|
-|4     |design_1_axi_gpio_video            |     1|
-|5     |design_1_axi_vdma_0                |     1|
-|6     |design_1_axis_subset_converter_in  |     1|
-|7     |design_1_axis_subset_converter_out |     1|
-|8     |design_1_brightness_adjustment_0   |     1|
-|9     |design_1_color_inversion_0         |     1|
-|10    |design_1_contrast_adjustment_0     |     1|
-|11    |design_1_dvi2rgb_0                 |     1|
-|12    |design_1_edge_detection_0          |     1|
-|13    |design_1_emboss_effect_0           |     1|
-|14    |design_1_grayscale_0               |     1|
-|15    |design_1_m00_regslice              |     1|
-|16    |design_1_posterize_effect_0        |     1|
-|17    |design_1_proc_sys_reset_0          |     1|
-|18    |design_1_proc_sys_reset_fclk0      |     1|
-|19    |design_1_proc_sys_reset_fclk1      |     1|
-|20    |design_1_processing_system7_0      |     1|
-|21    |design_1_rgb2dvi_1                 |     1|
-|22    |design_1_s00_regslice              |     1|
-|23    |design_1_s01_regslice              |     1|
-|24    |design_1_sepia_tone_0              |     1|
-|25    |design_1_solarize_effect_0         |     1|
-|26    |design_1_thresholding_0            |     1|
-|27    |design_1_v_axi4s_vid_out_0         |     1|
-|28    |design_1_v_tc_in                   |     1|
-|29    |design_1_v_tc_out                  |     1|
-|30    |design_1_v_vid_in_axi4s_0          |     1|
-|31    |design_1_xbar                      |     2|
-|33    |IOBUF                              |     4|
-|34    |OBUF                               |     1|
+|1     |design_1_AXI4_ImageProcessor_0     |     1|
+|2     |design_1_auto_pc                   |     2|
+|4     |design_1_axi_dynclk_0              |     1|
+|5     |design_1_axi_gpio_video            |     1|
+|6     |design_1_axi_vdma_0                |     1|
+|7     |design_1_axis_subset_converter_in  |     1|
+|8     |design_1_axis_subset_converter_out |     1|
+|9     |design_1_brightness_adjustment_0   |     1|
+|10    |design_1_color_inversion_0         |     1|
+|11    |design_1_contrast_adjustment_0     |     1|
+|12    |design_1_dvi2rgb_0                 |     1|
+|13    |design_1_edge_detection_0          |     1|
+|14    |design_1_emboss_effect_0           |     1|
+|15    |design_1_grayscale_0               |     1|
+|16    |design_1_m00_regslice              |     1|
+|17    |design_1_posterize_effect_0        |     1|
+|18    |design_1_proc_sys_reset_0          |     1|
+|19    |design_1_proc_sys_reset_fclk0      |     1|
+|20    |design_1_proc_sys_reset_fclk1      |     1|
+|21    |design_1_processing_system7_0      |     1|
+|22    |design_1_rgb2dvi_1                 |     1|
+|23    |design_1_s00_regslice              |     1|
+|24    |design_1_s01_regslice              |     1|
+|25    |design_1_sepia_tone_0              |     1|
+|26    |design_1_solarize_effect_0         |     1|
+|27    |design_1_thresholding_0            |     1|
+|28    |design_1_v_axi4s_vid_out_0         |     1|
+|29    |design_1_v_tc_in                   |     1|
+|30    |design_1_v_tc_out                  |     1|
+|31    |design_1_v_vid_in_axi4s_0          |     1|
+|32    |design_1_xbar                      |     2|
+|34    |IOBUF                              |     4|
+|35    |OBUF                               |     1|
 +------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1399.566 ; gain = 547.094
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 69 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 1395.938 ; gain = 515.582
-Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1395.938 ; gain = 544.219
+Synthesis finished with 0 errors, 0 critical warnings and 71 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1399.566 ; gain = 516.672
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1399.566 ; gain = 547.094
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1395.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 1399.566 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1395.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1409.934 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 4 instances
 
-Synth Design complete, checksum: 78532865
+Synth Design complete, checksum: 97fd9601
 INFO: [Common 17-83] Releasing license: Synthesis
-141 Infos, 191 Warnings, 0 Critical Warnings and 0 Errors encountered.
+146 Infos, 186 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1395.938 ; gain = 919.641
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1409.934 ; gain = 935.301
 INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May 22 12:40:41 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon May 22 19:40:45 2023...

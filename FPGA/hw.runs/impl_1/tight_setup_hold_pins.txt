@@ -1,0 +1,19 @@
++========================+===================+=========================================================================+
+| Launch Setup Clock     | Launch Hold Clock | Pin                                                                     |
++========================+===================+=========================================================================+
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[0].DataEncoder/n1d_1_reg[2]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[1].DataEncoder/n1d_1_reg[2]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[0].DataEncoder/n1d_1_reg[3]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[1].DataEncoder/n1d_1_reg[3]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[2].DataEncoder/n1d_1_reg[2]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[0].DataEncoder/n1d_1_reg[1]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[2].DataEncoder/n1d_1_reg[3]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[1].DataEncoder/n1d_1_reg[1]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[0].DataEncoder/n1d_1_reg[0]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[2].DataEncoder/n1d_1_reg[1]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[1].DataEncoder/pDataOut_1_reg[0]/D |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[2].DataEncoder/n1d_1_reg[0]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[1].DataEncoder/n1d_1_reg[0]/D      |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[0].DataEncoder/pDataOut_1_reg[0]/D |
+| axi_dynclk_0_PXL_CLK_O | clk_fpga_0        | design_1_i/rgb2dvi_1/U0/DataEncoders[2].DataEncoder/pDataOut_1_reg[0]/D |
++------------------------+-------------------+-------------------------------------------------------------------------+

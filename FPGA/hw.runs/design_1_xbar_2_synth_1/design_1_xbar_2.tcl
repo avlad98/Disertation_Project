@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2.tcl"
+  variable script "D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_xbar_2_synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -79,19 +80,22 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.cache/wt [current_project]
-set_property parent.project_path D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.xpr [current_project]
+set_property webtalk.parent_dir D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.cache/wt [current_project]
+set_property parent.project_path D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.ipdefs/repo [current_project]
+set_property ip_repo_paths {
+  d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/ip_repo/AXI4_ImageProcessor_1_0
+  d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ipdefs/repo
+} [current_project]
 update_ip_catalog
-set_property ip_output_repo d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.cache/ip [current_project]
+set_property ip_output_repo d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.srcs/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2.xci
-set_property used_in_implementation false [get_files -all d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_ooc.xdc]
+read_ip -quiet D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.srcs/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2.xci
+set_property used_in_implementation false [get_files -all d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -107,7 +111,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_xbar_2_synth_1 -new_name design_1_xbar_2 -ip [get_ips design_1_xbar_2]]
+set cacheID [config_ip_cache -export -no_bom  -dir D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_xbar_2_synth_1 -new_name design_1_xbar_2 -ip [get_ips design_1_xbar_2]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -162,32 +166,32 @@ create_report "design_1_xbar_2_synth_1_synth_report_utilization_0" "report_utili
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2.dcp d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2.dcp
+  file copy -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2.dcp d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.v
+  write_verilog -force -mode synth_stub d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.vhdl
+  write_vhdl -force -mode synth_stub d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_sim_netlist.v
+  write_verilog -force -mode funcsim d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -197,47 +201,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2.dcp d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2.dcp
+  file copy -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2.dcp d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2_stub.v d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.v
+  file rename -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2_stub.v d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2_stub.vhdl d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.vhdl
+  file rename -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2_stub.vhdl d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2_sim_netlist.v d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_sim_netlist.v
+  file rename -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2_sim_netlist.v d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2_sim_netlist.vhdl d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_sim_netlist.vhdl
+  file rename -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_xbar_2_synth_1/design_1_xbar_2_sim_netlist.vhdl d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cacheID 
 
-if {[file isdir D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.ip_user_files/ip/design_1_xbar_2]} {
+if {[file isdir D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ip_user_files/ip/design_1_xbar_2]} {
   catch { 
-    file copy -force d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.v D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.ip_user_files/ip/design_1_xbar_2
+    file copy -force d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.v D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ip_user_files/ip/design_1_xbar_2
   }
 }
 
-if {[file isdir D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.ip_user_files/ip/design_1_xbar_2]} {
+if {[file isdir D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ip_user_files/ip/design_1_xbar_2]} {
   catch { 
-    file copy -force d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.vhdl D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.ip_user_files/ip/design_1_xbar_2
+    file copy -force d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2_stub.vhdl D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ip_user_files/ip/design_1_xbar_2
   }
 }
 file delete __synthesis_is_running__

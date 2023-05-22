@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Mon May 22 12:45:57 2023
+| Date             : Mon May 22 19:46:42 2023
 | Host             : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.056 |       12 |       --- |             --- |
-| Slice Logic              |     0.011 |    24009 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     6997 |     17600 |           39.76 |
-|   Register               |     0.001 |    13563 |     35200 |           38.53 |
-|   CARRY4                 |     0.001 |      360 |      4400 |            8.18 |
+| Clocks                   |     0.057 |       12 |       --- |             --- |
+| Slice Logic              |     0.011 |    24343 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     7122 |     17600 |           40.47 |
+|   Register               |     0.001 |    13743 |     35200 |           39.04 |
+|   CARRY4                 |     0.001 |      363 |      4400 |            8.25 |
 |   F7/F8 Muxes            |    <0.001 |      319 |     17600 |            1.81 |
-|   LUT as Shift Register  |    <0.001 |      244 |      6000 |            4.07 |
 |   LUT as Distributed RAM |    <0.001 |       42 |      6000 |            0.70 |
-|   Others                 |    <0.001 |      828 |       --- |             --- |
-| Signals                  |     0.017 |    17513 |       --- |             --- |
+|   LUT as Shift Register  |    <0.001 |      244 |      6000 |            4.07 |
+|   Others                 |    <0.001 |      831 |       --- |             --- |
+| Signals                  |     0.017 |    17784 |       --- |             --- |
 | Block RAM                |     0.009 |       14 |        60 |           23.33 |
 | MMCM                     |     0.200 |        2 |         2 |          100.00 |
 | I/O                      |     0.172 |       21 |       100 |           21.00 |
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.108 |       0.100 |      0.009 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.108 |       0.099 |      0.009 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.136 |       0.127 |      0.009 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.043 |       0.042 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -166,18 +166,17 @@ Table of Contents
 |   design_1_i             |     1.864 |
 |     axi_dynclk_0         |     0.110 |
 |       U0                 |     0.110 |
-|     axi_interconnect_gp0 |     0.006 |
-|       s00_couplers       |     0.005 |
-|       xbar               |     0.001 |
+|     axi_interconnect_gp0 |     0.005 |
+|       s00_couplers       |     0.004 |
 |     axi_interconnect_hp0 |     0.007 |
 |       m00_couplers       |     0.004 |
-|       xbar               |     0.001 |
+|       xbar               |     0.002 |
 |     axi_vdma_0           |     0.029 |
 |       U0                 |     0.029 |
 |     dvi2rgb_0            |     0.134 |
 |       U0                 |     0.134 |
-|     processing_system7_0 |     1.407 |
-|       inst               |     1.407 |
+|     processing_system7_0 |     1.408 |
+|       inst               |     1.408 |
 |     rgb2dvi_1            |     0.134 |
 |       U0                 |     0.134 |
 |     v_axi4s_vid_out_0    |     0.006 |

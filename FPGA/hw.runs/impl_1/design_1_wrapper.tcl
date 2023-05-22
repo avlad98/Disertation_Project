@@ -132,7 +132,10 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.cache/wt [current_project]
   set_property parent.project_path D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.xpr [current_project]
-  set_property ip_repo_paths D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ipdefs/repo [current_project]
+  set_property ip_repo_paths {
+  D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/ip_repo/AXI4_ImageProcessor_1_0
+  D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ipdefs/repo
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

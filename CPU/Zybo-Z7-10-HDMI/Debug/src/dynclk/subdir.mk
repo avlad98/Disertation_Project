@@ -17,7 +17,7 @@ C_DEPS += \
 src/dynclk/%.o: ../src/dynclk/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM v7 gcc compiler'
-	arm-none-eabi-gcc -DDEBUG -Wall -O0 -g3 -I"D:\Facultate\Disertatie\Hybrid_CPU_FPGA_DisertationProject\CPU\Zybo-Z7-10-HDMI\src" -ID:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/CPU/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/bspinclude/include -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	arm-none-eabi-gcc -DDEBUG -Wall -O0 -g3 -I"D:\Facultate\Disertatie\Hybrid_CPU_FPGA_DisertationProject\CPU\Zybo-Z7-10-HDMI\src" -ID:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/CPU/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/bspinclude/include -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/CPU/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/domain_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
