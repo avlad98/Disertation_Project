@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x2E4B4FAE83FE4741",
+      "boundary_crc": "0x2E4B4FAEA5CF3C47",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../hw.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -51,7 +51,20 @@
       "v_tc_in": "",
       "v_tc_out": "",
       "v_vid_in_axi4s_0": "",
-      "dvi2rgb_0": ""
+      "dvi2rgb_0": "",
+      "xlslice_G_7_0": "",
+      "xlslice_R_23_16": "",
+      "xlslice_B_15_8": "",
+      "grayscale_0": "",
+      "thresholding_0": "",
+      "edge_detection_0": "",
+      "brightness_adjustment_0": "",
+      "color_inversion_0": "",
+      "emboss_effect_0": "",
+      "sepia_tone_0": "",
+      "contrast_adjustment_0": "",
+      "posterize_effect_0": "",
+      "solarize_effect_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -3789,6 +3802,393 @@
             "value": "false"
           }
         }
+      },
+      "xlslice_G_7_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_0_0",
+        "xci_path": "ip\\design_1_xlslice_0_0\\design_1_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_G_7_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "7"
+          },
+          "DIN_TO": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "24"
+          }
+        }
+      },
+      "xlslice_R_23_16": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_G_0",
+        "xci_path": "ip\\design_1_xlslice_G_0\\design_1_xlslice_G_0.xci",
+        "inst_hier_path": "xlslice_R_23_16",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "23"
+          },
+          "DIN_TO": {
+            "value": "16"
+          },
+          "DIN_WIDTH": {
+            "value": "24"
+          }
+        }
+      },
+      "xlslice_B_15_8": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_xlslice_B_0",
+        "xci_path": "ip\\design_1_xlslice_B_0\\design_1_xlslice_B_0.xci",
+        "inst_hier_path": "xlslice_B_15_8",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "15"
+          },
+          "DIN_TO": {
+            "value": "8"
+          },
+          "DIN_WIDTH": {
+            "value": "24"
+          }
+        }
+      },
+      "grayscale_0": {
+        "vlnv": "xilinx.com:module_ref:grayscale:1.0",
+        "xci_name": "design_1_grayscale_0_0",
+        "xci_path": "ip\\design_1_grayscale_0_0\\design_1_grayscale_0_0.xci",
+        "inst_hier_path": "grayscale_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "grayscale",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "24",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
+      "thresholding_0": {
+        "vlnv": "xilinx.com:module_ref:thresholding:1.0",
+        "xci_name": "design_1_thresholding_0_0",
+        "xci_path": "ip\\design_1_thresholding_0_0\\design_1_thresholding_0_0.xci",
+        "inst_hier_path": "thresholding_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "thresholding",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "edge_detection_0": {
+        "vlnv": "xilinx.com:module_ref:edge_detection:1.0",
+        "xci_name": "design_1_edge_detection_0_0",
+        "xci_path": "ip\\design_1_edge_detection_0_0\\design_1_edge_detection_0_0.xci",
+        "inst_hier_path": "edge_detection_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "edge_detection",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "brightness_adjustment_0": {
+        "vlnv": "xilinx.com:module_ref:brightness_adjustment:1.0",
+        "xci_name": "design_1_brightness_adjustment_0_0",
+        "xci_path": "ip\\design_1_brightness_adjustment_0_0\\design_1_brightness_adjustment_0_0.xci",
+        "inst_hier_path": "brightness_adjustment_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "brightness_adjustment",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "color_inversion_0": {
+        "vlnv": "xilinx.com:module_ref:color_inversion:1.0",
+        "xci_name": "design_1_color_inversion_0_0",
+        "xci_path": "ip\\design_1_color_inversion_0_0\\design_1_color_inversion_0_0.xci",
+        "inst_hier_path": "color_inversion_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "color_inversion",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "emboss_effect_0": {
+        "vlnv": "xilinx.com:module_ref:emboss_effect:1.0",
+        "xci_name": "design_1_emboss_effect_0_0",
+        "xci_path": "ip\\design_1_emboss_effect_0_0\\design_1_emboss_effect_0_0.xci",
+        "inst_hier_path": "emboss_effect_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "emboss_effect",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "sepia_tone_0": {
+        "vlnv": "xilinx.com:module_ref:sepia_tone:1.0",
+        "xci_name": "design_1_sepia_tone_0_0",
+        "xci_path": "ip\\design_1_sepia_tone_0_0\\design_1_sepia_tone_0_0.xci",
+        "inst_hier_path": "sepia_tone_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sepia_tone",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "contrast_adjustment_0": {
+        "vlnv": "xilinx.com:module_ref:contrast_adjustment:1.0",
+        "xci_name": "design_1_contrast_adjustment_0_0",
+        "xci_path": "ip\\design_1_contrast_adjustment_0_0\\design_1_contrast_adjustment_0_0.xci",
+        "inst_hier_path": "contrast_adjustment_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "contrast_adjustment",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "posterize_effect_0": {
+        "vlnv": "xilinx.com:module_ref:posterize_effect:1.0",
+        "xci_name": "design_1_posterize_effect_0_0",
+        "xci_path": "ip\\design_1_posterize_effect_0_0\\design_1_posterize_effect_0_0.xci",
+        "inst_hier_path": "posterize_effect_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "posterize_effect",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "solarize_effect_0": {
+        "vlnv": "xilinx.com:module_ref:solarize_effect:1.0",
+        "xci_name": "design_1_solarize_effect_0_0",
+        "xci_path": "ip\\design_1_solarize_effect_0_0\\design_1_solarize_effect_0_0.xci",
+        "inst_hier_path": "solarize_effect_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "solarize_effect",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "g": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "r": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "color": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -3910,12 +4310,6 @@
         "interface_ports": [
           "hdmi_out",
           "rgb2dvi_1/TMDS"
-        ]
-      },
-      "v_axi4s_vid_out_0_vid_io_out": {
-        "interface_ports": [
-          "rgb2dvi_1/RGB",
-          "v_axi4s_vid_out_0/vid_io_out"
         ]
       },
       "v_tc_0_vtiming_out": {
@@ -4100,6 +4494,38 @@
           "axis_subset_converter_out/aresetn"
         ]
       },
+      "thresholding_0_color": {
+        "ports": [
+          "thresholding_0/color",
+          "rgb2dvi_1/vid_pData"
+        ]
+      },
+      "v_axi4s_vid_out_0_vid_active_video": {
+        "ports": [
+          "v_axi4s_vid_out_0/vid_active_video",
+          "rgb2dvi_1/vid_pVDE"
+        ]
+      },
+      "v_axi4s_vid_out_0_vid_data": {
+        "ports": [
+          "v_axi4s_vid_out_0/vid_data",
+          "xlslice_G_7_0/Din",
+          "xlslice_B_15_8/Din",
+          "xlslice_R_23_16/Din"
+        ]
+      },
+      "v_axi4s_vid_out_0_vid_hsync": {
+        "ports": [
+          "v_axi4s_vid_out_0/vid_hsync",
+          "rgb2dvi_1/vid_pHSync"
+        ]
+      },
+      "v_axi4s_vid_out_0_vid_vsync": {
+        "ports": [
+          "v_axi4s_vid_out_0/vid_vsync",
+          "rgb2dvi_1/vid_pVSync"
+        ]
+      },
       "v_axi4s_vid_out_0_vtg_ce": {
         "ports": [
           "v_axi4s_vid_out_0/vtg_ce",
@@ -4122,6 +4548,51 @@
         "ports": [
           "xlconcat_0/dout",
           "processing_system7_0/IRQ_F2P"
+        ]
+      },
+      "xlslice_B_15_8_Dout": {
+        "ports": [
+          "xlslice_B_15_8/Dout",
+          "grayscale_0/b",
+          "thresholding_0/b",
+          "edge_detection_0/b",
+          "brightness_adjustment_0/b",
+          "color_inversion_0/b",
+          "emboss_effect_0/b",
+          "sepia_tone_0/b",
+          "contrast_adjustment_0/b",
+          "posterize_effect_0/b",
+          "solarize_effect_0/b"
+        ]
+      },
+      "xlslice_G_7_0_Dout": {
+        "ports": [
+          "xlslice_G_7_0/Dout",
+          "grayscale_0/g",
+          "thresholding_0/g",
+          "edge_detection_0/g",
+          "brightness_adjustment_0/g",
+          "color_inversion_0/g",
+          "emboss_effect_0/g",
+          "sepia_tone_0/g",
+          "contrast_adjustment_0/g",
+          "posterize_effect_0/g",
+          "solarize_effect_0/g"
+        ]
+      },
+      "xlslice_R_23_16_Dout": {
+        "ports": [
+          "xlslice_R_23_16/Dout",
+          "grayscale_0/r",
+          "thresholding_0/r",
+          "edge_detection_0/r",
+          "brightness_adjustment_0/r",
+          "color_inversion_0/r",
+          "emboss_effect_0/r",
+          "sepia_tone_0/r",
+          "contrast_adjustment_0/r",
+          "posterize_effect_0/r",
+          "solarize_effect_0/r"
         ]
       }
     },

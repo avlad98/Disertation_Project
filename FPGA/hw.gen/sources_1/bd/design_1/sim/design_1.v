@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Thu Jan  5 18:51:15 2023
+//Date        : Mon May 22 12:38:35 2023
 //Host        : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=35,numReposBlks=24,numNonXlnxBlks=3,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=48,numReposBlks=37,numNonXlnxBlks=3,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=10,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -368,10 +368,11 @@ module design_1
   wire [2:0]rgb2dvi_1_TMDS_DATA_N;
   wire [2:0]rgb2dvi_1_TMDS_DATA_P;
   wire [0:0]subset_converter_reset_dout;
-  wire v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO;
-  wire [23:0]v_axi4s_vid_out_0_vid_io_out_DATA;
-  wire v_axi4s_vid_out_0_vid_io_out_HSYNC;
-  wire v_axi4s_vid_out_0_vid_io_out_VSYNC;
+  wire [23:0]thresholding_0_color;
+  wire v_axi4s_vid_out_0_vid_active_video;
+  wire [23:0]v_axi4s_vid_out_0_vid_data;
+  wire v_axi4s_vid_out_0_vid_hsync;
+  wire v_axi4s_vid_out_0_vid_vsync;
   wire v_axi4s_vid_out_0_vtg_ce;
   wire v_tc_0_irq;
   wire v_tc_0_vtiming_out_ACTIVE_VIDEO;
@@ -389,6 +390,9 @@ module design_1
   wire v_vid_in_axi4s_0_vtiming_out_HSYNC;
   wire v_vid_in_axi4s_0_vtiming_out_VSYNC;
   wire [4:0]xlconcat_0_dout;
+  wire [7:0]xlslice_B_15_8_Dout;
+  wire [7:0]xlslice_G_7_0_Dout;
+  wire [7:0]xlslice_R_23_16_Dout;
 
   assign dvi2rgb_0_DDC_SCL_I = hdmi_in_ddc_scl_i;
   assign dvi2rgb_0_DDC_SDA_I = hdmi_in_ddc_sda_i;
@@ -768,6 +772,18 @@ module design_1
         .s_axis_tready(axi_vdma_0_M_AXIS_MM2S_TREADY),
         .s_axis_tuser(axi_vdma_0_M_AXIS_MM2S_TUSER),
         .s_axis_tvalid(axi_vdma_0_M_AXIS_MM2S_TVALID));
+  design_1_brightness_adjustment_0_0 brightness_adjustment_0
+       (.b(xlslice_B_15_8_Dout),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
+  design_1_color_inversion_0_0 color_inversion_0
+       (.b(xlslice_B_15_8_Dout),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
+  design_1_contrast_adjustment_0_0 contrast_adjustment_0
+       (.b(xlslice_B_15_8_Dout),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
   design_1_dvi2rgb_0_0 dvi2rgb_0
        (.PixelClk(dvi2rgb_0_PixelClk),
         .RefClk(processing_system7_0_FCLK_CLK2),
@@ -788,6 +804,22 @@ module design_1
         .vid_pHSync(dvi2rgb_0_RGB_HSYNC),
         .vid_pVDE(dvi2rgb_0_RGB_ACTIVE_VIDEO),
         .vid_pVSync(dvi2rgb_0_RGB_VSYNC));
+  design_1_edge_detection_0_0 edge_detection_0
+       (.b(xlslice_B_15_8_Dout),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
+  design_1_emboss_effect_0_0 emboss_effect_0
+       (.b(xlslice_B_15_8_Dout),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
+  design_1_grayscale_0_0 grayscale_0
+       (.b(xlslice_B_15_8_Dout),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
+  design_1_posterize_effect_0_0 posterize_effect_0
+       (.b(xlslice_B_15_8_Dout),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
   design_1_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(dvi2rgb_0_aPixelClkLckd),
         .dcm_locked(1'b1),
@@ -934,12 +966,25 @@ module design_1
         .TMDS_Data_n(rgb2dvi_1_TMDS_DATA_N),
         .TMDS_Data_p(rgb2dvi_1_TMDS_DATA_P),
         .aRst_n(axi_dynclk_0_LOCKED_O),
-        .vid_pData(v_axi4s_vid_out_0_vid_io_out_DATA),
-        .vid_pHSync(v_axi4s_vid_out_0_vid_io_out_HSYNC),
-        .vid_pVDE(v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO),
-        .vid_pVSync(v_axi4s_vid_out_0_vid_io_out_VSYNC));
+        .vid_pData(thresholding_0_color),
+        .vid_pHSync(v_axi4s_vid_out_0_vid_hsync),
+        .vid_pVDE(v_axi4s_vid_out_0_vid_active_video),
+        .vid_pVSync(v_axi4s_vid_out_0_vid_vsync));
+  design_1_sepia_tone_0_0 sepia_tone_0
+       (.b(xlslice_B_15_8_Dout),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
+  design_1_solarize_effect_0_0 solarize_effect_0
+       (.b(xlslice_B_15_8_Dout),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
   design_1_subset_converter_reset_0 subset_converter_reset
        (.dout(subset_converter_reset_dout));
+  design_1_thresholding_0_0 thresholding_0
+       (.b(xlslice_B_15_8_Dout),
+        .color(thresholding_0_color),
+        .g(xlslice_G_7_0_Dout),
+        .r(xlslice_R_23_16_Dout));
   design_1_v_axi4s_vid_out_0_0 v_axi4s_vid_out_0
        (.aclk(ACLK_1),
         .aclken(1'b1),
@@ -950,13 +995,13 @@ module design_1
         .s_axis_video_tready(axis_subset_converter_out_M_AXIS_TREADY),
         .s_axis_video_tuser(axis_subset_converter_out_M_AXIS_TUSER),
         .s_axis_video_tvalid(axis_subset_converter_out_M_AXIS_TVALID),
-        .vid_active_video(v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO),
-        .vid_data(v_axi4s_vid_out_0_vid_io_out_DATA),
-        .vid_hsync(v_axi4s_vid_out_0_vid_io_out_HSYNC),
+        .vid_active_video(v_axi4s_vid_out_0_vid_active_video),
+        .vid_data(v_axi4s_vid_out_0_vid_data),
+        .vid_hsync(v_axi4s_vid_out_0_vid_hsync),
         .vid_io_out_ce(1'b1),
         .vid_io_out_clk(axi_dynclk_0_PXL_CLK_O),
         .vid_io_out_reset(1'b0),
-        .vid_vsync(v_axi4s_vid_out_0_vid_io_out_VSYNC),
+        .vid_vsync(v_axi4s_vid_out_0_vid_vsync),
         .vtg_active_video(v_tc_0_vtiming_out_ACTIVE_VIDEO),
         .vtg_ce(v_axi4s_vid_out_0_vtg_ce),
         .vtg_field_id(1'b0),
@@ -1057,6 +1102,15 @@ module design_1
         .In3(v_tc_in_irq),
         .In4(axi_gpio_video_ip2intc_irpt),
         .dout(xlconcat_0_dout));
+  design_1_xlslice_B_0 xlslice_B_15_8
+       (.Din(v_axi4s_vid_out_0_vid_data),
+        .Dout(xlslice_B_15_8_Dout));
+  design_1_xlslice_0_0 xlslice_G_7_0
+       (.Din(v_axi4s_vid_out_0_vid_data),
+        .Dout(xlslice_G_7_0_Dout));
+  design_1_xlslice_G_0 xlslice_R_23_16
+       (.Din(v_axi4s_vid_out_0_vid_data),
+        .Dout(xlslice_R_23_16_Dout));
 endmodule
 
 module design_1_axi_interconnect_gp0_0

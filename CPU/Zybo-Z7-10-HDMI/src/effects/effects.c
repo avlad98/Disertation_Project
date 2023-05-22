@@ -137,8 +137,14 @@ void effectBlur(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
     tRBGPixel *srcPixel;
     tRBGPixel *dstPixel;
     int sumR, sumG, sumB;
-    int kernel[3][3] = { {1, 1, 1}, {1, 1, 1}, {1, 1, 1} };
-    int kernelSize = 3;
+    int kernel[5][5] = {
+        {1, 1, 1, 1, 1},
+        {1, 1, 1, 1, 1},
+        {1, 1, 1, 1, 1},
+        {1, 1, 1, 1, 1},
+        {1, 1, 1, 1, 1}
+    };
+    int kernelSize = 5;
     int i, j, m;
     int tempi, tempj;
     int kernelSum = kernelSize * kernelSize;

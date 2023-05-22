@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zybo Z7 210351A77AFFA&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zybo Z7-210351A77AFFA-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zybo Z7-210351A77AFFA-13722093-0&quot;}}]}"/>
+	<item key="HelloWorld_Blink_system-bitFile" value="${project_loc:HelloWorld_Blink}/_ide/bitstream/BlinkLedGPIO_wrapper.bit"/>
+	<item key="HelloWorld_Blink_system-bmmFile" value=""/>
+	<item key="HelloWorld_Blink_system-target" value="Local"/>
+	<item key="HelloWorld_Blink_system-device" value="Auto Detect"/>
+	<item key="HelloWorld_Blink_system-partial_bit" value="false"/>
+	<item key="HelloWorld_Blink_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="Zybo-Z7-10-HDMI_system"/>
+	<item key="Zybo-Z7-10-HDMI_system-bitFile" value="${project_loc:Zybo-Z7-10-HDMI}/_ide/bitstream/design_1_wrapper.bit"/>
+	<item key="Zybo-Z7-10-HDMI_system-bmmFile" value=""/>
+	<item key="Zybo-Z7-10-HDMI_system-target" value="Local"/>
+	<item key="Zybo-Z7-10-HDMI_system-device" value="Auto Detect"/>
+	<item key="Zybo-Z7-10-HDMI_system-partial_bit" value="false"/>
+	<item key="Zybo-Z7-10-HDMI_system-skip_rev_check" value="false"/>
 </section>

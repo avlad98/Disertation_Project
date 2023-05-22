@@ -39,6 +39,7 @@
 #include "timer_ps/timer_ps.h"
 #include "xparameters.h"
 #include "sleep.h"
+#include "xtime_l.h" // Xilinx timer library
 
 #include "xil_cache.h"
 
@@ -98,6 +99,18 @@ int main(void)
 	return 0;
 }
 
+void printAvailableEffects()
+{
+	u8 effectIdx = 0;
+
+	xil_printf("****************************************\r\n");
+	xil_printf("Available Effects:\r\n");
+	for (effectIdx = 0; effectIdx < NUM_EFFECTS; effectIdx++) {
+		xil_printf("%u. %s\r\n", effectIdx, effects[effectIdx].name);
+	}
+	xil_printf("****************************************\r\n\r\n");
+}
+
 eImgEffect DecodeUserChoice(char userInput)
 {
 	eImgEffect imgEffect = ORIGINAL;
@@ -109,7 +122,7 @@ eImgEffect DecodeUserChoice(char userInput)
 		return ORIGINAL;
 	}
 
-	xil_printf("Applying %s effect\r\n", effects[imgEffect].name);
+	xil_printf("Applying %u. %s effect\r\n", effects[imgEffect].idx, effects[imgEffect].name);
 
 	return imgEffect;
 }
@@ -122,42 +135,56 @@ void ProcessImage(eImgEffect imgEffect)
 	u32 height = videoCapt.timing.VActiveVideo;
 	u32 stride = DEMO_STRIDE;
 
-	Xil_DCacheInvalidateRange((unsigned int) srcFrame, DEMO_MAX_FRAME);
+//	Xil_DCacheInvalidateRange((unsigned int) srcFrame, DEMO_MAX_FRAME);
 
 	effects[imgEffect].fun_ptr(srcFrame, destFrame, width, height, stride);
 
-	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
+//	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
 }
 
 void MainLoop()
 {
-	eImgEffect imgEffect = ORIGINAL;
-	char userInput = 0;
-
-	nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
-	DisplayChangeFrame(&dispCtrl, nextFrame);
-
-	/* Flush UART FIFO */
-	while (XUartPs_IsReceiveData(UART_BASEADDR))
-	{
-		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-	}
-
-	while (1) {
-		if (XUartPs_IsReceiveData(UART_BASEADDR)) {
-			userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-			xil_printf("RECEIVED char %c || uint %u\r\n", userInput, (u8) userInput);
-			imgEffect = DecodeUserChoice(userInput);
-		}
-
-		nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
-		VideoStop(&videoCapt);
-		ProcessImage(imgEffect);
-		VideoStart(&videoCapt);
-		DisplayChangeFrame(&dispCtrl, nextFrame);
-		usleep(S_to_uS(0.05));
-	}
+//	eImgEffect imgEffect = ORIGINAL;
+//	char userInput = 0;
+//	XTime tStart, tEnd;
+//	float elapsedTime;
+//	int whole, thousandths;
+//
+//	nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
+//	DisplayChangeFrame(&dispCtrl, nextFrame);
+//
+//	/* Flush UART FIFO */
+//	while (XUartPs_IsReceiveData(UART_BASEADDR))
+//	{
+//		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+//	}
+//
+//	printAvailableEffects();
+//
+//	while (1) {
+//		if (XUartPs_IsReceiveData(UART_BASEADDR)) {
+//			userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+//			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+//			imgEffect = DecodeUserChoice(userInput);
+//		}
+//
+//		XTime_GetTime( &tStart);
+//
+//		nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
+//		VideoStop(&videoCapt);
+//		ProcessImage(imgEffect);
+//		VideoStart(&videoCapt);
+//		DisplayChangeFrame(&dispCtrl, nextFrame);
+//
+//		XTime_GetTime(&tEnd);
+//
+//		elapsedTime = ((float)(tEnd - tStart)) / (COUNTS_PER_SECOND);
+//	    whole = elapsedTime;
+//	    thousandths = (elapsedTime - whole) * 1000;
+//	    xil_printf("Elapsed Time: %d.%3d seconds\r\n", whole, thousandths);
+//
+//		usleep(S_to_uS(0.05));
+//	}
 }
 
 

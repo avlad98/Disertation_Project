@@ -12,6 +12,12 @@
 /* ------------------------------------------------------------ */
 /*					Miscellaneous Declarations					*/
 /* ------------------------------------------------------------ */
+typedef struct {
+	u8 r;
+	u8 b;
+	u8 g;
+} tRBGPixel;
+
 typedef enum {
 	ORIGINAL = 0,
 	INVERTED_COLORS = 1,
@@ -22,12 +28,6 @@ typedef enum {
 	THRESHOLD = 6,
 	NUM_EFFECTS
 } eImgEffect;
-
-typedef struct {
-	u8 r;
-	u8 b;
-	u8 g;
-} tRBGPixel;
 
 typedef struct {
 	u8 idx;

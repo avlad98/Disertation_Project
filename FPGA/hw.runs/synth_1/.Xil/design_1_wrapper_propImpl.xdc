@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc rfile:../../../hw.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc rfile:../../../hw.srcs/constrs_1/imports/constraints/Zybo-Z7-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { hdmi_in_ddc_scl_io }]; #IO_L22P_T3_34 Sch=hdmi_rx_scl
 set_property src_info {type:XDC file:1 line:71 export:INPUT save:INPUT read:READ} [current_design]
