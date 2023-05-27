@@ -130,7 +130,7 @@ void printAvailableEffects()
 	for (effectIdx = 0; effectIdx < NUM_EFFECTS; effectIdx++) {
 		xil_printf("%u. %s\r\n", effectIdx, effects[effectIdx].name);
 	}
-	xil_printf("****************************************\r\n\r\n");
+	xil_printf("****************************************\r\n");
 }
 
 eImgEffect GetUserEffect(u8 userInput)
@@ -157,11 +157,11 @@ void ProcessImage(eImgEffect imgEffect)
 	u32 height = videoCapt.timing.VActiveVideo;
 	u32 stride = DEMO_STRIDE;
 
-//	Xil_DCacheInvalidateRange((unsigned int) srcFrame, DEMO_MAX_FRAME);
+	Xil_DCacheInvalidateRange((unsigned int) srcFrame, DEMO_MAX_FRAME);
 
 	effects[imgEffect].fun_ptr(srcFrame, destFrame, width, height, stride);
 
-//	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
+	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
 }
 
 void flushUART()
@@ -220,7 +220,7 @@ static inline u8 readUART(UARTResponse *userInput)
 
 		userInput->valid = 1;
 
-//	    xil_printf("User input: %c || %u\r\n", userInput->c, userInput->c);
+	    xil_printf("[DEBUG] User input: %c || %u\r\n", userInput->c, userInput->c);
 	}
 
 	return userInput->valid;
@@ -272,16 +272,6 @@ void invalidateUserInputArr()
 u8 startedUserInputProcess = 0;
 u8 processUserInput(UARTResponse *userInput)
 {
-//0.	"enable cpu"
-//1.	"enable fpga"
-//2.	"disable cpu"
-//3.	"disable fpga"
-//4.	"apply cpu X"
-//5.	"apply fpga X"
-//6.	"effects"
-//7.	"menu"
-//8.	"stats"
-
 	const u8 COMMAND_NUM = 9;
 
 	userInputArr.chars[userInputArr.cnt++] = userInput->c;
@@ -296,7 +286,7 @@ u8 processUserInput(UARTResponse *userInput)
 			startedUserInputProcess = 1;
 			break;
 		default:
-//			xil_printf("Wrong effect!!\r\n");
+			xil_printf("Wrong effect!!\r\n");
 			invalidateUserInputArr();
 		}
 	}
@@ -304,7 +294,7 @@ u8 processUserInput(UARTResponse *userInput)
 	for (u8 commandID = 0; commandID < COMMAND_NUM; commandID++) {
 		if (strlen(commands[commandID]) <= userInputArr.cnt) {
 			if (0 == strcmp(commands[commandID], userInputArr.chars)) {
-//				xil_printf("Decoded command %u. %s\r\n", commandID, commands[commandID]);
+				xil_printf("[DEBUG] Decoded command %u. %s\r\n", commandID, commands[commandID]);
 
 				switch(commandID)
 				{
@@ -374,7 +364,6 @@ u8 processUserInput(UARTResponse *userInput)
 
 				invalidateUserInputArr();
 				startedUserInputProcess = 0;
-//				printUsage();
 			}
 		}
 	}
@@ -391,39 +380,6 @@ u8 processUserInput(UARTResponse *userInput)
 
 void MainLoop()
 {
-	/* ============================== FPGA ============================== */
-////INCLUDEFILES=$(wildcard *.h)
-////LIBSOURCES=$(wildcard *.c)
-////OUTS = $(wildcard *.o)
-//
-//	char userInput = 0;
-//	uint8_t imgEffect = 0;
-//	uint8_t counter = 0;
-//
-//	/* Flush UART FIFO */
-//	while (XUartPs_IsReceiveData(UART_BASEADDR))
-//	{
-//		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-//	}
-//
-//	while (1) {
-//		if (XUartPs_IsReceiveData(UART_BASEADDR)) {
-//			userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-//			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-//			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-//			if (counter == 0) {
-//				imgEffect = DecodeUserChoiceFPGA(userInput);
-//				AXI4_IMAGEPROCESSOR_mWriteReg(
-//						XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
-//						AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
-//						imgEffect);
-//			}
-//			counter++;
-//			counter %= 2;
-//		}
-//	}
-
-	/* ============================== CPU ============================== */
 	UARTResponse userInput;
 	XTime tStart, tEnd;
     double elapsed_time;
@@ -476,11 +432,6 @@ void MainLoop()
 		    fps = 1 / elapsed_time;
 			state.fpgaFps = fps;
 		}
-
-	    // Calculate the FPS
-//	    fps = 1 / elapsed_time;
-
-//	    printf("FPS: %.2f\n", fps);
 	}
 }
 
