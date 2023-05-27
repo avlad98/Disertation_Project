@@ -29,14 +29,9 @@ module grayscale(
 
 reg [15:0] gray;
 
-//  // Calculate grayscale value as average of RGB components
   always @* begin
-//      color = {r, b, g};
       gray = (r+b+g) / 3;
       color = {gray[7:0], gray[7:0], gray[7:0]};
-
-
-//    color = {(r + g + b) / 3, (r + g + b) / 3, (r + g + b) / 3};
   end
 
 endmodule

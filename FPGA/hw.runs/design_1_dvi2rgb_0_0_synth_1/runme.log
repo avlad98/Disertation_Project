@@ -10,9 +10,10 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source design_1_dvi2rgb_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 374.191 ; gain = 66.398
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 373.359 ; gain = 65.391
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.ipdefs/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/ip_repo/AXI4_ImageProcessor_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ipdefs/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dvi2rgb_0_0
 Command: synth_design -top design_1_dvi2rgb_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
@@ -22,126 +23,126 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3688
+INFO: [Synth 8-7075] Helper process launched with PID 30636
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'rddata_rst_i', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:2188]
-INFO: [Synth 8-11241] undeclared symbol 'datard_overflow', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:2235]
-INFO: [Synth 8-11241] undeclared symbol 'datard_underflow', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:2236]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6379]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6381]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6412]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6414]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6447]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6449]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:30]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:32]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:69]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:71]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:109]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:111]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:150]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:152]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:192]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:194]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:235]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:237]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:279]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:281]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:324]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:326]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:370]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:372]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:417]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:419]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:465]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:467]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:514]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:516]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:564]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:566]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:615]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:617]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6554]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6556]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6589]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6591]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:30]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:32]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:69]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:71]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:109]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:111]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:150]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:152]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:192]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:194]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:235]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:237]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:279]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:281]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:324]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:326]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:370]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:372]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:417]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:419]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:465]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:467]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:514]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:516]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:564]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:566]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:615]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:617]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10347]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10349]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10380]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10382]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10413]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10415]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:30]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:32]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:65]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:67]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:100]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:102]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:135]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:137]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:170]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:172]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:205]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:207]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:240]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:242]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:275]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:277]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:310]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:312]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:345]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:347]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:380]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:382]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:415]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:417]
+INFO: [Synth 8-11241] undeclared symbol 'rddata_rst_i', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:2188]
+INFO: [Synth 8-11241] undeclared symbol 'datard_overflow', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:2235]
+INFO: [Synth 8-11241] undeclared symbol 'datard_underflow', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:2236]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6379]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6381]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6412]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6414]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6447]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6449]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:69]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:71]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:109]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:111]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:150]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:152]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:192]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:194]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:235]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:237]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:279]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:281]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:324]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:326]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:370]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:372]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:417]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:419]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:465]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:467]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:514]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:516]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:564]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:566]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:615]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:617]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6554]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6556]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6589]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6591]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:69]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:71]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:109]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:111]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:150]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:152]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:192]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:194]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:235]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:237]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:279]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:281]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:324]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:326]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:370]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:372]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:417]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:419]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:465]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:467]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:514]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:516]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:564]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:566]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:615]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:617]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10347]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10349]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10380]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10382]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10413]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10415]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:65]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:67]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:100]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:102]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:135]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:137]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:170]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:172]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:205]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:207]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:240]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:242]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:275]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:277]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:310]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:312]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:345]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:347]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:380]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:382]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:415]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:417]
 INFO: [Common 17-14] Message 'Synth 8-11241' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4527]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4528]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4529]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4530]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4531]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4532]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4586]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4587]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4588]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:5486]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4527]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4528]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4529]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4530]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4531]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4532]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4586]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4587]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4588]
+WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:5486]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1239.363 ; gain = 421.570
+Starting RTL Elaboration : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 1240.035 ; gain = 421.504
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-9112] actual for formal port 'arst' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:135]
-WARNING: [Synth 8-9112] actual for formal port 'arst' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:212]
-WARNING: [Synth 8-9112] actual for formal port 'potherchrdy' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:244]
-WARNING: [Synth 8-9112] actual for formal port 'potherchvld' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:245]
-INFO: [Synth 8-638] synthesizing module 'design_1_dvi2rgb_0_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:81]
+WARNING: [Synth 8-9112] actual for formal port 'arst' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:135]
+WARNING: [Synth 8-9112] actual for formal port 'arst' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:212]
+WARNING: [Synth 8-9112] actual for formal port 'potherchrdy' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:244]
+WARNING: [Synth 8-9112] actual for formal port 'potherchvld' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:245]
+INFO: [Synth 8-638] synthesizing module 'design_1_dvi2rgb_0_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:81]
 	Parameter kEmulateDDC bound to: 1 - type: bool 
 	Parameter kRstActiveHigh bound to: 0 - type: bool 
 	Parameter kClkRange bound to: 2 - type: integer 
@@ -150,18 +151,18 @@ INFO: [Synth 8-638] synthesizing module 'design_1_dvi2rgb_0_0' [d:/Facultate/Dis
 	Parameter kAddBUFG bound to: 0 - type: bool 
 	Parameter kEdidFileName bound to: dgl_720p_cea.data - type: string 
 	Parameter kDebug bound to: 0 - type: bool 
-INFO: [Synth 8-3491] module 'dvi2rgb' declared at 'd:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:64' bound to instance 'U0' of component 'dvi2rgb' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'dvi2rgb' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:112]
-INFO: [Synth 8-638] synthesizing module 'TMDS_Clocking' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:82]
-INFO: [Synth 8-638] synthesizing module 'ResetBridge' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'SyncAsync' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
-INFO: [Synth 8-113] binding component instance 'IDelayCtrlX' to cell 'IDELAYCTRL' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:125]
+INFO: [Synth 8-3491] module 'dvi2rgb' declared at 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:64' bound to instance 'U0' of component 'dvi2rgb' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'dvi2rgb' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Clocking' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-113] binding component instance 'IDelayCtrlX' to cell 'IDELAYCTRL' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:125]
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
 	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
-INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:139]
+INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:139]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
@@ -176,23 +177,23 @@ INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [d
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
 	Parameter STARTUP_WAIT bound to: 0 - type: bool 
-INFO: [Synth 8-113] binding component instance 'DVI_ClkGenerator' to cell 'MMCME2_ADV' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:180]
-INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:239]
+INFO: [Synth 8-113] binding component instance 'DVI_ClkGenerator' to cell 'MMCME2_ADV' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:180]
+INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:239]
 	Parameter BUFR_DIVIDE bound to: 5 - type: string 
 	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
-INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:245]
-INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'TMDS_Clocking' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:82]
-INFO: [Synth 8-638] synthesizing module 'ResetBridge__parameterized0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized1' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'ResetBridge__parameterized0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'TMDS_Decoder' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Decoder.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'InputSERDES' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:85]
+INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:245]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Clocking' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'ResetBridge__parameterized0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized1' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge__parameterized0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Decoder' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Decoder.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'InputSERDES' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:85]
 	Parameter DIFF_TERM bound to: 0 - type: bool 
 	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
-INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:92]
+INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:92]
 	Parameter CINVCTRL_SEL bound to: FALSE - type: string 
 	Parameter DELAY_SRC bound to: IDATAIN - type: string 
 	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
@@ -201,7 +202,7 @@ INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [d
 	Parameter PIPE_SEL bound to: FALSE - type: string 
 	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: double 
 	Parameter SIGNAL_PATTERN bound to: DATA - type: string 
-INFO: [Synth 8-113] binding component instance 'InputDelay' to cell 'IDELAYE2' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:102]
+INFO: [Synth 8-113] binding component instance 'InputDelay' to cell 'IDELAYE2' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:102]
 	Parameter DATA_RATE bound to: DDR - type: string 
 	Parameter DATA_WIDTH bound to: 10 - type: integer 
 	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
@@ -211,7 +212,7 @@ INFO: [Synth 8-113] binding component instance 'InputDelay' to cell 'IDELAYE2' [
 	Parameter NUM_CE bound to: 2 - type: integer 
 	Parameter OFB_USED bound to: FALSE - type: string 
 	Parameter SERDES_MODE bound to: MASTER - type: string 
-INFO: [Synth 8-113] binding component instance 'DeserializerMaster' to cell 'ISERDESE2' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:130]
+INFO: [Synth 8-113] binding component instance 'DeserializerMaster' to cell 'ISERDESE2' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:130]
 	Parameter DATA_RATE bound to: DDR - type: string 
 	Parameter DATA_WIDTH bound to: 10 - type: integer 
 	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
@@ -221,370 +222,105 @@ INFO: [Synth 8-113] binding component instance 'DeserializerMaster' to cell 'ISE
 	Parameter NUM_CE bound to: 2 - type: integer 
 	Parameter OFB_USED bound to: FALSE - type: string 
 	Parameter SERDES_MODE bound to: SLAVE - type: string 
-INFO: [Synth 8-113] binding component instance 'DeserializerSlave' to cell 'ISERDESE2' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:172]
-INFO: [Synth 8-256] done synthesizing module 'InputSERDES' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'SyncBase' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'SyncBase' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
-INFO: [Synth 8-638] synthesizing module 'SyncBase__parameterized0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'SyncBase__parameterized0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
-INFO: [Synth 8-638] synthesizing module 'PhaseAlign' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:95]
-INFO: [Synth 8-256] done synthesizing module 'PhaseAlign' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:95]
-INFO: [Synth 8-638] synthesizing module 'ChannelBond' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/ChannelBond.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'ChannelBond' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/ChannelBond.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'TMDS_Decoder' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Decoder.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'EEPROM_8b' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/EEPROM_8b.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'TWI_SlaveCtl' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TWI_SlaveCtl.vhd:87]
-INFO: [Synth 8-638] synthesizing module 'GlitchFilter' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/GlitchFilter.vhd:69]
-INFO: [Synth 8-256] done synthesizing module 'GlitchFilter' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/GlitchFilter.vhd:69]
-INFO: [Synth 8-256] done synthesizing module 'TWI_SlaveCtl' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TWI_SlaveCtl.vhd:87]
-INFO: [Synth 8-226] default block is never used [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/EEPROM_8b.vhd:201]
-INFO: [Synth 8-256] done synthesizing module 'EEPROM_8b' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/EEPROM_8b.vhd:85]
-INFO: [Synth 8-256] done synthesizing module 'dvi2rgb' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:112]
-INFO: [Synth 8-256] done synthesizing module 'design_1_dvi2rgb_0_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:81]
-WARNING: [Synth 8-6014] Unused sequential element pTkn0FlagQ_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:172]
-WARNING: [Synth 8-6014] Unused sequential element pTkn1FlagQ_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:173]
-WARNING: [Synth 8-6014] Unused sequential element pTkn2FlagQ_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:174]
-WARNING: [Synth 8-6014] Unused sequential element pTkn3FlagQ_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:175]
-WARNING: [Synth 8-6014] Unused sequential element pDelayFastOvf_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:209]
+INFO: [Synth 8-113] binding component instance 'DeserializerSlave' to cell 'ISERDESE2' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:172]
+INFO: [Synth 8-256] done synthesizing module 'InputSERDES' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SyncBase' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'SyncBase' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'SyncBase__parameterized0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'SyncBase__parameterized0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'PhaseAlign' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'PhaseAlign' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'ChannelBond' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/ChannelBond.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'ChannelBond' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/ChannelBond.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Decoder' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Decoder.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'EEPROM_8b' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/EEPROM_8b.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'TWI_SlaveCtl' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TWI_SlaveCtl.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'GlitchFilter' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/GlitchFilter.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'GlitchFilter' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/GlitchFilter.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'TWI_SlaveCtl' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TWI_SlaveCtl.vhd:87]
+INFO: [Synth 8-226] default block is never used [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/EEPROM_8b.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'EEPROM_8b' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/EEPROM_8b.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'dvi2rgb' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:112]
+INFO: [Synth 8-256] done synthesizing module 'design_1_dvi2rgb_0_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:81]
+WARNING: [Synth 8-6014] Unused sequential element pTkn0FlagQ_reg was removed.  [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:172]
+WARNING: [Synth 8-6014] Unused sequential element pTkn1FlagQ_reg was removed.  [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:173]
+WARNING: [Synth 8-6014] Unused sequential element pTkn2FlagQ_reg was removed.  [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:174]
+WARNING: [Synth 8-6014] Unused sequential element pTkn3FlagQ_reg was removed.  [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:175]
+WARNING: [Synth 8-6014] Unused sequential element pDelayFastOvf_reg was removed.  [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:209]
 WARNING: [Synth 8-7129] Port aRst in module dvi2rgb is either unconnected or has no load
 WARNING: [Synth 8-7129] Port pRst in module dvi2rgb is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1587.918 ; gain = 770.125
+Finished RTL Elaboration : Time (s): cpu = 00:01:10 ; elapsed = 00:01:39 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1587.918 ; gain = 770.125
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:10 ; elapsed = 00:01:40 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1587.918 ; gain = 770.125
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:10 ; elapsed = 00:01:40 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1587.918 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-
-*** Running vivado
-    with args -log design_1_dvi2rgb_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_dvi2rgb_0_0.tcl
-
-
-
-****** Vivado v2022.2 (64-bit)
-  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
-  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-source design_1_dvi2rgb_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 374.449 ; gain = 64.996
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.ipdefs/repo'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dvi2rgb_0_0
-Command: synth_design -top design_1_dvi2rgb_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Device 21-403] Loading part xc7z010clg400-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
-INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7756
-INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'rddata_rst_i', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:2188]
-INFO: [Synth 8-11241] undeclared symbol 'datard_overflow', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:2235]
-INFO: [Synth 8-11241] undeclared symbol 'datard_underflow', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:2236]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6379]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6381]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6412]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6414]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6447]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6449]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:30]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:32]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:69]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:71]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:109]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:111]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:150]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:152]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:192]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:194]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:235]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:237]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:279]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:281]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:324]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:326]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:370]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:372]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:417]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:419]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:465]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:467]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:514]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:516]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:564]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:566]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:615]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_ext.vh:617]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6554]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6556]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6589]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:6591]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:30]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:32]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:69]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:71]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:109]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:111]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:150]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:152]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:192]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:194]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:235]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:237]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:279]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:281]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:324]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:326]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:370]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:372]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:417]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:419]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:465]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:467]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:514]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:516]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:564]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:566]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:615]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core.vh:617]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10347]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10349]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10380]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10382]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10413]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/xsdbm_v3_0_vl_rfs.v:10415]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:30]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:32]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:65]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:67]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:100]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:102]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:135]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:137]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:170]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:172]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:205]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:207]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:240]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:242]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:275]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:277]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:310]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:312]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:345]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:347]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:380]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:382]
-INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:415]
-INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/verilog/xsdbm_v3_0_0_bs_core_vec.vh:417]
-INFO: [Common 17-14] Message 'Synth 8-11241' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4527]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4528]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4529]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4530]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4531]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4532]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4586]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4587]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:4588]
-WARNING: [Synth 8-10294] parameter declaration is not allowed here in this mode of Verilog [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/hdl/ila_v6_2_syn_rfs.v:5486]
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1241.348 ; gain = 422.168
----------------------------------------------------------------------------------
-WARNING: [Synth 8-9112] actual for formal port 'arst' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:135]
-WARNING: [Synth 8-9112] actual for formal port 'arst' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:212]
-WARNING: [Synth 8-9112] actual for formal port 'potherchrdy' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:244]
-WARNING: [Synth 8-9112] actual for formal port 'potherchvld' is neither a static name nor a globally static expression [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:245]
-INFO: [Synth 8-638] synthesizing module 'design_1_dvi2rgb_0_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:81]
-	Parameter kEmulateDDC bound to: 1 - type: bool 
-	Parameter kRstActiveHigh bound to: 0 - type: bool 
-	Parameter kClkRange bound to: 2 - type: integer 
-	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
-	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
-	Parameter kAddBUFG bound to: 0 - type: bool 
-	Parameter kEdidFileName bound to: dgl_720p_cea.data - type: string 
-	Parameter kDebug bound to: 0 - type: bool 
-INFO: [Synth 8-3491] module 'dvi2rgb' declared at 'd:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:64' bound to instance 'U0' of component 'dvi2rgb' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'dvi2rgb' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:112]
-INFO: [Synth 8-638] synthesizing module 'TMDS_Clocking' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:82]
-INFO: [Synth 8-638] synthesizing module 'ResetBridge' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'SyncAsync' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
-INFO: [Synth 8-113] binding component instance 'IDelayCtrlX' to cell 'IDELAYCTRL' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:125]
-	Parameter DIFF_TERM bound to: 0 - type: bool 
-	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
-	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
-INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:139]
-	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
-	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKIN1_PERIOD bound to: 12.000000 - type: double 
-	Parameter CLKOUT0_DIVIDE_F bound to: 2.000000 - type: double 
-	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
-	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
-	Parameter COMPENSATION bound to: ZHOLD - type: string 
-	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
-	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
-	Parameter STARTUP_WAIT bound to: 0 - type: bool 
-INFO: [Synth 8-113] binding component instance 'DVI_ClkGenerator' to cell 'MMCME2_ADV' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:180]
-INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:239]
-	Parameter BUFR_DIVIDE bound to: 5 - type: string 
-	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
-INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:245]
-INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'TMDS_Clocking' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Clocking.vhd:82]
-INFO: [Synth 8-638] synthesizing module 'ResetBridge__parameterized0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized1' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsync.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'ResetBridge__parameterized0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncAsyncReset.vhd:72]
-INFO: [Synth 8-638] synthesizing module 'TMDS_Decoder' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Decoder.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'InputSERDES' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:85]
-	Parameter DIFF_TERM bound to: 0 - type: bool 
-	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
-INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:92]
-	Parameter CINVCTRL_SEL bound to: FALSE - type: string 
-	Parameter DELAY_SRC bound to: IDATAIN - type: string 
-	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
-	Parameter IDELAY_TYPE bound to: VARIABLE - type: string 
-	Parameter IDELAY_VALUE bound to: 0 - type: integer 
-	Parameter PIPE_SEL bound to: FALSE - type: string 
-	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: double 
-	Parameter SIGNAL_PATTERN bound to: DATA - type: string 
-INFO: [Synth 8-113] binding component instance 'InputDelay' to cell 'IDELAYE2' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:102]
-	Parameter DATA_RATE bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 10 - type: integer 
-	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
-	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
-	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
-	Parameter IOBDELAY bound to: IFD - type: string 
-	Parameter NUM_CE bound to: 2 - type: integer 
-	Parameter OFB_USED bound to: FALSE - type: string 
-	Parameter SERDES_MODE bound to: MASTER - type: string 
-INFO: [Synth 8-113] binding component instance 'DeserializerMaster' to cell 'ISERDESE2' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:130]
-	Parameter DATA_RATE bound to: DDR - type: string 
-	Parameter DATA_WIDTH bound to: 10 - type: integer 
-	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
-	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
-	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
-	Parameter IOBDELAY bound to: IFD - type: string 
-	Parameter NUM_CE bound to: 2 - type: integer 
-	Parameter OFB_USED bound to: FALSE - type: string 
-	Parameter SERDES_MODE bound to: SLAVE - type: string 
-INFO: [Synth 8-113] binding component instance 'DeserializerSlave' to cell 'ISERDESE2' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:172]
-INFO: [Synth 8-256] done synthesizing module 'InputSERDES' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/InputSERDES.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'SyncBase' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'SyncBase' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
-INFO: [Synth 8-638] synthesizing module 'SyncBase__parameterized0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'SyncBase__parameterized0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/SyncBase.vhd:74]
-INFO: [Synth 8-638] synthesizing module 'PhaseAlign' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:95]
-INFO: [Synth 8-256] done synthesizing module 'PhaseAlign' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:95]
-INFO: [Synth 8-638] synthesizing module 'ChannelBond' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/ChannelBond.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'ChannelBond' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/ChannelBond.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'TMDS_Decoder' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TMDS_Decoder.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'EEPROM_8b' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/EEPROM_8b.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'TWI_SlaveCtl' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TWI_SlaveCtl.vhd:87]
-INFO: [Synth 8-638] synthesizing module 'GlitchFilter' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/GlitchFilter.vhd:69]
-INFO: [Synth 8-256] done synthesizing module 'GlitchFilter' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/GlitchFilter.vhd:69]
-INFO: [Synth 8-256] done synthesizing module 'TWI_SlaveCtl' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/TWI_SlaveCtl.vhd:87]
-INFO: [Synth 8-226] default block is never used [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/EEPROM_8b.vhd:201]
-INFO: [Synth 8-256] done synthesizing module 'EEPROM_8b' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/EEPROM_8b.vhd:85]
-INFO: [Synth 8-256] done synthesizing module 'dvi2rgb' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/dvi2rgb.vhd:112]
-INFO: [Synth 8-256] done synthesizing module 'design_1_dvi2rgb_0_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:81]
-WARNING: [Synth 8-6014] Unused sequential element pTkn0FlagQ_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:172]
-WARNING: [Synth 8-6014] Unused sequential element pTkn1FlagQ_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:173]
-WARNING: [Synth 8-6014] Unused sequential element pTkn2FlagQ_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:174]
-WARNING: [Synth 8-6014] Unused sequential element pTkn3FlagQ_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:175]
-WARNING: [Synth 8-6014] Unused sequential element pDelayFastOvf_reg was removed.  [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/0bb5/src/PhaseAlign.vhd:209]
-WARNING: [Synth 8-7129] Port aRst in module dvi2rgb is either unconnected or has no load
-WARNING: [Synth 8-7129] Port pRst in module dvi2rgb is either unconnected or has no load
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 1589.414 ; gain = 770.234
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1589.414 ; gain = 770.234
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1589.414 ; gain = 770.234
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1589.414 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1588.996 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb_ooc.xdc] for cell 'U0'
-CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_pixclk'. The XDC file d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
-CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_refclk'. The XDC file d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_refclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
-Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'U0'
-Parsing XDC File [D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_dvi2rgb_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_dvi2rgb_0_0_synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_dvi2rgb_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_dvi2rgb_0_0_propImpl.xdc].
+Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb_ooc.xdc] for cell 'U0'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_pixclk'. The XDC file d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_pixclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'ila_refclk'. The XDC file d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_refclk/ila_v6_2/constraints/ila.xdc will not be read for any cell of this module.
+Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/dvi2rgb.xdc] for cell 'U0'
+Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_dvi2rgb_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_dvi2rgb_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_dvi2rgb_0_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_dvi2rgb_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_dvi2rgb_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc] for cell 'U0'
-WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:10]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp_q*" && IS_SEQUENTIAL }'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:10]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:10]
+Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc] for cell 'U0'
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:10]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp_q*" && IS_SEQUENTIAL }'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:10]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_lcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:10]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:11]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp_q*" && IS_SEQUENTIAL }'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:11]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:11]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:11]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp_q*" && IS_SEQUENTIAL }'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:11]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_window_counter/u_wcnt_hcmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:11]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:12]
-WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp_q*" && IS_SEQUENTIAL }'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:12]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:12]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:12]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp_q*" && IS_SEQUENTIAL }'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:12]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/u_cap_sample_counter/u_scnt_cmp/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK*"}]'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:12]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter { NAME =~  "*allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK"}'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:13]
-WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter {NAME =~  "*allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D"}'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:13]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins -hierarchical -filter { NAME =~  "*allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK"}]'. [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:13]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter { NAME =~  "*allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK"}'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:13]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hierarchical -filter {NAME =~  "*allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/I_IS_TERMINATION_SLICE_W_OUTPUT_REG.DOUT_O_reg/D"}'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:13]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-from [get_pins -hierarchical -filter { NAME =~  "*allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/DUT/I_WHOLE_SLICE.G_SLICE_IDX[*].U_ALL_SRL_SLICE/u_srl*/S*/CLK"}]'. [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc:13]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-Finished Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/src/ila_timing_workaround.xdc] for cell 'U0'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1589.414 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1588.996 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1589.414 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 1588.996 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Constraint Validation : Time (s): cpu = 00:01:33 ; elapsed = 00:02:15 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:33 ; elapsed = 00:02:15 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_dvi2rgb_0_0_synth_1/dont_touch.xdc, line 20).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_dvi2rgb_0_0_synth_1/dont_touch.xdc, line 20).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:33 ; elapsed = 00:02:15 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'pState_reg' in module 'PhaseAlign'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TWI_SlaveCtl'
@@ -628,7 +364,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sState_reg' using encoding 'one-hot' in module 'EEPROM_8b'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:35 ; elapsed = 00:02:17 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -652,25 +388,25 @@ WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-7129] Port aRst in module dvi2rgb is either unconnected or has no load
 WARNING: [Synth 8-7129] Port pRst in module dvi2rgb is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:25 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:50 ; elapsed = 00:02:41 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:06 ; elapsed = 00:03:05 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Timing Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:03:07 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:29 ; elapsed = 00:01:34 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Technology Mapping : Time (s): cpu = 00:02:09 ; elapsed = 00:03:09 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -688,37 +424,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished IO Insertion : Time (s): cpu = 00:02:23 ; elapsed = 00:03:28 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:23 ; elapsed = 00:03:28 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:24 ; elapsed = 00:03:28 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:24 ; elapsed = 00:03:28 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:24 ; elapsed = 00:03:28 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:24 ; elapsed = 00:03:28 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -757,30 +493,30 @@ Report Cell Usage:
 |22    |IBUFDS     |     4|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:24 ; elapsed = 00:03:28 . Memory (MB): peak = 1588.996 ; gain = 770.465
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:01:37 . Memory (MB): peak = 1589.414 ; gain = 770.234
-Synthesis Optimization Complete : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1589.414 ; gain = 770.234
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:07 ; elapsed = 00:03:15 . Memory (MB): peak = 1588.996 ; gain = 770.465
+Synthesis Optimization Complete : Time (s): cpu = 00:02:24 ; elapsed = 00:03:28 . Memory (MB): peak = 1588.996 ; gain = 770.465
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1589.414 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1588.996 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 63 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 6 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1589.414 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1588.996 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
 
 Synth Design complete, checksum: ca80cdba
 INFO: [Common 17-83] Releasing license: Synthesis
-175 Infos, 32 Warnings, 6 Critical Warnings and 0 Errors encountered.
+176 Infos, 32 Warnings, 6 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:47 ; elapsed = 00:01:56 . Memory (MB): peak = 1589.414 ; gain = 1140.215
-INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_dvi2rgb_0_0_synth_1/design_1_dvi2rgb_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:02:38 ; elapsed = 00:03:55 . Memory (MB): peak = 1588.996 ; gain = 1141.469
+INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_dvi2rgb_0_0_synth_1/design_1_dvi2rgb_0_0.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 41 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_dvi2rgb_0_0_synth_1/design_1_dvi2rgb_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_dvi2rgb_0_0_synth_1/design_1_dvi2rgb_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_dvi2rgb_0_0_utilization_synth.rpt -pb design_1_dvi2rgb_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan  5 18:53:53 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed May 24 14:41:27 2023...

@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Mon May 22 19:38:46 2023
+-- Date        : Sat May 27 13:04:58 2023
 -- Host        : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_AXI4_ImageProcessor_0_1/design_1_AXI4_ImageProcessor_0_1_sim_netlist.vhdl
@@ -14,14 +14,1717 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
+entity design_1_AXI4_ImageProcessor_0_1_effect_switch is
+  port (
+    \slv_reg_wren__0\ : out STD_LOGIC;
+    color : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    S_AXI_WREADY : in STD_LOGIC;
+    S_AXI_AWREADY : in STD_LOGIC;
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_wvalid : in STD_LOGIC;
+    original_color : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    grayscale : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    color_inversion : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    brightness_adjustment : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    solarize : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    sepia : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    emboss_effect : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    posterize_effect : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    contrast_adjustment : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    thresholding : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    Q : in STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_AXI4_ImageProcessor_0_1_effect_switch : entity is "effect_switch";
+end design_1_AXI4_ImageProcessor_0_1_effect_switch;
+
+architecture STRUCTURE of design_1_AXI4_ImageProcessor_0_1_effect_switch is
+  signal \color[0]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[0]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[0]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[0]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[10]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[10]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[10]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[10]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[11]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[11]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[11]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[11]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[12]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[12]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[12]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[12]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[13]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[13]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[13]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[13]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[14]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[14]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[14]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[14]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[15]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[15]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[15]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[15]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[16]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[16]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[16]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[16]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[17]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[17]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[17]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[17]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[18]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[18]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[18]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[18]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[19]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[19]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[19]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[19]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[1]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[1]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[1]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[1]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[20]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[20]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[20]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[20]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[21]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[21]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[21]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[21]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[22]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[22]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[22]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[22]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[23]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[23]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[23]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[23]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[23]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \color[2]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[2]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[2]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[2]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[3]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[3]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[3]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[3]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[4]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[4]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[4]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[4]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[5]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[5]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[5]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[5]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[6]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[6]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[6]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[6]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[7]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[7]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[7]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[7]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[8]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[8]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[8]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[8]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \color[9]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \color[9]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \color[9]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \color[9]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal prev_select : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \prev_select_reg[7]_i_1_n_0\ : STD_LOGIC;
+  signal \prev_select_reg[7]_i_3_n_0\ : STD_LOGIC;
+  signal \prev_select_reg[7]_i_4_n_0\ : STD_LOGIC;
+  signal \prev_select_reg[7]_i_5_n_0\ : STD_LOGIC;
+  signal \^slv_reg_wren__0\ : STD_LOGIC;
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \prev_select_reg[0]\ : label is "LD";
+  attribute XILINX_TRANSFORM_PINMAP : string;
+  attribute XILINX_TRANSFORM_PINMAP of \prev_select_reg[0]\ : label is "VCC:GE GND:CLR";
+  attribute XILINX_LEGACY_PRIM of \prev_select_reg[1]\ : label is "LD";
+  attribute XILINX_TRANSFORM_PINMAP of \prev_select_reg[1]\ : label is "VCC:GE GND:CLR";
+  attribute XILINX_LEGACY_PRIM of \prev_select_reg[2]\ : label is "LD";
+  attribute XILINX_TRANSFORM_PINMAP of \prev_select_reg[2]\ : label is "VCC:GE GND:CLR";
+  attribute XILINX_LEGACY_PRIM of \prev_select_reg[3]\ : label is "LD";
+  attribute XILINX_TRANSFORM_PINMAP of \prev_select_reg[3]\ : label is "VCC:GE GND:CLR";
+  attribute XILINX_LEGACY_PRIM of \prev_select_reg[4]\ : label is "LD";
+  attribute XILINX_TRANSFORM_PINMAP of \prev_select_reg[4]\ : label is "VCC:GE GND:CLR";
+  attribute XILINX_LEGACY_PRIM of \prev_select_reg[5]\ : label is "LD";
+  attribute XILINX_TRANSFORM_PINMAP of \prev_select_reg[5]\ : label is "VCC:GE GND:CLR";
+  attribute XILINX_LEGACY_PRIM of \prev_select_reg[6]\ : label is "LD";
+  attribute XILINX_TRANSFORM_PINMAP of \prev_select_reg[6]\ : label is "VCC:GE GND:CLR";
+  attribute XILINX_LEGACY_PRIM of \prev_select_reg[7]\ : label is "LD";
+  attribute XILINX_TRANSFORM_PINMAP of \prev_select_reg[7]\ : label is "VCC:GE GND:CLR";
+begin
+  \slv_reg_wren__0\ <= \^slv_reg_wren__0\;
+\color[0]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(0),
+      I1 => \color[0]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[0]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(0)
+    );
+\color[0]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(0),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(0),
+      I4 => prev_select(0),
+      I5 => thresholding(0),
+      O => \color[0]_INST_0_i_1_n_0\
+    );
+\color[0]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[0]_INST_0_i_3_n_0\,
+      I1 => \color[0]_INST_0_i_4_n_0\,
+      O => \color[0]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[0]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(0),
+      I1 => color_inversion(0),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(0),
+      I4 => prev_select(0),
+      I5 => original_color(0),
+      O => \color[0]_INST_0_i_3_n_0\
+    );
+\color[0]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(0),
+      I1 => sepia(0),
+      I2 => prev_select(1),
+      I3 => emboss_effect(0),
+      I4 => prev_select(0),
+      I5 => posterize_effect(0),
+      O => \color[0]_INST_0_i_4_n_0\
+    );
+\color[10]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(10),
+      I1 => \color[10]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[10]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(10)
+    );
+\color[10]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(10),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(10),
+      I4 => prev_select(0),
+      I5 => thresholding(10),
+      O => \color[10]_INST_0_i_1_n_0\
+    );
+\color[10]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[10]_INST_0_i_3_n_0\,
+      I1 => \color[10]_INST_0_i_4_n_0\,
+      O => \color[10]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[10]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(10),
+      I1 => color_inversion(10),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(10),
+      I4 => prev_select(0),
+      I5 => original_color(10),
+      O => \color[10]_INST_0_i_3_n_0\
+    );
+\color[10]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(10),
+      I1 => sepia(10),
+      I2 => prev_select(1),
+      I3 => emboss_effect(10),
+      I4 => prev_select(0),
+      I5 => posterize_effect(10),
+      O => \color[10]_INST_0_i_4_n_0\
+    );
+\color[11]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(11),
+      I1 => \color[11]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[11]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(11)
+    );
+\color[11]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(11),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(11),
+      I4 => prev_select(0),
+      I5 => thresholding(11),
+      O => \color[11]_INST_0_i_1_n_0\
+    );
+\color[11]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[11]_INST_0_i_3_n_0\,
+      I1 => \color[11]_INST_0_i_4_n_0\,
+      O => \color[11]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[11]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(11),
+      I1 => color_inversion(11),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(11),
+      I4 => prev_select(0),
+      I5 => original_color(11),
+      O => \color[11]_INST_0_i_3_n_0\
+    );
+\color[11]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(11),
+      I1 => sepia(11),
+      I2 => prev_select(1),
+      I3 => emboss_effect(11),
+      I4 => prev_select(0),
+      I5 => posterize_effect(11),
+      O => \color[11]_INST_0_i_4_n_0\
+    );
+\color[12]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(12),
+      I1 => \color[12]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[12]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(12)
+    );
+\color[12]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(12),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(12),
+      I4 => prev_select(0),
+      I5 => thresholding(12),
+      O => \color[12]_INST_0_i_1_n_0\
+    );
+\color[12]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[12]_INST_0_i_3_n_0\,
+      I1 => \color[12]_INST_0_i_4_n_0\,
+      O => \color[12]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[12]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(12),
+      I1 => color_inversion(12),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(12),
+      I4 => prev_select(0),
+      I5 => original_color(12),
+      O => \color[12]_INST_0_i_3_n_0\
+    );
+\color[12]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(12),
+      I1 => sepia(12),
+      I2 => prev_select(1),
+      I3 => emboss_effect(12),
+      I4 => prev_select(0),
+      I5 => posterize_effect(12),
+      O => \color[12]_INST_0_i_4_n_0\
+    );
+\color[13]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(13),
+      I1 => \color[13]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[13]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(13)
+    );
+\color[13]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(13),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(13),
+      I4 => prev_select(0),
+      I5 => thresholding(13),
+      O => \color[13]_INST_0_i_1_n_0\
+    );
+\color[13]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[13]_INST_0_i_3_n_0\,
+      I1 => \color[13]_INST_0_i_4_n_0\,
+      O => \color[13]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[13]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(13),
+      I1 => color_inversion(13),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(13),
+      I4 => prev_select(0),
+      I5 => original_color(13),
+      O => \color[13]_INST_0_i_3_n_0\
+    );
+\color[13]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(13),
+      I1 => sepia(13),
+      I2 => prev_select(1),
+      I3 => emboss_effect(13),
+      I4 => prev_select(0),
+      I5 => posterize_effect(13),
+      O => \color[13]_INST_0_i_4_n_0\
+    );
+\color[14]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(14),
+      I1 => \color[14]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[14]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(14)
+    );
+\color[14]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(14),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(14),
+      I4 => prev_select(0),
+      I5 => thresholding(14),
+      O => \color[14]_INST_0_i_1_n_0\
+    );
+\color[14]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[14]_INST_0_i_3_n_0\,
+      I1 => \color[14]_INST_0_i_4_n_0\,
+      O => \color[14]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[14]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(14),
+      I1 => color_inversion(14),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(14),
+      I4 => prev_select(0),
+      I5 => original_color(14),
+      O => \color[14]_INST_0_i_3_n_0\
+    );
+\color[14]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(14),
+      I1 => sepia(14),
+      I2 => prev_select(1),
+      I3 => emboss_effect(14),
+      I4 => prev_select(0),
+      I5 => posterize_effect(14),
+      O => \color[14]_INST_0_i_4_n_0\
+    );
+\color[15]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(15),
+      I1 => \color[15]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[15]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(15)
+    );
+\color[15]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(15),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(15),
+      I4 => prev_select(0),
+      I5 => thresholding(15),
+      O => \color[15]_INST_0_i_1_n_0\
+    );
+\color[15]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[15]_INST_0_i_3_n_0\,
+      I1 => \color[15]_INST_0_i_4_n_0\,
+      O => \color[15]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[15]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(15),
+      I1 => color_inversion(15),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(15),
+      I4 => prev_select(0),
+      I5 => original_color(15),
+      O => \color[15]_INST_0_i_3_n_0\
+    );
+\color[15]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(15),
+      I1 => sepia(15),
+      I2 => prev_select(1),
+      I3 => emboss_effect(15),
+      I4 => prev_select(0),
+      I5 => posterize_effect(15),
+      O => \color[15]_INST_0_i_4_n_0\
+    );
+\color[16]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(16),
+      I1 => \color[16]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[16]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(16)
+    );
+\color[16]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(16),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(16),
+      I4 => prev_select(0),
+      I5 => thresholding(16),
+      O => \color[16]_INST_0_i_1_n_0\
+    );
+\color[16]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[16]_INST_0_i_3_n_0\,
+      I1 => \color[16]_INST_0_i_4_n_0\,
+      O => \color[16]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[16]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(16),
+      I1 => color_inversion(16),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(16),
+      I4 => prev_select(0),
+      I5 => original_color(16),
+      O => \color[16]_INST_0_i_3_n_0\
+    );
+\color[16]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(16),
+      I1 => sepia(16),
+      I2 => prev_select(1),
+      I3 => emboss_effect(16),
+      I4 => prev_select(0),
+      I5 => posterize_effect(16),
+      O => \color[16]_INST_0_i_4_n_0\
+    );
+\color[17]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(17),
+      I1 => \color[17]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[17]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(17)
+    );
+\color[17]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(17),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(17),
+      I4 => prev_select(0),
+      I5 => thresholding(17),
+      O => \color[17]_INST_0_i_1_n_0\
+    );
+\color[17]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[17]_INST_0_i_3_n_0\,
+      I1 => \color[17]_INST_0_i_4_n_0\,
+      O => \color[17]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[17]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(17),
+      I1 => color_inversion(17),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(17),
+      I4 => prev_select(0),
+      I5 => original_color(17),
+      O => \color[17]_INST_0_i_3_n_0\
+    );
+\color[17]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(17),
+      I1 => sepia(17),
+      I2 => prev_select(1),
+      I3 => emboss_effect(17),
+      I4 => prev_select(0),
+      I5 => posterize_effect(17),
+      O => \color[17]_INST_0_i_4_n_0\
+    );
+\color[18]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(18),
+      I1 => \color[18]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[18]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(18)
+    );
+\color[18]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(18),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(18),
+      I4 => prev_select(0),
+      I5 => thresholding(18),
+      O => \color[18]_INST_0_i_1_n_0\
+    );
+\color[18]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[18]_INST_0_i_3_n_0\,
+      I1 => \color[18]_INST_0_i_4_n_0\,
+      O => \color[18]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[18]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(18),
+      I1 => color_inversion(18),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(18),
+      I4 => prev_select(0),
+      I5 => original_color(18),
+      O => \color[18]_INST_0_i_3_n_0\
+    );
+\color[18]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(18),
+      I1 => sepia(18),
+      I2 => prev_select(1),
+      I3 => emboss_effect(18),
+      I4 => prev_select(0),
+      I5 => posterize_effect(18),
+      O => \color[18]_INST_0_i_4_n_0\
+    );
+\color[19]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(19),
+      I1 => \color[19]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[19]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(19)
+    );
+\color[19]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(19),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(19),
+      I4 => prev_select(0),
+      I5 => thresholding(19),
+      O => \color[19]_INST_0_i_1_n_0\
+    );
+\color[19]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[19]_INST_0_i_3_n_0\,
+      I1 => \color[19]_INST_0_i_4_n_0\,
+      O => \color[19]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[19]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(19),
+      I1 => color_inversion(19),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(19),
+      I4 => prev_select(0),
+      I5 => original_color(19),
+      O => \color[19]_INST_0_i_3_n_0\
+    );
+\color[19]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(19),
+      I1 => sepia(19),
+      I2 => prev_select(1),
+      I3 => emboss_effect(19),
+      I4 => prev_select(0),
+      I5 => posterize_effect(19),
+      O => \color[19]_INST_0_i_4_n_0\
+    );
+\color[1]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(1),
+      I1 => \color[1]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[1]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(1)
+    );
+\color[1]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(1),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(1),
+      I4 => prev_select(0),
+      I5 => thresholding(1),
+      O => \color[1]_INST_0_i_1_n_0\
+    );
+\color[1]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[1]_INST_0_i_3_n_0\,
+      I1 => \color[1]_INST_0_i_4_n_0\,
+      O => \color[1]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[1]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(1),
+      I1 => color_inversion(1),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(1),
+      I4 => prev_select(0),
+      I5 => original_color(1),
+      O => \color[1]_INST_0_i_3_n_0\
+    );
+\color[1]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(1),
+      I1 => sepia(1),
+      I2 => prev_select(1),
+      I3 => emboss_effect(1),
+      I4 => prev_select(0),
+      I5 => posterize_effect(1),
+      O => \color[1]_INST_0_i_4_n_0\
+    );
+\color[20]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(20),
+      I1 => \color[20]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[20]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(20)
+    );
+\color[20]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(20),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(20),
+      I4 => prev_select(0),
+      I5 => thresholding(20),
+      O => \color[20]_INST_0_i_1_n_0\
+    );
+\color[20]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[20]_INST_0_i_3_n_0\,
+      I1 => \color[20]_INST_0_i_4_n_0\,
+      O => \color[20]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[20]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(20),
+      I1 => color_inversion(20),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(20),
+      I4 => prev_select(0),
+      I5 => original_color(20),
+      O => \color[20]_INST_0_i_3_n_0\
+    );
+\color[20]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(20),
+      I1 => sepia(20),
+      I2 => prev_select(1),
+      I3 => emboss_effect(20),
+      I4 => prev_select(0),
+      I5 => posterize_effect(20),
+      O => \color[20]_INST_0_i_4_n_0\
+    );
+\color[21]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(21),
+      I1 => \color[21]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[21]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(21)
+    );
+\color[21]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(21),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(21),
+      I4 => prev_select(0),
+      I5 => thresholding(21),
+      O => \color[21]_INST_0_i_1_n_0\
+    );
+\color[21]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[21]_INST_0_i_3_n_0\,
+      I1 => \color[21]_INST_0_i_4_n_0\,
+      O => \color[21]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[21]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(21),
+      I1 => color_inversion(21),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(21),
+      I4 => prev_select(0),
+      I5 => original_color(21),
+      O => \color[21]_INST_0_i_3_n_0\
+    );
+\color[21]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(21),
+      I1 => sepia(21),
+      I2 => prev_select(1),
+      I3 => emboss_effect(21),
+      I4 => prev_select(0),
+      I5 => posterize_effect(21),
+      O => \color[21]_INST_0_i_4_n_0\
+    );
+\color[22]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(22),
+      I1 => \color[22]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[22]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(22)
+    );
+\color[22]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(22),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(22),
+      I4 => prev_select(0),
+      I5 => thresholding(22),
+      O => \color[22]_INST_0_i_1_n_0\
+    );
+\color[22]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[22]_INST_0_i_3_n_0\,
+      I1 => \color[22]_INST_0_i_4_n_0\,
+      O => \color[22]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[22]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(22),
+      I1 => color_inversion(22),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(22),
+      I4 => prev_select(0),
+      I5 => original_color(22),
+      O => \color[22]_INST_0_i_3_n_0\
+    );
+\color[22]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(22),
+      I1 => sepia(22),
+      I2 => prev_select(1),
+      I3 => emboss_effect(22),
+      I4 => prev_select(0),
+      I5 => posterize_effect(22),
+      O => \color[22]_INST_0_i_4_n_0\
+    );
+\color[23]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(23),
+      I1 => \color[23]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[23]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(23)
+    );
+\color[23]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(23),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(23),
+      I4 => prev_select(0),
+      I5 => thresholding(23),
+      O => \color[23]_INST_0_i_1_n_0\
+    );
+\color[23]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[23]_INST_0_i_4_n_0\,
+      I1 => \color[23]_INST_0_i_5_n_0\,
+      O => \color[23]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[23]_INST_0_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => prev_select(6),
+      I1 => prev_select(7),
+      I2 => prev_select(4),
+      I3 => prev_select(5),
+      O => \color[23]_INST_0_i_3_n_0\
+    );
+\color[23]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(23),
+      I1 => color_inversion(23),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(23),
+      I4 => prev_select(0),
+      I5 => original_color(23),
+      O => \color[23]_INST_0_i_4_n_0\
+    );
+\color[23]_INST_0_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(23),
+      I1 => sepia(23),
+      I2 => prev_select(1),
+      I3 => emboss_effect(23),
+      I4 => prev_select(0),
+      I5 => posterize_effect(23),
+      O => \color[23]_INST_0_i_5_n_0\
+    );
+\color[2]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(2),
+      I1 => \color[2]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[2]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(2)
+    );
+\color[2]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(2),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(2),
+      I4 => prev_select(0),
+      I5 => thresholding(2),
+      O => \color[2]_INST_0_i_1_n_0\
+    );
+\color[2]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[2]_INST_0_i_3_n_0\,
+      I1 => \color[2]_INST_0_i_4_n_0\,
+      O => \color[2]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[2]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(2),
+      I1 => color_inversion(2),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(2),
+      I4 => prev_select(0),
+      I5 => original_color(2),
+      O => \color[2]_INST_0_i_3_n_0\
+    );
+\color[2]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(2),
+      I1 => sepia(2),
+      I2 => prev_select(1),
+      I3 => emboss_effect(2),
+      I4 => prev_select(0),
+      I5 => posterize_effect(2),
+      O => \color[2]_INST_0_i_4_n_0\
+    );
+\color[3]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(3),
+      I1 => \color[3]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[3]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(3)
+    );
+\color[3]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(3),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(3),
+      I4 => prev_select(0),
+      I5 => thresholding(3),
+      O => \color[3]_INST_0_i_1_n_0\
+    );
+\color[3]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[3]_INST_0_i_3_n_0\,
+      I1 => \color[3]_INST_0_i_4_n_0\,
+      O => \color[3]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[3]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(3),
+      I1 => color_inversion(3),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(3),
+      I4 => prev_select(0),
+      I5 => original_color(3),
+      O => \color[3]_INST_0_i_3_n_0\
+    );
+\color[3]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(3),
+      I1 => sepia(3),
+      I2 => prev_select(1),
+      I3 => emboss_effect(3),
+      I4 => prev_select(0),
+      I5 => posterize_effect(3),
+      O => \color[3]_INST_0_i_4_n_0\
+    );
+\color[4]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(4),
+      I1 => \color[4]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[4]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(4)
+    );
+\color[4]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(4),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(4),
+      I4 => prev_select(0),
+      I5 => thresholding(4),
+      O => \color[4]_INST_0_i_1_n_0\
+    );
+\color[4]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[4]_INST_0_i_3_n_0\,
+      I1 => \color[4]_INST_0_i_4_n_0\,
+      O => \color[4]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[4]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(4),
+      I1 => color_inversion(4),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(4),
+      I4 => prev_select(0),
+      I5 => original_color(4),
+      O => \color[4]_INST_0_i_3_n_0\
+    );
+\color[4]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(4),
+      I1 => sepia(4),
+      I2 => prev_select(1),
+      I3 => emboss_effect(4),
+      I4 => prev_select(0),
+      I5 => posterize_effect(4),
+      O => \color[4]_INST_0_i_4_n_0\
+    );
+\color[5]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(5),
+      I1 => \color[5]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[5]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(5)
+    );
+\color[5]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(5),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(5),
+      I4 => prev_select(0),
+      I5 => thresholding(5),
+      O => \color[5]_INST_0_i_1_n_0\
+    );
+\color[5]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[5]_INST_0_i_3_n_0\,
+      I1 => \color[5]_INST_0_i_4_n_0\,
+      O => \color[5]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[5]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(5),
+      I1 => color_inversion(5),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(5),
+      I4 => prev_select(0),
+      I5 => original_color(5),
+      O => \color[5]_INST_0_i_3_n_0\
+    );
+\color[5]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(5),
+      I1 => sepia(5),
+      I2 => prev_select(1),
+      I3 => emboss_effect(5),
+      I4 => prev_select(0),
+      I5 => posterize_effect(5),
+      O => \color[5]_INST_0_i_4_n_0\
+    );
+\color[6]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(6),
+      I1 => \color[6]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[6]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(6)
+    );
+\color[6]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(6),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(6),
+      I4 => prev_select(0),
+      I5 => thresholding(6),
+      O => \color[6]_INST_0_i_1_n_0\
+    );
+\color[6]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[6]_INST_0_i_3_n_0\,
+      I1 => \color[6]_INST_0_i_4_n_0\,
+      O => \color[6]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[6]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(6),
+      I1 => color_inversion(6),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(6),
+      I4 => prev_select(0),
+      I5 => original_color(6),
+      O => \color[6]_INST_0_i_3_n_0\
+    );
+\color[6]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(6),
+      I1 => sepia(6),
+      I2 => prev_select(1),
+      I3 => emboss_effect(6),
+      I4 => prev_select(0),
+      I5 => posterize_effect(6),
+      O => \color[6]_INST_0_i_4_n_0\
+    );
+\color[7]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(7),
+      I1 => \color[7]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[7]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(7)
+    );
+\color[7]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(7),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(7),
+      I4 => prev_select(0),
+      I5 => thresholding(7),
+      O => \color[7]_INST_0_i_1_n_0\
+    );
+\color[7]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[7]_INST_0_i_3_n_0\,
+      I1 => \color[7]_INST_0_i_4_n_0\,
+      O => \color[7]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[7]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(7),
+      I1 => color_inversion(7),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(7),
+      I4 => prev_select(0),
+      I5 => original_color(7),
+      O => \color[7]_INST_0_i_3_n_0\
+    );
+\color[7]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(7),
+      I1 => sepia(7),
+      I2 => prev_select(1),
+      I3 => emboss_effect(7),
+      I4 => prev_select(0),
+      I5 => posterize_effect(7),
+      O => \color[7]_INST_0_i_4_n_0\
+    );
+\color[8]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(8),
+      I1 => \color[8]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[8]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(8)
+    );
+\color[8]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(8),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(8),
+      I4 => prev_select(0),
+      I5 => thresholding(8),
+      O => \color[8]_INST_0_i_1_n_0\
+    );
+\color[8]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[8]_INST_0_i_3_n_0\,
+      I1 => \color[8]_INST_0_i_4_n_0\,
+      O => \color[8]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[8]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(8),
+      I1 => color_inversion(8),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(8),
+      I4 => prev_select(0),
+      I5 => original_color(8),
+      O => \color[8]_INST_0_i_3_n_0\
+    );
+\color[8]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(8),
+      I1 => sepia(8),
+      I2 => prev_select(1),
+      I3 => emboss_effect(8),
+      I4 => prev_select(0),
+      I5 => posterize_effect(8),
+      O => \color[8]_INST_0_i_4_n_0\
+    );
+\color[9]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AAAACFC0"
+    )
+        port map (
+      I0 => original_color(9),
+      I1 => \color[9]_INST_0_i_1_n_0\,
+      I2 => prev_select(3),
+      I3 => \color[9]_INST_0_i_2_n_0\,
+      I4 => \color[23]_INST_0_i_3_n_0\,
+      O => color(9)
+    );
+\color[9]_INST_0_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"ABA8ABABABA8A8A8"
+    )
+        port map (
+      I0 => original_color(9),
+      I1 => prev_select(1),
+      I2 => prev_select(2),
+      I3 => contrast_adjustment(9),
+      I4 => prev_select(0),
+      I5 => thresholding(9),
+      O => \color[9]_INST_0_i_1_n_0\
+    );
+\color[9]_INST_0_i_2\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \color[9]_INST_0_i_3_n_0\,
+      I1 => \color[9]_INST_0_i_4_n_0\,
+      O => \color[9]_INST_0_i_2_n_0\,
+      S => prev_select(2)
+    );
+\color[9]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => grayscale(9),
+      I1 => color_inversion(9),
+      I2 => prev_select(1),
+      I3 => brightness_adjustment(9),
+      I4 => prev_select(0),
+      I5 => original_color(9),
+      O => \color[9]_INST_0_i_3_n_0\
+    );
+\color[9]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => solarize(9),
+      I1 => sepia(9),
+      I2 => prev_select(1),
+      I3 => emboss_effect(9),
+      I4 => prev_select(0),
+      I5 => posterize_effect(9),
+      O => \color[9]_INST_0_i_4_n_0\
+    );
+\prev_select_reg[0]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => Q(0),
+      G => \prev_select_reg[7]_i_1_n_0\,
+      GE => '1',
+      Q => prev_select(0)
+    );
+\prev_select_reg[1]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => Q(1),
+      G => \prev_select_reg[7]_i_1_n_0\,
+      GE => '1',
+      Q => prev_select(1)
+    );
+\prev_select_reg[2]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => Q(2),
+      G => \prev_select_reg[7]_i_1_n_0\,
+      GE => '1',
+      Q => prev_select(2)
+    );
+\prev_select_reg[3]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => Q(3),
+      G => \prev_select_reg[7]_i_1_n_0\,
+      GE => '1',
+      Q => prev_select(3)
+    );
+\prev_select_reg[4]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => Q(4),
+      G => \prev_select_reg[7]_i_1_n_0\,
+      GE => '1',
+      Q => prev_select(4)
+    );
+\prev_select_reg[5]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => Q(5),
+      G => \prev_select_reg[7]_i_1_n_0\,
+      GE => '1',
+      Q => prev_select(5)
+    );
+\prev_select_reg[6]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => Q(6),
+      G => \prev_select_reg[7]_i_1_n_0\,
+      GE => '1',
+      Q => prev_select(6)
+    );
+\prev_select_reg[7]\: unisim.vcomponents.LDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      CLR => '0',
+      D => Q(7),
+      G => \prev_select_reg[7]_i_1_n_0\,
+      GE => '1',
+      Q => prev_select(7)
+    );
+\prev_select_reg[7]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"AAA8"
+    )
+        port map (
+      I0 => \^slv_reg_wren__0\,
+      I1 => \prev_select_reg[7]_i_3_n_0\,
+      I2 => \prev_select_reg[7]_i_4_n_0\,
+      I3 => \prev_select_reg[7]_i_5_n_0\,
+      O => \prev_select_reg[7]_i_1_n_0\
+    );
+\prev_select_reg[7]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => S_AXI_WREADY,
+      I1 => S_AXI_AWREADY,
+      I2 => s00_axi_awvalid,
+      I3 => s00_axi_wvalid,
+      O => \^slv_reg_wren__0\
+    );
+\prev_select_reg[7]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6FF6FFFFFFFF6FF6"
+    )
+        port map (
+      I0 => prev_select(0),
+      I1 => Q(0),
+      I2 => Q(2),
+      I3 => prev_select(2),
+      I4 => Q(1),
+      I5 => prev_select(1),
+      O => \prev_select_reg[7]_i_3_n_0\
+    );
+\prev_select_reg[7]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6FF6FFFFFFFF6FF6"
+    )
+        port map (
+      I0 => prev_select(3),
+      I1 => Q(3),
+      I2 => Q(5),
+      I3 => prev_select(5),
+      I4 => Q(4),
+      I5 => prev_select(4),
+      O => \prev_select_reg[7]_i_4_n_0\
+    );
+\prev_select_reg[7]_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6FF6"
+    )
+        port map (
+      I0 => prev_select(6),
+      I1 => Q(6),
+      I2 => prev_select(7),
+      I3 => Q(7),
+      O => \prev_select_reg[7]_i_5_n_0\
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 entity design_1_AXI4_ImageProcessor_0_1_AXI4_ImageProcessor_v1_0_S00_AXI is
   port (
     S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_WREADY : out STD_LOGIC;
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    color : out STD_LOGIC_VECTOR ( 23 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
-    output_color : out STD_LOGIC_VECTOR ( 23 downto 0 );
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_wvalid : in STD_LOGIC;
@@ -31,8 +1734,16 @@ entity design_1_AXI4_ImageProcessor_0_1_AXI4_ImageProcessor_v1_0_S00_AXI is
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    color_threshold : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    color_grayscale : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    original_color : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    grayscale : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    color_inversion : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    brightness_adjustment : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    solarize : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    sepia : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    emboss_effect : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    posterize_effect : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    contrast_adjustment : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    thresholding : in STD_LOGIC_VECTOR ( 23 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
@@ -58,17 +1769,17 @@ architecture STRUCTURE of design_1_AXI4_ImageProcessor_0_1_AXI4_ImageProcessor_v
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal axi_wready0 : STD_LOGIC;
-  signal \output_color[23]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal p_1_in : STD_LOGIC_VECTOR ( 31 downto 7 );
   signal reg_data_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^s00_axi_bvalid\ : STD_LOGIC;
   signal \^s00_axi_rvalid\ : STD_LOGIC;
-  signal slv_reg0 : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal slv_reg0 : STD_LOGIC_VECTOR ( 31 downto 8 );
   signal \slv_reg0[15]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg0[23]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg0[31]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg0[7]_i_1_n_0\ : STD_LOGIC;
+  signal slv_reg0_0 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal slv_reg1 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \slv_reg1[15]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg1[23]_i_1_n_0\ : STD_LOGIC;
@@ -85,8 +1796,8 @@ architecture STRUCTURE of design_1_AXI4_ImageProcessor_0_1_AXI4_ImageProcessor_v
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \axi_araddr[3]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \slv_reg0[31]_i_2\ : label is "soft_lutpair1";
 begin
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
@@ -261,418 +1972,418 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
     );
 \axi_rdata[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(0),
-      I1 => slv_reg3(0),
-      I2 => slv_reg0(0),
+      I0 => slv_reg1(0),
+      I1 => slv_reg0_0(0),
+      I2 => slv_reg3(0),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(0),
+      I5 => slv_reg2(0),
       O => reg_data_out(0)
     );
 \axi_rdata[10]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(10),
-      I1 => slv_reg3(10),
-      I2 => slv_reg0(10),
+      I0 => slv_reg1(10),
+      I1 => slv_reg0(10),
+      I2 => slv_reg3(10),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(10),
+      I5 => slv_reg2(10),
       O => reg_data_out(10)
     );
 \axi_rdata[11]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(11),
-      I1 => slv_reg3(11),
-      I2 => slv_reg0(11),
+      I0 => slv_reg1(11),
+      I1 => slv_reg0(11),
+      I2 => slv_reg3(11),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(11),
+      I5 => slv_reg2(11),
       O => reg_data_out(11)
     );
 \axi_rdata[12]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(12),
-      I1 => slv_reg3(12),
-      I2 => slv_reg0(12),
+      I0 => slv_reg1(12),
+      I1 => slv_reg0(12),
+      I2 => slv_reg3(12),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(12),
+      I5 => slv_reg2(12),
       O => reg_data_out(12)
     );
 \axi_rdata[13]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(13),
-      I1 => slv_reg3(13),
-      I2 => slv_reg0(13),
+      I0 => slv_reg1(13),
+      I1 => slv_reg0(13),
+      I2 => slv_reg3(13),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(13),
+      I5 => slv_reg2(13),
       O => reg_data_out(13)
     );
 \axi_rdata[14]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(14),
-      I1 => slv_reg3(14),
-      I2 => slv_reg0(14),
+      I0 => slv_reg1(14),
+      I1 => slv_reg0(14),
+      I2 => slv_reg3(14),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(14),
+      I5 => slv_reg2(14),
       O => reg_data_out(14)
     );
 \axi_rdata[15]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(15),
-      I1 => slv_reg3(15),
-      I2 => slv_reg0(15),
+      I0 => slv_reg1(15),
+      I1 => slv_reg0(15),
+      I2 => slv_reg3(15),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(15),
+      I5 => slv_reg2(15),
       O => reg_data_out(15)
     );
 \axi_rdata[16]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(16),
-      I1 => slv_reg3(16),
-      I2 => slv_reg0(16),
+      I0 => slv_reg1(16),
+      I1 => slv_reg0(16),
+      I2 => slv_reg3(16),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(16),
+      I5 => slv_reg2(16),
       O => reg_data_out(16)
     );
 \axi_rdata[17]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(17),
-      I1 => slv_reg3(17),
-      I2 => slv_reg0(17),
+      I0 => slv_reg1(17),
+      I1 => slv_reg0(17),
+      I2 => slv_reg3(17),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(17),
+      I5 => slv_reg2(17),
       O => reg_data_out(17)
     );
 \axi_rdata[18]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(18),
-      I1 => slv_reg3(18),
-      I2 => slv_reg0(18),
+      I0 => slv_reg1(18),
+      I1 => slv_reg0(18),
+      I2 => slv_reg3(18),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(18),
+      I5 => slv_reg2(18),
       O => reg_data_out(18)
     );
 \axi_rdata[19]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(19),
-      I1 => slv_reg3(19),
-      I2 => slv_reg0(19),
+      I0 => slv_reg1(19),
+      I1 => slv_reg0(19),
+      I2 => slv_reg3(19),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(19),
+      I5 => slv_reg2(19),
       O => reg_data_out(19)
     );
 \axi_rdata[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(1),
-      I1 => slv_reg3(1),
-      I2 => slv_reg0(1),
+      I0 => slv_reg1(1),
+      I1 => slv_reg0_0(1),
+      I2 => slv_reg3(1),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(1),
+      I5 => slv_reg2(1),
       O => reg_data_out(1)
     );
 \axi_rdata[20]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(20),
-      I1 => slv_reg3(20),
-      I2 => slv_reg0(20),
+      I0 => slv_reg1(20),
+      I1 => slv_reg0(20),
+      I2 => slv_reg3(20),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(20),
+      I5 => slv_reg2(20),
       O => reg_data_out(20)
     );
 \axi_rdata[21]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(21),
-      I1 => slv_reg3(21),
-      I2 => slv_reg0(21),
+      I0 => slv_reg1(21),
+      I1 => slv_reg0(21),
+      I2 => slv_reg3(21),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(21),
+      I5 => slv_reg2(21),
       O => reg_data_out(21)
     );
 \axi_rdata[22]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(22),
-      I1 => slv_reg3(22),
-      I2 => slv_reg0(22),
+      I0 => slv_reg1(22),
+      I1 => slv_reg0(22),
+      I2 => slv_reg3(22),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(22),
+      I5 => slv_reg2(22),
       O => reg_data_out(22)
     );
 \axi_rdata[23]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(23),
-      I1 => slv_reg3(23),
-      I2 => slv_reg0(23),
+      I0 => slv_reg1(23),
+      I1 => slv_reg0(23),
+      I2 => slv_reg3(23),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(23),
+      I5 => slv_reg2(23),
       O => reg_data_out(23)
     );
 \axi_rdata[24]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(24),
-      I1 => slv_reg3(24),
-      I2 => slv_reg0(24),
+      I0 => slv_reg1(24),
+      I1 => slv_reg0(24),
+      I2 => slv_reg3(24),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(24),
+      I5 => slv_reg2(24),
       O => reg_data_out(24)
     );
 \axi_rdata[25]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(25),
-      I1 => slv_reg3(25),
-      I2 => slv_reg0(25),
+      I0 => slv_reg1(25),
+      I1 => slv_reg0(25),
+      I2 => slv_reg3(25),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(25),
+      I5 => slv_reg2(25),
       O => reg_data_out(25)
     );
 \axi_rdata[26]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(26),
-      I1 => slv_reg3(26),
-      I2 => slv_reg0(26),
+      I0 => slv_reg1(26),
+      I1 => slv_reg0(26),
+      I2 => slv_reg3(26),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(26),
+      I5 => slv_reg2(26),
       O => reg_data_out(26)
     );
 \axi_rdata[27]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(27),
-      I1 => slv_reg3(27),
-      I2 => slv_reg0(27),
+      I0 => slv_reg1(27),
+      I1 => slv_reg0(27),
+      I2 => slv_reg3(27),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(27),
+      I5 => slv_reg2(27),
       O => reg_data_out(27)
     );
 \axi_rdata[28]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(28),
-      I1 => slv_reg3(28),
-      I2 => slv_reg0(28),
+      I0 => slv_reg1(28),
+      I1 => slv_reg0(28),
+      I2 => slv_reg3(28),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(28),
+      I5 => slv_reg2(28),
       O => reg_data_out(28)
     );
 \axi_rdata[29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(29),
-      I1 => slv_reg3(29),
-      I2 => slv_reg0(29),
+      I0 => slv_reg1(29),
+      I1 => slv_reg0(29),
+      I2 => slv_reg3(29),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(29),
+      I5 => slv_reg2(29),
       O => reg_data_out(29)
     );
 \axi_rdata[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(2),
-      I1 => slv_reg3(2),
-      I2 => slv_reg0(2),
+      I0 => slv_reg1(2),
+      I1 => slv_reg0_0(2),
+      I2 => slv_reg3(2),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(2),
+      I5 => slv_reg2(2),
       O => reg_data_out(2)
     );
 \axi_rdata[30]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(30),
-      I1 => slv_reg3(30),
-      I2 => slv_reg0(30),
+      I0 => slv_reg1(30),
+      I1 => slv_reg0(30),
+      I2 => slv_reg3(30),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(30),
+      I5 => slv_reg2(30),
       O => reg_data_out(30)
     );
 \axi_rdata[31]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(31),
-      I1 => slv_reg3(31),
-      I2 => slv_reg0(31),
+      I0 => slv_reg1(31),
+      I1 => slv_reg0(31),
+      I2 => slv_reg3(31),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(31),
+      I5 => slv_reg2(31),
       O => reg_data_out(31)
     );
 \axi_rdata[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(3),
-      I1 => slv_reg3(3),
-      I2 => slv_reg0(3),
+      I0 => slv_reg1(3),
+      I1 => slv_reg0_0(3),
+      I2 => slv_reg3(3),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(3),
+      I5 => slv_reg2(3),
       O => reg_data_out(3)
     );
 \axi_rdata[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(4),
-      I1 => slv_reg3(4),
-      I2 => slv_reg0(4),
+      I0 => slv_reg1(4),
+      I1 => slv_reg0_0(4),
+      I2 => slv_reg3(4),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(4),
+      I5 => slv_reg2(4),
       O => reg_data_out(4)
     );
 \axi_rdata[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(5),
-      I1 => slv_reg3(5),
-      I2 => slv_reg0(5),
+      I0 => slv_reg1(5),
+      I1 => slv_reg0_0(5),
+      I2 => slv_reg3(5),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(5),
+      I5 => slv_reg2(5),
       O => reg_data_out(5)
     );
 \axi_rdata[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(6),
-      I1 => slv_reg3(6),
-      I2 => slv_reg0(6),
+      I0 => slv_reg1(6),
+      I1 => slv_reg0_0(6),
+      I2 => slv_reg3(6),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(6),
+      I5 => slv_reg2(6),
       O => reg_data_out(6)
     );
 \axi_rdata[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(7),
-      I1 => slv_reg3(7),
-      I2 => slv_reg0(7),
+      I0 => slv_reg1(7),
+      I1 => slv_reg0_0(7),
+      I2 => slv_reg3(7),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(7),
+      I5 => slv_reg2(7),
       O => reg_data_out(7)
     );
 \axi_rdata[8]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(8),
-      I1 => slv_reg3(8),
-      I2 => slv_reg0(8),
+      I0 => slv_reg1(8),
+      I1 => slv_reg0(8),
+      I2 => slv_reg3(8),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(8),
+      I5 => slv_reg2(8),
       O => reg_data_out(8)
     );
 \axi_rdata[9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFFAAF0CC00AAF0"
+      INIT => X"F0AAFFCCF0AA00CC"
     )
         port map (
-      I0 => slv_reg2(9),
-      I1 => slv_reg3(9),
-      I2 => slv_reg0(9),
+      I0 => slv_reg1(9),
+      I1 => slv_reg0(9),
+      I2 => slv_reg3(9),
       I3 => axi_araddr(3),
       I4 => axi_araddr(2),
-      I5 => slv_reg1(9),
+      I5 => slv_reg2(9),
       O => reg_data_out(9)
     );
 \axi_rdata_reg[0]\: unisim.vcomponents.FDRE
@@ -969,306 +2680,25 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => \^s_axi_wready\,
       R => axi_awready_i_1_n_0
     );
-\output_color[0]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(0),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(0),
-      O => output_color(0)
-    );
-\output_color[10]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(10),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(10),
-      O => output_color(10)
-    );
-\output_color[11]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(11),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(11),
-      O => output_color(11)
-    );
-\output_color[12]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(12),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(12),
-      O => output_color(12)
-    );
-\output_color[13]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(13),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(13),
-      O => output_color(13)
-    );
-\output_color[14]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(14),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(14),
-      O => output_color(14)
-    );
-\output_color[15]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(15),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(15),
-      O => output_color(15)
-    );
-\output_color[16]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(16),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(16),
-      O => output_color(16)
-    );
-\output_color[17]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(17),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(17),
-      O => output_color(17)
-    );
-\output_color[18]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(18),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(18),
-      O => output_color(18)
-    );
-\output_color[19]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(19),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(19),
-      O => output_color(19)
-    );
-\output_color[1]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(1),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(1),
-      O => output_color(1)
-    );
-\output_color[20]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(20),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(20),
-      O => output_color(20)
-    );
-\output_color[21]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(21),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(21),
-      O => output_color(21)
-    );
-\output_color[22]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(22),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(22),
-      O => output_color(22)
-    );
-\output_color[23]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(23),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(23),
-      O => output_color(23)
-    );
-\output_color[23]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
-    )
-        port map (
-      I0 => slv_reg0(4),
-      I1 => slv_reg0(3),
-      I2 => slv_reg0(5),
-      I3 => slv_reg0(1),
-      I4 => slv_reg0(0),
-      I5 => slv_reg0(2),
-      O => \output_color[23]_INST_0_i_1_n_0\
-    );
-\output_color[2]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(2),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(2),
-      O => output_color(2)
-    );
-\output_color[3]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(3),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(3),
-      O => output_color(3)
-    );
-\output_color[4]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(4),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(4),
-      O => output_color(4)
-    );
-\output_color[5]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(5),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(5),
-      O => output_color(5)
-    );
-\output_color[6]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(6),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(6),
-      O => output_color(6)
-    );
-\output_color[7]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(7),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(7),
-      O => output_color(7)
-    );
-\output_color[8]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(8),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(8),
-      O => output_color(8)
-    );
-\output_color[9]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"F0F1F0E0"
-    )
-        port map (
-      I0 => slv_reg0(7),
-      I1 => slv_reg0(6),
-      I2 => color_threshold(9),
-      I3 => \output_color[23]_INST_0_i_1_n_0\,
-      I4 => color_grayscale(9),
-      O => output_color(9)
+effect_switch: entity work.design_1_AXI4_ImageProcessor_0_1_effect_switch
+     port map (
+      Q(7 downto 0) => slv_reg0_0(7 downto 0),
+      S_AXI_AWREADY => \^s_axi_awready\,
+      S_AXI_WREADY => \^s_axi_wready\,
+      brightness_adjustment(23 downto 0) => brightness_adjustment(23 downto 0),
+      color(23 downto 0) => color(23 downto 0),
+      color_inversion(23 downto 0) => color_inversion(23 downto 0),
+      contrast_adjustment(23 downto 0) => contrast_adjustment(23 downto 0),
+      emboss_effect(23 downto 0) => emboss_effect(23 downto 0),
+      grayscale(23 downto 0) => grayscale(23 downto 0),
+      original_color(23 downto 0) => original_color(23 downto 0),
+      posterize_effect(23 downto 0) => posterize_effect(23 downto 0),
+      s00_axi_awvalid => s00_axi_awvalid,
+      s00_axi_wvalid => s00_axi_wvalid,
+      sepia(23 downto 0) => sepia(23 downto 0),
+      \slv_reg_wren__0\ => \slv_reg_wren__0\,
+      solarize(23 downto 0) => solarize(23 downto 0),
+      thresholding(23 downto 0) => thresholding(23 downto 0)
     );
 \slv_reg0[15]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -1303,17 +2733,6 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I3 => s00_axi_wstrb(3),
       O => \slv_reg0[31]_i_1_n_0\
     );
-\slv_reg0[31]_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8000"
-    )
-        port map (
-      I0 => \^s_axi_wready\,
-      I1 => \^s_axi_awready\,
-      I2 => s00_axi_awvalid,
-      I3 => s00_axi_wvalid,
-      O => \slv_reg_wren__0\
-    );
 \slv_reg0[7]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0200"
@@ -1330,7 +2749,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg0[7]_i_1_n_0\,
       D => s00_axi_wdata(0),
-      Q => slv_reg0(0),
+      Q => slv_reg0_0(0),
       R => axi_awready_i_1_n_0
     );
 \slv_reg0_reg[10]\: unisim.vcomponents.FDRE
@@ -1418,7 +2837,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg0[7]_i_1_n_0\,
       D => s00_axi_wdata(1),
-      Q => slv_reg0(1),
+      Q => slv_reg0_0(1),
       R => axi_awready_i_1_n_0
     );
 \slv_reg0_reg[20]\: unisim.vcomponents.FDRE
@@ -1506,7 +2925,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg0[7]_i_1_n_0\,
       D => s00_axi_wdata(2),
-      Q => slv_reg0(2),
+      Q => slv_reg0_0(2),
       R => axi_awready_i_1_n_0
     );
 \slv_reg0_reg[30]\: unisim.vcomponents.FDRE
@@ -1530,7 +2949,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg0[7]_i_1_n_0\,
       D => s00_axi_wdata(3),
-      Q => slv_reg0(3),
+      Q => slv_reg0_0(3),
       R => axi_awready_i_1_n_0
     );
 \slv_reg0_reg[4]\: unisim.vcomponents.FDRE
@@ -1538,7 +2957,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg0[7]_i_1_n_0\,
       D => s00_axi_wdata(4),
-      Q => slv_reg0(4),
+      Q => slv_reg0_0(4),
       R => axi_awready_i_1_n_0
     );
 \slv_reg0_reg[5]\: unisim.vcomponents.FDRE
@@ -1546,7 +2965,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg0[7]_i_1_n_0\,
       D => s00_axi_wdata(5),
-      Q => slv_reg0(5),
+      Q => slv_reg0_0(5),
       R => axi_awready_i_1_n_0
     );
 \slv_reg0_reg[6]\: unisim.vcomponents.FDRE
@@ -1554,7 +2973,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg0[7]_i_1_n_0\,
       D => s00_axi_wdata(6),
-      Q => slv_reg0(6),
+      Q => slv_reg0_0(6),
       R => axi_awready_i_1_n_0
     );
 \slv_reg0_reg[7]\: unisim.vcomponents.FDRE
@@ -1562,7 +2981,7 @@ axi_wready_reg: unisim.vcomponents.FDRE
       C => s00_axi_aclk,
       CE => \slv_reg0[7]_i_1_n_0\,
       D => s00_axi_wdata(7),
-      Q => slv_reg0(7),
+      Q => slv_reg0_0(7),
       R => axi_awready_i_1_n_0
     );
 \slv_reg0_reg[8]\: unisim.vcomponents.FDRE
@@ -2502,8 +3921,8 @@ entity design_1_AXI4_ImageProcessor_0_1_AXI4_ImageProcessor_v1_0 is
     S_AXI_WREADY : out STD_LOGIC;
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    color : out STD_LOGIC_VECTOR ( 23 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
-    output_color : out STD_LOGIC_VECTOR ( 23 downto 0 );
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_wvalid : in STD_LOGIC;
@@ -2513,8 +3932,16 @@ entity design_1_AXI4_ImageProcessor_0_1_AXI4_ImageProcessor_v1_0 is
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    color_threshold : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    color_grayscale : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    original_color : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    grayscale : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    color_inversion : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    brightness_adjustment : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    solarize : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    sepia : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    emboss_effect : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    posterize_effect : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    contrast_adjustment : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    thresholding : in STD_LOGIC_VECTOR ( 23 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
@@ -2530,9 +3957,14 @@ AXI4_ImageProcessor_v1_0_S00_AXI_inst: entity work.design_1_AXI4_ImageProcessor_
       S_AXI_ARREADY => S_AXI_ARREADY,
       S_AXI_AWREADY => S_AXI_AWREADY,
       S_AXI_WREADY => S_AXI_WREADY,
-      color_grayscale(23 downto 0) => color_grayscale(23 downto 0),
-      color_threshold(23 downto 0) => color_threshold(23 downto 0),
-      output_color(23 downto 0) => output_color(23 downto 0),
+      brightness_adjustment(23 downto 0) => brightness_adjustment(23 downto 0),
+      color(23 downto 0) => color(23 downto 0),
+      color_inversion(23 downto 0) => color_inversion(23 downto 0),
+      contrast_adjustment(23 downto 0) => contrast_adjustment(23 downto 0),
+      emboss_effect(23 downto 0) => emboss_effect(23 downto 0),
+      grayscale(23 downto 0) => grayscale(23 downto 0),
+      original_color(23 downto 0) => original_color(23 downto 0),
+      posterize_effect(23 downto 0) => posterize_effect(23 downto 0),
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_araddr(1 downto 0) => s00_axi_araddr(1 downto 0),
       s00_axi_aresetn => s00_axi_aresetn,
@@ -2546,7 +3978,10 @@ AXI4_ImageProcessor_v1_0_S00_AXI_inst: entity work.design_1_AXI4_ImageProcessor_
       s00_axi_rvalid => s00_axi_rvalid,
       s00_axi_wdata(31 downto 0) => s00_axi_wdata(31 downto 0),
       s00_axi_wstrb(3 downto 0) => s00_axi_wstrb(3 downto 0),
-      s00_axi_wvalid => s00_axi_wvalid
+      s00_axi_wvalid => s00_axi_wvalid,
+      sepia(23 downto 0) => sepia(23 downto 0),
+      solarize(23 downto 0) => solarize(23 downto 0),
+      thresholding(23 downto 0) => thresholding(23 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -2555,9 +3990,17 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_AXI4_ImageProcessor_0_1 is
   port (
-    color_grayscale : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    color_threshold : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    output_color : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    original_color : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    brightness_adjustment : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    color_inversion : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    grayscale : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    posterize_effect : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    emboss_effect : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    sepia : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    solarize : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    thresholding : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    contrast_adjustment : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    color : out STD_LOGIC_VECTOR ( 23 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2632,9 +4075,14 @@ inst: entity work.design_1_AXI4_ImageProcessor_0_1_AXI4_ImageProcessor_v1_0
       S_AXI_ARREADY => s00_axi_arready,
       S_AXI_AWREADY => s00_axi_awready,
       S_AXI_WREADY => s00_axi_wready,
-      color_grayscale(23 downto 0) => color_grayscale(23 downto 0),
-      color_threshold(23 downto 0) => color_threshold(23 downto 0),
-      output_color(23 downto 0) => output_color(23 downto 0),
+      brightness_adjustment(23 downto 0) => brightness_adjustment(23 downto 0),
+      color(23 downto 0) => color(23 downto 0),
+      color_inversion(23 downto 0) => color_inversion(23 downto 0),
+      contrast_adjustment(23 downto 0) => contrast_adjustment(23 downto 0),
+      emboss_effect(23 downto 0) => emboss_effect(23 downto 0),
+      grayscale(23 downto 0) => grayscale(23 downto 0),
+      original_color(23 downto 0) => original_color(23 downto 0),
+      posterize_effect(23 downto 0) => posterize_effect(23 downto 0),
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_araddr(1 downto 0) => s00_axi_araddr(3 downto 2),
       s00_axi_aresetn => s00_axi_aresetn,
@@ -2648,6 +4096,9 @@ inst: entity work.design_1_AXI4_ImageProcessor_0_1_AXI4_ImageProcessor_v1_0
       s00_axi_rvalid => s00_axi_rvalid,
       s00_axi_wdata(31 downto 0) => s00_axi_wdata(31 downto 0),
       s00_axi_wstrb(3 downto 0) => s00_axi_wstrb(3 downto 0),
-      s00_axi_wvalid => s00_axi_wvalid
+      s00_axi_wvalid => s00_axi_wvalid,
+      sepia(23 downto 0) => sepia(23 downto 0),
+      solarize(23 downto 0) => solarize(23 downto 0),
+      thresholding(23 downto 0) => thresholding(23 downto 0)
     );
 end STRUCTURE;

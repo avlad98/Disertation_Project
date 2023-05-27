@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Mon May 22 19:40:45 2023
+| Date         : Sat May 27 13:06:48 2023
 | Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -180,7 +180,6 @@ Warning! LUT value is adjusted to account for LUT combining.
 | design_1_m00_regslice_0              |    1 |
 | design_1_grayscale_0_0               |    1 |
 | design_1_emboss_effect_0_0           |    1 |
-| design_1_edge_detection_0_0          |    1 |
 | design_1_dvi2rgb_0_0                 |    1 |
 | design_1_contrast_adjustment_0_0     |    1 |
 | design_1_color_inversion_0_0         |    1 |

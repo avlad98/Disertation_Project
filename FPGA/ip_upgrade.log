@@ -1,6 +1,318 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sat May 27 12:54:55 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 13) to (Rev. 14)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_AXI4_ImageProcessor_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'edge_detection'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sat May 27 12:36:51 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 12) to (Rev. 13)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_AXI4_ImageProcessor_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'output_color'
+
+-Upgrade has added port 'color'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sat May 27 12:34:14 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed May 24 15:26:17 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed May 24 14:49:39 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed May 24 14:25:55 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed May 24 14:24:50 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 7) to (Rev. 8)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_AXI4_ImageProcessor_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'PixelClk'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed May 24 13:58:46 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed May 24 13:37:04 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 5) to (Rev. 6)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_AXI4_ImageProcessor_0_1'. These changes may impact your design.
+
+
+-Upgrade has added port 'PixelClk'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed May 24 12:42:12 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue May 23 11:01:55 2023
+| Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_AXI4_ImageProcessor_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_AXI4_ImageProcessor_0_1 (xilinx.com:user:AXI4_ImageProcessor:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_AXI4_ImageProcessor_0_1'. These changes may impact your design.
+
+
+-Upgrade has removed port 'color_grayscale'
+
+-Upgrade has removed port 'color_threshold'
+
+-Upgrade has added port 'brightness_adjustment'
+
+-Upgrade has added port 'color_inversion'
+
+-Upgrade has added port 'contrast_adjustment'
+
+-Upgrade has added port 'edge_detection'
+
+-Upgrade has added port 'emboss_effect'
+
+-Upgrade has added port 'grayscale'
+
+-Upgrade has added port 'original_color'
+
+-Upgrade has added port 'posterize_effect'
+
+-Upgrade has added port 'sepia'
+
+-Upgrade has added port 'solarize'
+
+-Upgrade has added port 'thresholding'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 | Date         : Mon May 22 19:27:22 2023
 | Host         : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

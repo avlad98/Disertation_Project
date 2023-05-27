@@ -26,6 +26,18 @@
 #define S_to_uS(x)	(ULONG)((x) * 1000000)
 
 
+typedef struct
+{
+	char c;
+	u8 val;
+	u8 valid;
+} UARTResponse;
+
+typedef struct
+{
+	char chars[20];
+	u8 cnt;
+} UserInputArr;
 
 /* ------------------------------------------------------------ */
 /*					Procedure Declarations						*/

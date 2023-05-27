@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_AXI4_ImageProcessor_0_1_synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
@@ -93,7 +92,7 @@ set_property ip_output_repo d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationP
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.srcs/sources_1/bd/design_1/ip/design_1_AXI4_ImageProcessor_0_1/design_1_AXI4_ImageProcessor_0_1.xci
+read_ip -quiet D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.srcs/sources_1/bd/design_1/ip/design_1_AXI4_ImageProcessor_0_1/design_1_AXI4_ImageProcessor_0_1.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -10,9 +10,10 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source design_1_axis_subset_converter_in_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 373.703 ; gain = 65.594
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 374.660 ; gain = 53.047
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.ipdefs/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/ip_repo/AXI4_ImageProcessor_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ipdefs/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axis_subset_converter_in_0
 Command: synth_design -top design_1_axis_subset_converter_in_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
@@ -22,31 +23,31 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12616
+INFO: [Synth 8-7075] Helper process launched with PID 67536
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1194.621 ; gain = 406.738
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1194.344 ; gain = 407.156
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/synth/design_1_axis_subset_converter_in_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'top_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/top_design_1_axis_subset_converter_in_0.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axis_subset_converter_v1_1_27_core' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/40cb/hdl/axis_subset_converter_v1_1_vl_rfs.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'axis_subset_converter_v1_1_27_core' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/40cb/hdl/axis_subset_converter_v1_1_vl_rfs.v:62]
-INFO: [Synth 8-6157] synthesizing module 'tdata_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdata_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'tdata_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdata_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6157] synthesizing module 'tuser_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tuser_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'tuser_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tuser_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6157] synthesizing module 'tid_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tid_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'tid_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tid_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6157] synthesizing module 'tdest_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdest_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'tdest_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdest_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6157] synthesizing module 'tstrb_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tstrb_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'tstrb_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tstrb_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6157] synthesizing module 'tkeep_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tkeep_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'tkeep_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tkeep_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6157] synthesizing module 'tlast_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tlast_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'tlast_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tlast_design_1_axis_subset_converter_in_0.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'top_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/top_design_1_axis_subset_converter_in_0.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/synth/design_1_axis_subset_converter_in_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/synth/design_1_axis_subset_converter_in_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'top_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/top_design_1_axis_subset_converter_in_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axis_subset_converter_v1_1_27_core' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/40cb/hdl/axis_subset_converter_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'axis_subset_converter_v1_1_27_core' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/40cb/hdl/axis_subset_converter_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'tdata_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdata_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tdata_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdata_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tuser_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tuser_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tuser_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tuser_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tid_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tid_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tid_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tid_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tdest_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdest_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tdest_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tdest_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tstrb_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tstrb_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tstrb_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tstrb_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tkeep_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tkeep_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tkeep_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tkeep_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'tlast_design_1_axis_subset_converter_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tlast_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'tlast_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/tlast_design_1_axis_subset_converter_in_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'top_design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/hdl/top_design_1_axis_subset_converter_in_0.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/synth/design_1_axis_subset_converter_in_0.v:53]
 WARNING: [Synth 8-7129] Port tid[0] in module tlast_design_1_axis_subset_converter_in_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port tdata[23] in module tlast_design_1_axis_subset_converter_in_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port tdata[22] in module tlast_design_1_axis_subset_converter_in_0 is either unconnected or has no load
@@ -149,54 +150,54 @@ WARNING: [Synth 8-7129] Port tstrb[1] in module tstrb_design_1_axis_subset_conve
 WARNING: [Synth 8-7129] Port tstrb[0] in module tstrb_design_1_axis_subset_converter_in_0 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1292.812 ; gain = 504.930
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1292.812 ; gain = 504.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1292.812 ; gain = 504.930
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1292.812 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1292.438 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/design_1_axis_subset_converter_in_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/design_1_axis_subset_converter_in_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_axis_subset_converter_in_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_axis_subset_converter_in_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/design_1_axis_subset_converter_in_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_in_0/design_1_axis_subset_converter_in_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axis_subset_converter_in_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axis_subset_converter_in_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.078 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1292.438 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1308.219 ; gain = 1.141
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1292.438 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:01:00 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:01:00 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_axis_subset_converter_in_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axis_subset_converter_in_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:00 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:01:00 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -219,25 +220,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:08 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:28 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:28 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:01:00 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:28 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -255,37 +256,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -303,26 +304,26 @@ Report Cell Usage:
 +-+-----+------+
 +-+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1292.438 ; gain = 505.250
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:09 . Memory (MB): peak = 1308.219 ; gain = 504.930
-Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:13 . Memory (MB): peak = 1308.219 ; gain = 520.336
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:39 . Memory (MB): peak = 1292.438 ; gain = 505.250
+Synthesis Optimization Complete : Time (s): cpu = 00:01:18 ; elapsed = 00:01:45 . Memory (MB): peak = 1292.438 ; gain = 505.250
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1308.219 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1292.438 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1322.828 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1314.844 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete, checksum: 28b65dd9
 INFO: [Common 17-83] Releasing license: Synthesis
-40 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:33 . Memory (MB): peak = 1326.840 ; gain = 917.133
-INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_axis_subset_converter_in_0_synth_1/design_1_axis_subset_converter_in_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axis_subset_converter_in_0, cache-ID = 7ac79ff33e598386
-INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_axis_subset_converter_in_0_synth_1/design_1_axis_subset_converter_in_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:30 ; elapsed = 00:02:03 . Memory (MB): peak = 1319.797 ; gain = 909.828
+INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axis_subset_converter_in_0_synth_1/design_1_axis_subset_converter_in_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axis_subset_converter_in_0, cache-ID = 6ca413d172890542
+INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axis_subset_converter_in_0_synth_1/design_1_axis_subset_converter_in_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axis_subset_converter_in_0_utilization_synth.rpt -pb design_1_axis_subset_converter_in_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan  5 18:45:57 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed May 24 14:33:57 2023...

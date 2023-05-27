@@ -79,6 +79,27 @@ u32 nextFrame = 0;
 u8 frameBuf[DISPLAY_NUM_FRAMES][DEMO_MAX_FRAME] __attribute__((aligned(0x20)));
 u8 *pFrames[DISPLAY_NUM_FRAMES]; //array of pointers to the frame buffers
 
+UserInputArr userInputArr;
+tEffectState state = {
+		.cpuEnabled = 0, 		.fpgaEnabled = 0,
+		.cpuFps = 0, 			.fpgaFps = 0,
+		.cpuEffect = ORIGINAL,	.fpgaEffect = ORIGINAL,
+		.cpuFrame = 0,			.fpgaFrame = 0
+};
+char *commands[] =
+{
+	"enable cpu",
+	"enable fpga",
+	"disable cpu",
+	"disable fpga",
+	"apply cpu ",
+	"apply fpga ",
+	"effects",
+	"menu",
+	"stats"
+};
+
+
 /*
  * Interrupt vector table
  */
@@ -112,11 +133,11 @@ void printAvailableEffects()
 	xil_printf("****************************************\r\n\r\n");
 }
 
-eImgEffect DecodeUserChoice(char userInput)
+eImgEffect GetUserEffect(u8 userInput)
 {
 	eImgEffect imgEffect = ORIGINAL;
 
-	imgEffect = userInput - '0';
+	imgEffect = userInput;
 
 	if (imgEffect < 0 || imgEffect >= NUM_EFFECTS) {
 		xil_printf("Invalid effect %u\r\n", imgEffect);
@@ -143,33 +164,241 @@ void ProcessImage(eImgEffect imgEffect)
 //	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
 }
 
+void flushUART()
+{
+	while (XUartPs_IsReceiveData(UART_BASEADDR))
+	{
+		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+	}
+}
+
+static inline u8 readUART(UARTResponse *userInput)
+{
+	userInput->c = 0xFF;
+	userInput->val = 0xFF;
+	userInput->valid = 0x00;
+
+	if (XUartPs_IsReceiveData(UART_BASEADDR)) {
+		userInput->c = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+
+		/* Ignore Carriage return / CR / 13 / 0xD */
+		if (userInput->c == 0xD) {
+			return userInput->valid;
+		}
+
+		if ((userInput->c >= '0') && (userInput->c <= '9'))
+		{
+			userInput->val = userInput->c - '0';
+		} else {
+			switch(userInput->c) {
+			case 'a':
+			case 'A':
+				userInput->val = 0xA;
+				break;
+			case 'b':
+			case 'B':
+				userInput->val = 0xB;
+				break;
+			case 'c':
+			case 'C':
+				userInput->val = 0xC;
+				break;
+			case 'd':
+			case 'D':
+				userInput->val = 0xD;
+				break;
+			case 'e':
+			case 'E':
+				userInput->val = 0xE;
+				break;
+			case 'f':
+			case 'F':
+				userInput->val = 0xF;
+				break;
+			}
+		}
+
+		userInput->valid = 1;
+
+//	    xil_printf("User input: %c || %u\r\n", userInput->c, userInput->c);
+	}
+
+	return userInput->valid;
+}
+
+void printUsage()
+{
+	xil_printf("****************************************\r\n");
+	xil_printf("Available options:\r\n");
+	xil_printf("Print menu: menu\r\n");
+	xil_printf("Enable CPU processing: enable cpu\r\n");
+	xil_printf("Disable CPU processing: disable cpu\r\n");
+	xil_printf("Enable FPGA processing: enable fpga\r\n");
+	xil_printf("Disable FPGA processing: disable fpga\r\n");
+	xil_printf("Apply CPU or FPGA effect: apply cpu/fpga effect\r\n");
+	xil_printf("Show CPU/FPGA state and FPS: stats\r\n");
+	xil_printf("****************************************\r\n");
+}
+
+void printStats()
+{
+    u32 fpsWhole, fpsThousandths;
+
+    fpsWhole = state.cpuFps;
+    fpsThousandths = (state.cpuFps - fpsWhole) * 1000;
+	xil_printf("CPU: %s %s -- %d.%3d FPS\r\n",
+			(state.cpuEnabled) ? "Enabled" : "Disabled",
+			(state.cpuEnabled) ? effects[state.cpuEffect].name : "NONE",
+			(state.cpuEnabled) ? fpsWhole: 0,
+			(state.cpuEnabled) ? fpsThousandths: 0);
+
+    fpsWhole = state.fpgaFps;
+    fpsThousandths = (state.fpgaFps - fpsWhole) * 1000;
+	xil_printf("FPGA: %s %s -- %d.%3d FPS\r\n",
+			(state.fpgaEnabled) ? "Enabled" : "Disabled",
+			(state.fpgaEnabled) ? effects[state.fpgaEffect].name : "NONE",
+			(state.fpgaEnabled) ? fpsWhole: 0,
+			(state.fpgaEnabled) ? fpsThousandths: 0);}
+
+void invalidateUserInputArr()
+{
+	for (u8 i = 0; i < sizeof(userInputArr.chars); i++) {
+		userInputArr.chars[i] = 0x00;
+	}
+
+	userInputArr.cnt = 0;
+}
+
+u8 startedUserInputProcess = 0;
+u8 processUserInput(UARTResponse *userInput)
+{
+//0.	"enable cpu"
+//1.	"enable fpga"
+//2.	"disable cpu"
+//3.	"disable fpga"
+//4.	"apply cpu X"
+//5.	"apply fpga X"
+//6.	"effects"
+//7.	"menu"
+//8.	"stats"
+
+	const u8 COMMAND_NUM = 9;
+
+	userInputArr.chars[userInputArr.cnt++] = userInput->c;
+
+	if (!startedUserInputProcess){
+		switch(userInput->c) {
+		case 'a':
+		case 'd':
+		case 'e':
+		case 'm':
+		case 's':
+			startedUserInputProcess = 1;
+			break;
+		default:
+//			xil_printf("Wrong effect!!\r\n");
+			invalidateUserInputArr();
+		}
+	}
+
+	for (u8 commandID = 0; commandID < COMMAND_NUM; commandID++) {
+		if (strlen(commands[commandID]) <= userInputArr.cnt) {
+			if (0 == strcmp(commands[commandID], userInputArr.chars)) {
+//				xil_printf("Decoded command %u. %s\r\n", commandID, commands[commandID]);
+
+				switch(commandID)
+				{
+				case 0:
+					state.cpuEnabled = 1;
+					state.fpgaEnabled = 0;
+					AXI4_IMAGEPROCESSOR_mWriteReg(
+							XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
+							AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
+							ORIGINAL);
+					xil_printf("Enabled CPU, Disabled FPGA\r\n");
+					break;
+				case 1:
+					state.fpgaEnabled = 1;
+					state.cpuEnabled = 0;
+					DisplayChangeFrame(&dispCtrl, state.fpgaFrame);
+					xil_printf("Enabled FPGA, Disabled CPU\r\n");
+					break;
+				case 2:
+					state.cpuEnabled = 0;
+					DisplayChangeFrame(&dispCtrl, state.fpgaFrame);
+					xil_printf("Disabled CPU\r\n");
+					break;
+				case 3:
+					state.fpgaEnabled = 0;
+					AXI4_IMAGEPROCESSOR_mWriteReg(
+							XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
+							AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
+							ORIGINAL);
+					xil_printf("Disabled FPGA\r\n");
+					break;
+				case 4:
+				case 5:
+					while (readUART(userInput))
+					{
+						eImgEffect imgEffect = GetUserEffect(userInput->val);
+
+						if (commandID == 4) {
+							/* Enable CPU effect, disable FPGA*/
+							state.cpuEffect = imgEffect;
+							state.cpuEnabled = 1;
+							state.fpgaEnabled = 0;
+							AXI4_IMAGEPROCESSOR_mWriteReg(
+									XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
+									AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
+									ORIGINAL);
+							xil_printf("Applied CPU effect %s\r\n", effects[imgEffect].name);
+						} else if (commandID == 5){
+							/* Enable FPGA effect, disable CPU*/
+							state.fpgaEffect = imgEffect;
+							state.fpgaEnabled = 1;
+							state.cpuEnabled = 0;
+							xil_printf("Applied FPGA effect %s\r\n", effects[imgEffect].name);
+						}
+					}
+					break;
+				case 6:
+					printAvailableEffects();
+					break;
+				case 7:
+					printUsage();
+					break;
+				case 8:
+					printStats();
+					break;
+				}
+
+				invalidateUserInputArr();
+				startedUserInputProcess = 0;
+//				printUsage();
+			}
+		}
+	}
+
+	if (userInputArr.cnt >= 20)
+	{
+		xil_printf("Invalid command\r\n");
+		invalidateUserInputArr();
+		startedUserInputProcess = 0;
+	}
+
+	return 0;
+}
+
 void MainLoop()
 {
-
-//	INCLUDEFILES=$(wildcard *.h)
-//	LIBSOURCES=$(wildcard *.c)
-//	OUTS = $(wildcard *.o)
-
-	usleep(S_to_uS(15));
-	AXI4_IMAGEPROCESSOR_mWriteReg(
-			XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
-			AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
-			0x1);
-	usleep(S_to_uS(5));
-	AXI4_IMAGEPROCESSOR_mWriteReg(
-			XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
-			AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
-			0x0);
-
-
-//	eImgEffect imgEffect = ORIGINAL;
-//	char userInput = 0;
-//	XTime tStart, tEnd;
-//	float elapsedTime;
-//	int whole, thousandths;
+	/* ============================== FPGA ============================== */
+////INCLUDEFILES=$(wildcard *.h)
+////LIBSOURCES=$(wildcard *.c)
+////OUTS = $(wildcard *.o)
 //
-//	nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
-//	DisplayChangeFrame(&dispCtrl, nextFrame);
+//	char userInput = 0;
+//	uint8_t imgEffect = 0;
+//	uint8_t counter = 0;
 //
 //	/* Flush UART FIFO */
 //	while (XUartPs_IsReceiveData(UART_BASEADDR))
@@ -177,32 +406,82 @@ void MainLoop()
 //		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
 //	}
 //
-//	printAvailableEffects();
-//
 //	while (1) {
 //		if (XUartPs_IsReceiveData(UART_BASEADDR)) {
 //			userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
 //			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-//			imgEffect = DecodeUserChoice(userInput);
+//			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+//			if (counter == 0) {
+//				imgEffect = DecodeUserChoiceFPGA(userInput);
+//				AXI4_IMAGEPROCESSOR_mWriteReg(
+//						XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
+//						AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
+//						imgEffect);
+//			}
+//			counter++;
+//			counter %= 2;
 //		}
-//
-//		XTime_GetTime( &tStart);
-//
-//		nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
-//		VideoStop(&videoCapt);
-//		ProcessImage(imgEffect);
-//		VideoStart(&videoCapt);
-//		DisplayChangeFrame(&dispCtrl, nextFrame);
-//
-//		XTime_GetTime(&tEnd);
-//
-//		elapsedTime = ((float)(tEnd - tStart)) / (COUNTS_PER_SECOND);
-//	    whole = elapsedTime;
-//	    thousandths = (elapsedTime - whole) * 1000;
-//	    xil_printf("Elapsed Time: %d.%3d seconds\r\n", whole, thousandths);
-//
-//		usleep(S_to_uS(0.05));
 //	}
+
+	/* ============================== CPU ============================== */
+	UARTResponse userInput;
+	XTime tStart, tEnd;
+    double elapsed_time;
+    double fps;
+
+
+	state.fpgaEnabled = 1;
+	state.fpgaFrame = dispCtrl.curFrame;
+	nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
+	state.cpuFrame = nextFrame;
+	DisplayChangeFrame(&dispCtrl, nextFrame);
+
+	flushUART();
+	invalidateUserInputArr();
+
+	printUsage();
+	while (1) {
+		if (readUART(&userInput)) {
+			processUserInput(&userInput);
+		}
+
+		if (state.cpuEnabled) {
+			XTime_GetTime(&tStart);
+
+			nextFrame = DemoGetInactiveFrame(&dispCtrl, &videoCapt);
+			VideoStop(&videoCapt);
+			ProcessImage(state.cpuEffect);
+			VideoStart(&videoCapt);
+			DisplayChangeFrame(&dispCtrl, nextFrame);
+
+			usleep(S_to_uS(0.05));
+
+			XTime_GetTime(&tEnd);
+
+		    elapsed_time = ((double)(tEnd - tStart)) / (double)(COUNTS_PER_SECOND);
+		    fps = 1 / elapsed_time;
+
+			state.cpuFps = fps;
+		} else if (state.fpgaEnabled) {
+			XTime_GetTime(&tStart);
+
+			DisplayChangeFrame(&dispCtrl, state.fpgaFrame);
+			AXI4_IMAGEPROCESSOR_mWriteReg(
+					XPAR_AXI4_IMAGEPROCESSOR_0_S00_AXI_BASEADDR,
+					AXI4_IMAGEPROCESSOR_S00_AXI_SLV_REG0_OFFSET,
+					state.fpgaEffect);
+
+			XTime_GetTime(&tEnd);
+		    elapsed_time = ((double)(tEnd - tStart)) / (double)(COUNTS_PER_SECOND);
+		    fps = 1 / elapsed_time;
+			state.fpgaFps = fps;
+		}
+
+	    // Calculate the FPS
+//	    fps = 1 / elapsed_time;
+
+//	    printf("FPS: %.2f\n", fps);
+	}
 }
 
 

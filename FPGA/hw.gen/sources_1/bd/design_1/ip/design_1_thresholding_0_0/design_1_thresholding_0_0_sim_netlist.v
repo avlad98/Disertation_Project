@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Sun May 21 18:16:34 2023
+// Date        : Wed May 24 14:42:56 2023
 // Host        : DESKTOP-UR3KT7E running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_thresholding_0_0 -prefix
-//               design_1_thresholding_0_0_ design_1_thresholding_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_thresholding_0_0/design_1_thresholding_0_0_sim_netlist.v
 // Design      : design_1_thresholding_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -61,6 +61,7 @@ module design_1_thresholding_0_0
         .r(r));
 endmodule
 
+(* ORIG_REF_NAME = "thresholding" *) 
 module design_1_thresholding_0_0_thresholding
    (color,
     b,

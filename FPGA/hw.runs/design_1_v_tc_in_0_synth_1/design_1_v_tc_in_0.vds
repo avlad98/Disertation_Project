@@ -2,18 +2,19 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Jan  5 18:47:12 2023
-# Process ID: 15584
-# Current directory: D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_v_tc_in_0_synth_1
+# Start of session at: Wed May 24 14:34:15 2023
+# Process ID: 56600
+# Current directory: D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_v_tc_in_0_synth_1
 # Command line: vivado.exe -log design_1_v_tc_in_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_v_tc_in_0.tcl
-# Log file: D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_v_tc_in_0_synth_1/design_1_v_tc_in_0.vds
-# Journal file: D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_v_tc_in_0_synth_1\vivado.jou
+# Log file: D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_v_tc_in_0_synth_1/design_1_v_tc_in_0.vds
+# Journal file: D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_v_tc_in_0_synth_1\vivado.jou
 # Running On: DESKTOP-UR3KT7E, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 4, Host memory: 17031 MB
 #-----------------------------------------------------------
 source design_1_v_tc_in_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 374.277 ; gain = 68.953
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 374.875 ; gain = 67.574
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.ipdefs/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/ip_repo/AXI4_ImageProcessor_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ipdefs/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_v_tc_in_0
 Command: synth_design -top design_1_v_tc_in_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
@@ -23,12 +24,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16032
+INFO: [Synth 8-7075] Helper process launched with PID 30796
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 1195.059 ; gain = 406.430
+Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1195.070 ; gain = 405.977
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_in_0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/synth/design_1_v_tc_in_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_in_0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/synth/design_1_v_tc_in_0.vhd:93]
 	Parameter C_HAS_AXI4_LITE bound to: 1 - type: integer 
 	Parameter C_HAS_INTC_IF bound to: 0 - type: integer 
 	Parameter C_ARBITRARY_RES_EN bound to: 0 - type: integer 
@@ -116,21 +117,21 @@ INFO: [Synth 8-638] synthesizing module 'design_1_v_tc_in_0' [d:/Facultate/Diser
 	Parameter C_GEN_ACHROMA_EN bound to: 0 - type: integer 
 	Parameter C_GEN_FIELDID_EN bound to: 0 - type: integer 
 	Parameter C_DET_FIELDID_EN bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'v_tc' declared at 'd:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/399a/hdl/v_tc_v6_2_vh_rfs.vhd:9698' bound to instance 'U0' of component 'v_tc' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/synth/design_1_v_tc_in_0.vhd:287]
+INFO: [Synth 8-3491] module 'v_tc' declared at 'd:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/399a/hdl/v_tc_v6_2_vh_rfs.vhd:9698' bound to instance 'U0' of component 'v_tc' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/synth/design_1_v_tc_in_0.vhd:287]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-638] synthesizing module 'pselect_f' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-226] default block is never used [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-256] done synthesizing module 'design_1_v_tc_in_0' (0#1) [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/synth/design_1_v_tc_in_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'design_1_v_tc_in_0' (0#1) [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/synth/design_1_v_tc_in_0.vhd:93]
 WARNING: [Synth 8-7129] Port det_interlace in module tc_detector is either unconnected or has no load
 WARNING: [Synth 8-7129] Port hblank in module tc_detector is either unconnected or has no load
 WARNING: [Synth 8-7129] Port vblank in module tc_detector is either unconnected or has no load
@@ -233,59 +234,59 @@ WARNING: [Synth 8-7129] Port max_vfp[0] in module tc_top is either unconnected o
 WARNING: [Synth 8-7129] Port async_enable in module tc_top is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 1349.246 ; gain = 560.617
+Finished RTL Elaboration : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 1348.992 ; gain = 559.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:44 . Memory (MB): peak = 1349.246 ; gain = 560.617
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1348.992 ; gain = 559.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:44 . Memory (MB): peak = 1349.246 ; gain = 560.617
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1348.992 ; gain = 559.898
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.548 . Memory (MB): peak = 1349.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.506 . Memory (MB): peak = 1348.992 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_v_tc_in_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_v_tc_in_0_synth_1/dont_touch.xdc]
-Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_clocks.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_v_tc_in_0_propImpl.xdc].
+Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_v_tc_in_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_v_tc_in_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_v_tc_in_0/design_1_v_tc_in_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_v_tc_in_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_v_tc_in_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_v_tc_in_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_v_tc_in_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1461.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1453.898 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.231 . Memory (MB): peak = 1461.477 ; gain = 0.309
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.244 . Memory (MB): peak = 1453.898 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:01:11 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:01:11 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_v_tc_in_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_v_tc_in_0_synth_1/dont_touch.xdc, line 9).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/xpm_cdc_single_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:01:11 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:11 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 ---------------------------------------------------------------------------------------------------
@@ -298,7 +299,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:53 ; elapsed = 00:01:17 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:02 ; elapsed = 00:01:17 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -358,25 +359,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:37 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:41 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:52 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:39 ; elapsed = 00:02:02 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:29 ; elapsed = 00:01:57 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Timing Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:02:08 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:32 ; elapsed = 00:02:01 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Technology Mapping : Time (s): cpu = 00:01:49 ; elapsed = 00:02:14 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -394,37 +395,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:46 ; elapsed = 00:02:15 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished IO Insertion : Time (s): cpu = 00:02:05 ; elapsed = 00:02:32 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:46 ; elapsed = 00:02:15 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:05 ; elapsed = 00:02:32 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:47 ; elapsed = 00:02:16 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:06 ; elapsed = 00:02:33 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:47 ; elapsed = 00:02:16 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:06 ; elapsed = 00:02:33 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:47 ; elapsed = 00:02:16 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:06 ; elapsed = 00:02:33 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:47 ; elapsed = 00:02:16 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:06 ; elapsed = 00:02:33 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -471,29 +472,29 @@ Report Cell Usage:
 |11    |FDSE   |   314|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:47 ; elapsed = 00:02:16 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:06 ; elapsed = 00:02:33 . Memory (MB): peak = 1453.898 ; gain = 664.805
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 922 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:02:05 . Memory (MB): peak = 1461.477 ; gain = 560.617
-Synthesis Optimization Complete : Time (s): cpu = 00:01:47 ; elapsed = 00:02:17 . Memory (MB): peak = 1461.477 ; gain = 672.848
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:27 ; elapsed = 00:02:23 . Memory (MB): peak = 1453.898 ; gain = 559.898
+Synthesis Optimization Complete : Time (s): cpu = 00:02:07 ; elapsed = 00:02:34 . Memory (MB): peak = 1453.898 ; gain = 664.805
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.294 . Memory (MB): peak = 1461.477 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.445 . Memory (MB): peak = 1453.898 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 235 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1461.477 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1453.898 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete, checksum: f7b6dbdd
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+44 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:35 . Memory (MB): peak = 1461.477 ; gain = 1050.520
-INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_v_tc_in_0_synth_1/design_1_v_tc_in_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:02:23 ; elapsed = 00:02:57 . Memory (MB): peak = 1453.898 ; gain = 1043.121
+INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_v_tc_in_0_synth_1/design_1_v_tc_in_0.dcp' has been generated.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_v_tc_in_0, cache-ID = 49bb8a9fe0abbded
 INFO: [Coretcl 2-1174] Renamed 12 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_v_tc_in_0_synth_1/design_1_v_tc_in_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_v_tc_in_0_synth_1/design_1_v_tc_in_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_v_tc_in_0_utilization_synth.rpt -pb design_1_v_tc_in_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan  5 18:50:27 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed May 24 14:37:54 2023...

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Facultate/Disertatie/Disertation_Project/FPGA/hw/hw.runs/design_1_axi_vdma_0_0_synth_1'
+HD_PWD='D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axi_vdma_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

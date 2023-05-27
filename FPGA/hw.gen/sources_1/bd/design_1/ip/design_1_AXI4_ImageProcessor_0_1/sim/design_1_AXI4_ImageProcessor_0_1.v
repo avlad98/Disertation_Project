@@ -48,15 +48,23 @@
 
 
 // IP VLNV: xilinx.com:user:AXI4_ImageProcessor:1.0
-// IP Revision: 3
+// IP Revision: 14
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_AXI4_ImageProcessor_0_1 (
-  color_grayscale,
-  color_threshold,
-  output_color,
+  original_color,
+  brightness_adjustment,
+  color_inversion,
+  grayscale,
+  posterize_effect,
+  emboss_effect,
+  sepia,
+  solarize,
+  thresholding,
+  contrast_adjustment,
+  color,
   s00_axi_aclk,
   s00_axi_aresetn,
   s00_axi_awaddr,
@@ -80,9 +88,17 @@ module design_1_AXI4_ImageProcessor_0_1 (
   s00_axi_rready
 );
 
-input wire [23 : 0] color_grayscale;
-input wire [23 : 0] color_threshold;
-output wire [23 : 0] output_color;
+input wire [23 : 0] original_color;
+input wire [23 : 0] brightness_adjustment;
+input wire [23 : 0] color_inversion;
+input wire [23 : 0] grayscale;
+input wire [23 : 0] posterize_effect;
+input wire [23 : 0] emboss_effect;
+input wire [23 : 0] sepia;
+input wire [23 : 0] solarize;
+input wire [23 : 0] thresholding;
+input wire [23 : 0] contrast_adjustment;
+output wire [23 : 0] color;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 input wire s00_axi_aclk;
@@ -134,9 +150,17 @@ input wire s00_axi_rready;
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_S00_AXI_ADDR_WIDTH(4)  // Width of S_AXI address bus
   ) inst (
-    .color_grayscale(color_grayscale),
-    .color_threshold(color_threshold),
-    .output_color(output_color),
+    .original_color(original_color),
+    .brightness_adjustment(brightness_adjustment),
+    .color_inversion(color_inversion),
+    .grayscale(grayscale),
+    .posterize_effect(posterize_effect),
+    .emboss_effect(emboss_effect),
+    .sepia(sepia),
+    .solarize(solarize),
+    .thresholding(thresholding),
+    .contrast_adjustment(contrast_adjustment),
+    .color(color),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),
     .s00_axi_awaddr(s00_axi_awaddr),

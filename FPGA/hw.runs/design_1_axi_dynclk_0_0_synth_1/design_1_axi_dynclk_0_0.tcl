@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0.tcl"
+  variable script "D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_axi_dynclk_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
@@ -78,20 +79,22 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.cache/wt [current_project]
-set_property parent.project_path D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.xpr [current_project]
+set_property webtalk.parent_dir D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.cache/wt [current_project]
+set_property parent.project_path D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part digilentinc.com:zybo-z7-10:part0:1.1 [current_project]
-set_property ip_repo_paths d:/WorkRaduV/Projects/Zybo-Z7/hw/repo [current_project]
+set_property ip_repo_paths {
+  d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/ip_repo/AXI4_ImageProcessor_1_0
+  d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ipdefs/repo
+} [current_project]
 update_ip_catalog
-set_property ip_output_repo d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/cache [current_project]
+set_property ip_output_repo d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.srcs/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0.xci
-set_property used_in_implementation false [get_files -all d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/src/axi_dynclk.xdc]
+read_ip -quiet D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.srcs/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0.xci
+set_property used_in_implementation false [get_files -all d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/src/axi_dynclk.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -107,7 +110,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.runs/design_1_axi_dynclk_0_0_synth_1 -new_name design_1_axi_dynclk_0_0 -ip [get_ips design_1_axi_dynclk_0_0]]
+set cacheID [config_ip_cache -export -no_bom  -dir D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axi_dynclk_0_0_synth_1 -new_name design_1_axi_dynclk_0_0 -ip [get_ips design_1_axi_dynclk_0_0]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -162,32 +165,32 @@ create_report "design_1_axi_dynclk_0_0_synth_1_synth_report_utilization_0" "repo
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0.dcp d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0.dcp
+  file copy -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0.dcp d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.v
+  write_verilog -force -mode synth_stub d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -197,47 +200,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0.dcp d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0.dcp
+  file copy -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0.dcp d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0_stub.v d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.v
+  file rename -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0_stub.v d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0_stub.vhdl d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.vhdl
+  file rename -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0_stub.vhdl d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0_sim_netlist.v d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_sim_netlist.v
+  file rename -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0_sim_netlist.v d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0_sim_netlist.vhdl d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_sim_netlist.vhdl
+  file rename -force D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.runs/design_1_axi_dynclk_0_0_synth_1/design_1_axi_dynclk_0_0_sim_netlist.vhdl d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cacheID 
 
-if {[file isdir D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.ip_user_files/ip/design_1_axi_dynclk_0_0]} {
+if {[file isdir D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ip_user_files/ip/design_1_axi_dynclk_0_0]} {
   catch { 
-    file copy -force d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.v D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.ip_user_files/ip/design_1_axi_dynclk_0_0
+    file copy -force d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.v D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ip_user_files/ip/design_1_axi_dynclk_0_0
   }
 }
 
-if {[file isdir D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.ip_user_files/ip/design_1_axi_dynclk_0_0]} {
+if {[file isdir D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ip_user_files/ip/design_1_axi_dynclk_0_0]} {
   catch { 
-    file copy -force d:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.vhdl D:/WorkRaduV/Projects/Zybo-Z7/hw/proj/hw.ip_user_files/ip/design_1_axi_dynclk_0_0
+    file copy -force d:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.gen/sources_1/bd/design_1/ip/design_1_axi_dynclk_0_0/design_1_axi_dynclk_0_0_stub.vhdl D:/Facultate/Disertatie/Hybrid_CPU_FPGA_DisertationProject/FPGA/hw.ip_user_files/ip/design_1_axi_dynclk_0_0
   }
 }
 file delete __synthesis_is_running__
