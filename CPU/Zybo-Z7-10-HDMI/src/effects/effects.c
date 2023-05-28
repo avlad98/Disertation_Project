@@ -80,8 +80,6 @@ void effectGrayscale(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 str
 			dstPixel = (tRBGPixel*)&destFrame[col + lineStart];
 
 			gray = (srcPixel->r + srcPixel->b + srcPixel->g) / 3;
-			gray += 50; // add some brightness
-			if (gray > 0xFF) gray = 0xFF; // clamp grey pixel value
 
 			memset(dstPixel, gray, sizeof(tRBGPixel));
 		}

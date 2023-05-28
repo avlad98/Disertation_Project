@@ -144,7 +144,7 @@ eImgEffect GetUserEffect(u8 userInput)
 		return ORIGINAL;
 	}
 
-	xil_printf("Applying %u. %s effect\r\n", effects[imgEffect].idx, effects[imgEffect].name);
+//	xil_printf("Applying %u. %s effect\r\n", effects[imgEffect].idx, effects[imgEffect].name);
 
 	return imgEffect;
 }
