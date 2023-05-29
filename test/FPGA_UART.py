@@ -1,27 +1,21 @@
 import serial
 import time
+import pickle
 
 DEBUG=False
-CURRENT_TEST = 0
-NUM_EFFECTS=10
 EFFECTS = ["ORIGINAL", "BRIGHTNESS_DECREASE", 
            "INVERTED_COLORS", "GRAYSCALE", 
            "POSTERIZE", "EMBOSS", 
            "SEPIA", "SOLARIZE", 
            "THRESHOLDING", "CONTRAST_ADJUSTMENT"]
+NUM_EFFECTS=len(EFFECTS)
 
-serialPort = serial.Serial(port="COM6", baudrate=115200, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
+serialPort = None
 
 def wait(seconds=5, verbose=False):
     if verbose:
         print(f'Waiting {seconds} seconds...')
     time.sleep(seconds)
-
-def getCurrentTest():
-    global CURRENT_TEST
-    tmp = CURRENT_TEST
-    CURRENT_TEST += 1
-    return tmp
 
 def send(text, sendTimeout=0.2):
     text = text
@@ -55,39 +49,39 @@ def read(lines=1, readTimeout=0.2):
 
 def printStats(sendTimeout=0.5, readTimeout=0.5):
     send("stats", sendTimeout=sendTimeout)
-    read(lines=2, readTimeout=readTimeout)
+    return read(lines=2, readTimeout=readTimeout)
 
 def printMenu(sendTimeout=0.2, readTimeout=0.2):
     send("menu", sendTimeout=sendTimeout)
-    read(lines=10, readTimeout=readTimeout)
+    return read(lines=10, readTimeout=readTimeout)
 
 def printEffects(sendTimeout=0.2, readTimeout=0.2):
     send("effects", sendTimeout=sendTimeout)
-    read(lines=13, readTimeout=readTimeout)
+    return read(lines=13, readTimeout=readTimeout)
 
 def enableCpu(sendTimeout=0.3, readTimeout=0.1):
     send("enable cpu", sendTimeout=sendTimeout)
-    read(lines=1, readTimeout=readTimeout)
+    return read(lines=1, readTimeout=readTimeout)
 
 def enableFpga(sendTimeout=0.3, readTimeout=0.1):
     send("enable fpga", sendTimeout=sendTimeout)
-    read(lines=1, readTimeout=readTimeout)
+    return read(lines=1, readTimeout=readTimeout)
 
 def disableCpu(sendTimeout=0.3, readTimeout=0.1):
     send("disable cpu", sendTimeout=sendTimeout)
-    read(lines=1, readTimeout=readTimeout)
+    return read(lines=1, readTimeout=readTimeout)
 
 def disableFpga(sendTimeout=0.3, readTimeout=0.1):
     send("disable fpga", sendTimeout=sendTimeout)
-    read(lines=1, readTimeout=readTimeout)
+    return read(lines=1, readTimeout=readTimeout)
 
 def applyCpu(effect, sendTimeout=0.5, readTimeout=0.5):
     send(f"apply cpu {effect}", sendTimeout=sendTimeout)
-    read(lines=1, readTimeout=readTimeout)
+    return read(lines=1, readTimeout=readTimeout)
 
 def applyFpga(effect, sendTimeout=0.5, readTimeout=0.5):
     send(f"apply fpga {effect}", sendTimeout=sendTimeout)
-    read(lines=1, readTimeout=readTimeout)
+    return read(lines=1, readTimeout=readTimeout)
 
 testTimeout = [
     # Test 0 ORIGINAL Effect
@@ -111,43 +105,43 @@ testTimeout = [
     # Test 3 GRAYSCALE Effect
     {
         'CPU': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 2},
-        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 0.2},
+        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 1},
     },
 
     # Test 4 POSTERIZE Effect
     {
         'CPU': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 2},
-        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 0.2},
+        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 1},
     },
 
     # Test 5 EMBOSS Effect
     {
         'CPU': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 2},
-        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 0.2},
+        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 1},
     },
 
     # Test 6 SEPIA Effect
     {
         'CPU': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 2},
-        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 0.2},
+        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 1},
     },
 
     # Test 7 SOLARIZE Effect
     {
         'CPU': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 2},
-        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 0.2},
+        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 1},
     },
 
     # Test 8 THRESHOLDING Effect
     {
         'CPU': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 2},
-        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 0.2},
+        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 2},
     },
 
     # Test 9 CONTRAST_ADJUSTMENT Effect
     {
         'CPU': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 2},
-        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 0.2},
+        'FPGA': {'sendTimeout': 0.5, 'readTimeout': 0.5, 'waitAfterTimeout': 1},
     },
 ]
 
@@ -168,8 +162,90 @@ def runEffectTest(effectIdx):
     wait(seconds=testTimeout[effectIdx]["FPGA"]['waitAfterTimeout'])
     disableFpga()
 
-if __name__ == "__main__":
-    # DEBUG=True
+def getCpuTimes():
+    NUM_RUNS = 15
+    runs = []
+    disableFpga()
+
+    for runIdx in range(NUM_RUNS):
+        cpuStats = []
+        for effectIdx, effectName in enumerate(EFFECTS):
+            applyCpu(
+                effect=effectIdx, 
+                sendTimeout=testTimeout[effectIdx]["CPU"]['sendTimeout'],
+                readTimeout=testTimeout[effectIdx]["CPU"]['readTimeout'])
+            stats = printStats()
+            cpuStats.append(stats)
+            wait(seconds=testTimeout[effectIdx]["FPGA"]['waitAfterTimeout'])
+
+        runs.append(cpuStats)
+    
+    print(runs)
+
+    with open("cpuStats", "wb") as fp:   #Pickling
+        pickle.dump(runs, fp)
+
+def extractCpuFPS():
+    cpuTimes = {}
 
     for effectIdx, effectName in enumerate(EFFECTS):
-        runEffectTest(effectIdx=effectIdx)
+        cpuTimes[effectName] = []
+
+    with open("cpuStats", "rb") as fp:
+        runs = pickle.load(fp)
+
+    for run in runs:
+        for effectIdx, stats in enumerate(run):
+            processed = stats.split("\n")[0]
+            
+            dashIdx = processed.find('-- ') + len('-- ')
+            fpsIdx = processed.find('FPS')
+            
+            fps = float(processed[dashIdx:fpsIdx].replace(' ', ''))
+
+            cpuTimes[EFFECTS[effectIdx]].append(fps)
+            
+            # print(f'{effectIdx}. {fps}')
+
+    for effectIdx, (effectName, fpsList) in enumerate(cpuTimes.items()):
+        print(f"{effectIdx}. {effectName}: {fpsList}")
+
+    with open('cpuFPS.txt', 'w') as file:
+        text = ''
+        text += f'CpuFPS = [\n'
+
+        for effectIdx, (effectName, fpsList) in enumerate(cpuTimes.items()):
+            formatted_list = [f'{num:.3f}' for num in fpsList]
+            comma_separated = ', '.join(formatted_list)
+            text += f'\t# {effectIdx}. {effectName} Effect\n'
+            text += f'\t[{comma_separated}]'
+
+            if effectIdx != (len(EFFECTS)-1):
+                text += ',\n\n'
+            else:
+                text += '\n'
+
+        text += f']'
+
+        file.write(text)
+
+if __name__ == "__main__":
+#     serialPort = serial.Serial(
+#         port="COM6", 
+#         baudrate=115200, 
+#         bytesize=8, 
+#         timeout=2, 
+#         stopbits=serial.STOPBITS_ONE
+#     )
+
+    # getCpuTimes()
+
+    extractCpuFPS()
+
+
+
+    # printMenu()
+    # printEffects()
+
+    # for effectIdx, effectName in enumerate(EFFECTS):
+    #     runEffectTest(effectIdx=effectIdx)
